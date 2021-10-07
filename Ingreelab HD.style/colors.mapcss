@@ -96,6 +96,8 @@
     @color_primary: #F98819; // l: 0.1 // ok
     @color_secondary_casing: #663a0e; // l: 0.1 // ok
     @color_secondary: #F98819; // l: 0.1 // ok
+@color_raceway_casing: #b36d60; // l: 0.1 // ok
+@color_raceway: #ff9b8a; // l: 0.1 // ok
     @color_tertiary_casing: #663a0e; // l: 0.1 // ok
     @color_tertiary: #F98819; // l: 0.1 // ok
     @color_tertiary_small: #b36212; // l: 0.1 // ok

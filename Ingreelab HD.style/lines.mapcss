@@ -87,8 +87,7 @@ line {
         casing-width: 1pt;
     }
 
-    |z8-[highway=secondary],
-    |z8-[highway=raceway] {
+    |z8-[highway=secondary] {
     //                           11  c12 c13 c14 c15
         width: eval( zlinear(11, 2pt,3pt,4pt,4pt,max(4pt, metric(any(tag(lanes),2)*2)) ));
         color: @color_secondary;
@@ -106,11 +105,24 @@ line {
     }
 
     |z11-{
-        [highway=secondary], [highway=secondary_link], [highway=raceway] {
+        [highway=secondary], [highway=secondary_link] {
             color: @color_secondary;
             casing-color: @color_secondary_casing;
             casing-width: 0.5pt;
         }
+    }
+
+    |z8-[highway=raceway] {
+        //                       11  12  13  14  15
+        width: eval( zlinear(11, 1pt,2pt,2pt,3pt,max(4pt, metric(any(tag(lanes),2)*2)) ));
+        color: @color_raceway;
+        z-index: 2;
+        linecap: round;
+    }
+    |z12-[highway=raceway] {
+        color: @color_raceway;
+        casing-color: @color_raceway_casing;
+        casing-width: 0.5pt;
     }
 
     |z10-{
@@ -131,7 +143,7 @@ line {
         }
     }
 
-    |z13-{
+    |z12-{
         [highway=residential], [highway=living_street] {
             //                       13  14  15
             width: eval( zlinear(13, 2px,2pt,max(3pt, 4m) ));
@@ -142,8 +154,8 @@ line {
         }
     }
 
-    |z13-{
-        [highway=unclassified], [highway=bus_guideway], [highway=road], [highway=service] {
+    |z12-{
+        [highway=unclassified], |z13-[highway=bus_guideway], |z13-[highway=road], |z13-[highway=service] {
             //                           13  14  15
             width: eval( zlinear(13, 2px,2pt,max(3pt, 4m) ));
             color: @color_small_road;
