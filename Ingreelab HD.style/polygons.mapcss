@@ -251,10 +251,10 @@ area {
     }
     
     [natural=wetland] {
-        |z9-12 {
+        |z9-10 {
             fill-color: @color_wetland;
         }
-        |z13- {
+        |z11- {
             fill-image: @image_wetland;
         }
     }
