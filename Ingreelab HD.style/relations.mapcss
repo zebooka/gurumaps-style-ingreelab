@@ -1,3 +1,7 @@
+// Ingreelab alike map style for Guru Maps
+// Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
+// Copyright (c) 2021 Anton Bondar http://zebooka.com
+
 @if Style == Outdoor
 relation[type=route] {
 //    outline-width: 5pt;

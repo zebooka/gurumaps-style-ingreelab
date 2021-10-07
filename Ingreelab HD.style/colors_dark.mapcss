@@ -1,5 +1,6 @@
-// DefaultStyle from GLMap.framework
+// Ingreelab alike map style for Guru Maps
 // Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
+// Copyright (c) 2021 Anton Bondar http://zebooka.com
 
 @color_ground: #202020;
 @color_water: #21659A;
