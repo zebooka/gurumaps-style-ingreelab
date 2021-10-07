@@ -75,7 +75,7 @@
 
 // roads of all kinds
 @color_small_road: #EEE; // l: 0.4 // OK
-@color_small_road_casing: #AAA; // l: 0.1 // OK
+@color_small_road_casing: #808080; // l: 0.1 // OK
 @color_bridge: #A4A8AB; // l: 0.1
 @color_railroad_tunnel: #A4A8ABAA; // l: 0.1
 @color_cycleway_dashes: #6876e1; // l: 0.1
@@ -102,7 +102,7 @@
     @color_tertiary: #F98819; // l: 0.1 // ok
     @color_tertiary_small: #b36212; // l: 0.1 // ok
 @color_residential: #FEFED0; // l: 0.4 // OK
-@color_residential_casing: #AAA; // l: 0.1 // OK
+@color_residential_casing: #8c8c8c; // l: 0.1 // OK
 
     @color_pedestrian: #777; // OK
 

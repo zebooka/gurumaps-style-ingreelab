@@ -516,37 +516,35 @@ line {
 
         |z13-{
             [piste:difficulty] {
-                color:white;
-                width:2pt;
-                dashes-width: none;
+                color: white;
+                width: 2pt;
+                dashes: 20,1;
+                dashes-width: 2pt;
             }
             [piste:difficulty=novice] {
-                color: @color_difficulty_novice;
+                dashes-color: @color_difficulty_novice;
                 text-color: @color_difficulty_novice;
             }
             [piste:difficulty=easy] {
-                color: @color_difficulty_easy;
+                dashes-color: @color_difficulty_easy;
                 text-color: @color_difficulty_easy;
             }
             [piste:difficulty=intermediate] {
-                color: @color_difficulty_intermediate;
+                dashes-color: @color_difficulty_intermediate;
                 text-color: @color_difficulty_intermediate;
             }
             [piste:difficulty=advanced],
             [piste:difficulty=expert],
             [piste:difficulty=extreme] {
-                color: @color_difficulty_expert;
+                dashes-color: @color_difficulty_expert;
                 text-color: @color_difficulty_expert;
             }
 
-            [piste:difficulty=extreme] {
-                dashes: 4,4;
-                dashes-width: 2pt;
-            }
             [piste:difficulty=freeride] {
                 text-color: @color_difficulty_freeride;
                 dashes-color: @color_difficulty_freeride;
-                dashes: 4,4;
+                width: 2pt;
+                dashes: 10,2;
                 dashes-width: 2pt;
             }
 
