@@ -1,0 +1,399 @@
+// DefaultStyle from GLMap.framework
+// Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
+
+/******************************* Polygons *******************************/
+area {
+    [boundary=administrative] {
+        // country boundaries
+        [admin_level=2] {
+            z-index: 4;
+            width: eval( zlinear(13, 1pt,2pt,3pt ));
+            color: @color_boundary_country;
+        }
+        // states boundaries
+        |z5-[admin_level=3] {
+            z-index: 3;
+            galileo-stencil-type: drop-same;
+            galileo-stencil-ref: 1;
+
+            dashes-width: 1pt;
+            dashes-color: @color_boundary_state;
+            dashes: 4,4,4,4;
+            |z13-{
+                dashes-width: 2pt;
+            }
+        }
+        // regions
+        |z6-[admin_level=4] {
+            z-index: 2;
+            galileo-stencil-type: drop-same;
+            galileo-stencil-ref: 2;
+
+            dashes-width: 1pt;
+            dashes-color: @color_boundary_other;
+            dashes: 4,4,4,4;
+        }
+        // suburbs
+        |z11-13[admin_level=9] {
+            z-index: 1;
+            galileo-stencil-type: drop-same;
+            galileo-stencil-ref: 3;
+
+            dashes-width: 1pt;
+            dashes-color: @color_boundary_other;
+            dashes:4,4,4,4;
+        }
+    }
+
+    // Other types of polygons. Less importnant is on top.
+
+    // -15
+    |z13-[place=islet],
+    |z11-[place=island]
+    {
+        z-index: -15;
+        fill-color: @color_ground;
+    }
+
+    // mud of all kinds
+    |z13-{
+        [landuse=construction], [landuse=brownfield], [natural=mud] {
+            z-index: -15;
+            fill-color: @color_mud;
+        }
+    }
+
+    // -14
+    // green color again
+    |z11-{
+        [landuse=farm], [landuse=village_green], [landuse=recreation_ground], [landuse=vineyard], [leisure=common], [leisure=golf_course] {
+            z-index: -14;
+            fill-color: @color_farm;
+        }
+
+        // yellow farms
+        [landuse=farmland],[landuse=farmyard] {
+            z-index: -14;
+            fill-color: @color_farmyard;
+        }
+
+        [landuse=commercial],
+        [landuse=industrial] {
+            z-index: -14;
+            fill-color: @color_landuse_commercial;
+        }
+    }
+    
+    // generalized buildings
+    |z11-12[landuse=residential]{
+        z-index: -14;
+        fill-color: @color_landuse_residential;
+    }
+
+    // for hospital territory, not buildings
+    |z15-[amenity=hospital][!building]{
+        z-index: -14;
+        fill-color: @color_hospital;
+    }
+
+    |z13-[landuse=cemetery]{
+        z-index: -14;
+        fill-color: @color_landuse_cemetery;
+    }
+
+    |z15-[landuse=railway]{
+        z-index: -14;
+        fill-color: @color_railway;
+    }
+
+    // all kinds of sands
+    |z13-{
+        [natural=beach], [natural=sand], [landuse=salt_pond] {
+            z-index: -14;
+            fill-color: @color_sand;
+        }
+        
+        [landuse=quarry] {
+            z-index: -14;
+            fill-color: @color_quarry;
+        }
+    }
+
+    // -13
+
+    // all kinds of woods
+    |z10-{
+        [natural=wood], [landuse=forest]{
+            z-index: -13;
+            fill-color: @color_wood;
+        }
+        [leisure=nature_reserve]{
+            z-index: -13;
+            fill-color: @color_nature_reserve;
+        }
+    }
+    |z13-{
+        // заросли кустов
+        [natural=scrub] {
+            z-index: -13;
+            fill-color: @color_scrub;
+        }
+        // парки для отдыха
+        [leisure=park], [leisure=garden], [tourism=zoo] {
+            z-index: -13;
+            fill-color: @color_wood;
+        }
+        // сельское хозяйство
+        [landuse=orchard], [landuse=vineyard], [landuse=plant_nursery], [landuse=greenhouse_horticulture] {
+            z-index: -13;
+            fill-color: @color_orchard;
+        }
+        // дачи
+        [landuse=allotments] {
+            z-index: -13;
+            fill-color: @color_allotments;
+        }
+    }
+    @if Style == Outdoor
+        |z15-{
+            [natural=wood], [landuse=forest] {
+                fill-image: @image_wood;
+            }
+            [leisure=garden] {
+                fill-image: @image_garden;
+            }
+            [natural=scrub] {
+                fill-image: @image_scrub;
+            }
+            [landuse=vineyard] {
+                fill-image: @image_vineyard;
+            }
+            [landuse=orchard] {
+                fill-image: @image_orchard;
+            }
+            [landuse=plant_nursery], [landuse=greenhouse_horticulture] {
+                fill-image: @image_plant_nursery;
+            }
+            [landuse=allotments] {
+                fill-image: @image_allotments;
+            }
+            [landuse=quarry] {
+                fill-image: @image_quarry;
+            }
+            [leisure=dog_park] {
+                fill-image: @image_dog_park;
+            }
+        }
+    @endif
+
+    @if SubStyle != Car
+        |z16-[leisure=sports_centre]{
+            z-index: -13;
+            fill-color: @color_sports_centre;
+        }
+    @endif
+
+    // -12
+
+    [natural=oceanwater]{
+        z-index: -12;
+        fill-color: @color_water;
+    }
+
+    // grass of all kinds
+    |z11-[natural=fell] {
+        z-index: -12;
+        fill-color: @color_grass;
+    }
+    |z13-{
+        [landuse=pasture], [landuse=meadow], [landuse=grass], [landuse=greenfield], [natural=grassland], [natural=heath] {
+            z-index: -12;
+            fill-color: @color_grass;
+        }
+    }
+    |z15-{
+        [highway=pedestrian],[highway=footway] {
+            z-index: -12;
+            fill-color: @color_footway_area;
+        }
+    }
+
+    // -11
+
+    |z15-[man_made=works]{
+        z-index: -11;
+        fill-color: @color_landuse_commercial;
+    }
+
+    // parkings
+    |z16-{
+        [landuse=garages],[amenity=parking] {
+            z-index: -11;
+            fill-color: @color_landuse_parking;
+        }
+    }
+    
+    // -10
+    
+    |z9-[natural=glacier] {
+        fill-color: @color_glacier;
+        z-index:-10;
+    }
+
+    // 0
+
+    |z5-{
+        |z9-[natural=bay], // - часто из заливов не вырезают острова. И они в результате тонут под водой.
+        |z9-[landuse=basin],
+        [natural=water], [landuse=reservoir], [waterway=riverbank] {
+            fill-color: @color_water;
+        }
+    }
+    
+    [natural=wetland] {
+        |z9-12 {
+            fill-color: @color_wetland;
+        }
+        |z13- {
+            fill-image: @image_wetland;
+        }
+    }
+
+    |z13-{
+        [landuse=retail], [amenity=marketplace] {
+            fill-color: @color_market;
+        }
+
+        // pier and groyne displayed on top of the water
+        [man_made=pier],[man_made=groyne] {
+            fill-color: @color_ground;
+        }
+        // dock над домом. т.к. может быть домом
+        [waterway=dock] {
+            fill-color: @color_water;
+        }
+    }
+
+    @if SubStyle != Car
+        |z10-[leisure=nature_reserve] {
+            color: @color_national_park;
+            width: 3pt;
+        }
+        |z9-[boundary=national_park] {
+            color: @color_national_park;
+            width: 2pt;
+        }
+    @endif
+
+    |z11-[aeroway=aerodrome] {
+        fill-color: @color_aeroway_aerodrome;
+    }
+
+    |z13-{
+        [leisure=playground] {
+            fill-color: @color_playground;
+        }
+    // 1
+        [leisure=stadium] {
+            z-index: 1;
+            fill-color: @color_stadium;
+        }
+        [aeroway=runway] {
+            z-index: 1;
+            fill-color: @color_aeroway_runway;
+        }
+    }
+
+    |z14-{
+        [aeroway=hangar], [aeroway=terminal],[aeroway=gate] {
+            z-index: 1;
+            fill-color: @color_building;
+            width: 1pt;
+            color: @color_building_stroke;
+        }
+        [aeroway=apron] {
+            z-index: 1;
+            fill-color: @color_aeroway_apron;
+        }
+    }
+
+    // 2
+
+    // fill image of military area desplayed on top of the other objects
+    |z11-{
+        [landuse=military],[military=danger_area] {
+            z-index: 2;
+            fill-image: @image_forbidden_area;
+        }
+    }
+
+    |z13-[leisure=track] {
+        z-index: 2;
+        fill-color: @color_farm;
+    }
+
+    // 3
+
+    // all buildings
+    [building] {
+        @if SubStyle != Car
+            |z13-{
+                z-index: 3;
+                fill-color: @color_building;
+            }
+        @endif
+
+        // building stroke
+        |z15-{
+            z-index: 3;
+            width: 1px;
+            color: @color_building_stroke;
+            fill-color: @color_building;
+            [building=planned] {
+                fill-color: @color_building_planned;
+            }
+            [building=construction] {
+                fill-color: @color_building_planned;
+
+                dashes-width: 1pt;
+                dashes-color: @color_building_stroke;
+                dashes: 4,4,4,4;
+
+                width: none;
+            }
+        }
+    }
+
+    |z13-[leisure=pitch] {
+        z-index: 3;
+        fill-color: @color_pitch;
+    }
+
+    // 4
+
+    |z16-[amenity=swimming_pool],
+    |z17-[leisure=swimming_pool] {
+        z-index: 4;
+        fill-color: @color_swimming_pool;
+    }
+
+    // 10
+
+    |z13-[man_made=bridge]
+    {
+        z-index: 10;
+        fill-color: @color_bridge;
+    }
+}
+
+/******************************* Polygon strokes *******************************/
+
+// all barriers displayed as thin red line. Hedge is dark-green.
+area,line|z16-[barrier]{
+	width: 1pt;
+	color: @color_barrier;
+
+    [barrier=hedge] {
+        color: @color_hedge;
+    }
+}

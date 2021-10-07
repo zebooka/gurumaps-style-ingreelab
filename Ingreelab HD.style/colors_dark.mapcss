@@ -1,0 +1,123 @@
+// DefaultStyle from GLMap.framework
+// Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
+
+@color_ground: #202020;
+@color_water: #21659A;
+@color_water_icon: #78B9EB;
+@color_water_underground: #21659A66;
+@color_wood: #315C1F;
+@color_wood_icon: #A4D88B;
+@color_nature_reserve: #45642330;
+@color_building_planned: #382B1D;
+@color_building: #5B4935;
+@color_landuse_residential: #39332D;
+@color_building_stroke: #826B4B;
+@color_landuse_commercial: #22160F;
+@color_landuse_cemetery: #31342A;
+@color_landuse_parking: #1D1711;
+@color_glacier: #061E1D;
+@color_boundary_country: #8E9BA5;
+@color_boundary_state: #8E9BA599;
+@color_boundary_other: #53575A99;
+@color_mud: #3F3515;
+@color_farm: #293820;
+@color_farmyard: #2F2417;
+@color_sand: #0E0B02;
+@color_market: #3F4B19;
+@color_wetland: #1E694199;
+@color_scrub: #445327;
+@color_orchard: #56631C;
+@color_allotments: #28401E;
+@color_playground: #18451F;
+@color_stadium: #376055;
+@color_sports_centre: #021F05;
+@color_aeroway_aerodrome: #1E0C06;
+@color_aeroway_runway: #020A0D;
+@color_aeroway_runway_line: #414141;
+@color_aeroway_apron: #2E2026;
+@color_pitch: #1F4230;
+@color_swimming_pool: #1B658F;
+@color_bridge: #323232;
+@color_barrier: #884418;
+@color_hedge: #A6CB65;
+@color_grass: #344517;
+@color_quarry: #3C3A3A;
+@color_hospital: #222202;
+@color_private: #510807;
+@color_tunnel: #2E2E2E;
+@color_national_park: #557433;
+
+@color_label_text: #E0DFDD;
+@color_name_text: #D3D2D0;
+@color_suburb_text: #808384;
+@color_national_park_text: #ABCA88;
+@color_building_text: #99836B;
+@color_entrance_text: #998167;
+@color_public_transport_text: #C9C9C6;
+@color_private_access_text: #F07573;
+@color_label_stroke: #000000EE;
+@color_water_text: #000000;
+@color_aerialway_text: #FFFFFF;
+@color_shop_text: #F9D8A3;
+@color_beach_text: #A5997E;
+@color_peak_text: #D4595A;
+@color_volcano_text: #FF0000;
+
+@color_difficulty_novice: #7FFF7E;
+@color_difficulty_easy: #0000FF;
+@color_difficulty_intermediate: #FF0000;
+@color_difficulty_expert: #FFFFFF;
+@color_difficulty_freeride: #FFA500;
+
+@color_icon_tint: #AA9278;
+@color_icon_capital_tint: #C4C4C4;
+
+// roads of all kinds
+@color_small_road: #666666;
+@color_small_road_casing: #4C4C4C;
+@color_bridge: #6C7175;
+@color_railroad_tunnel: #6C7175AA;
+@color_cycleway_dashes: #2638C1;
+@color_footway_area: #3B2713;
+@color_footway_casing: #00000030;
+@color_road_construction: #AD5F0B;
+@color_dashes_casing: #00000030;
+@if Style == Outdoor
+    @color_footway_dashes: #AE7469;
+    @color_track_dashes: #AB9286;
+    @if SubStyle == Hike
+        @color_path_dashes: @color_track_dashes;
+    @else
+        @color_path_dashes: #9BA0C9;
+    @endif
+    @color_motorway_casing: @color_small_road_casing;
+    @color_motorway: @color_small_road;
+    @color_trunk_casing: @color_small_road_casing;
+    @color_trunk: @color_small_road;
+    @color_primary_casing: @color_small_road_casing;
+    @color_primary: @color_small_road;
+    @color_secondary_casing: @color_small_road_casing;
+    @color_secondary: @color_small_road;
+    @color_tertiary_casing: @color_small_road_casing;
+    @color_tertiary: @color_small_road;
+    @color_pedestrian: #323232;
+    @color_pedestrian_casing: #545454;
+@else
+    @color_footway_dashes: #8C5A55;
+    @color_path_dashes: @color_footway_dashes;
+    @color_track_dashes: @color_small_road; // l: 0.4
+    @color_motorway_casing: #D85615;
+    @color_motorway: #CB4400;
+    @color_trunk_casing: #C65816;
+    @color_trunk: #BA4600;
+    @color_primary_casing: #B55A16;
+    @color_primary: #A94800;
+    @color_secondary_casing: #A35D17;
+    @color_secondary: #984C00;
+    @color_tertiary_casing: #916118;
+    @color_tertiary: #875100;
+    @color_pedestrian: @color_small_road;
+@endif
+
+@color_railway: #1E4810;
+@color_railway_dashes: #7F7F7F;

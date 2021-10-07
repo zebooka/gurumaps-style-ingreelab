@@ -1,0 +1,49 @@
+// DefaultStyle from GLMap.framework
+// Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
+
+@if Theme == Dark
+    @import "colors_dark.mapcss";
+    @image_noData: "noData_dark.png";
+    @image_forbidden_area: "forbidden_area_dark.png";
+    @image_wood: "wood_dark.png";
+    @image_garden: "garden_dark.png";
+    @image_scrub: "scrub_dark.png";
+    @image_vineyard: "vineyard_dark.png";
+    @image_orchard: "orchard_dark.png";
+    @image_plant_nursery: "plant_nursery_dark.png";
+    @image_allotments: "allotments_dark.png";
+    @image_quarry: "quarry_dark.png";
+    @image_dog_park: "dog_park_dark.png";
+@else // Default colors
+    @import "colors.mapcss";
+    @image_noData: "noData.png";
+    @image_forbidden_area: "forbidden_area.png";
+    @image_wood: "wood.png";
+    @image_garden: "garden.png";
+    @image_scrub: "scrub.png";
+    @image_vineyard: "vineyard.png";
+    @image_orchard: "orchard.png";
+    @image_plant_nursery: "plant_nursery.png";
+    @image_allotments: "allotments.png";
+    @image_quarry: "quarry.png";
+    @image_dog_park: "dog_park.png";
+@endif
+@image_wetland: "wetland.png";
+
+// canvas color
+canvas
+{
+    fill-color: @color_ground;
+    fill-image: @image_noData;
+}
+
+// for any object with tag 'layer', set it's property 'layer', to value of 'layer' tag
+*|z9-[layer]
+{
+    layer: eval(tag(layer));
+}
+
+@import "polygons.mapcss";
+@import "lines.mapcss";
+@import "points.mapcss";
+@import "relations.mapcss";

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="31px" height="32px" viewBox="0 0 31 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>gasstation</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="p" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="gasstation" sketch:type="MSLayerGroup" fill="#888888">
+            <path d="M21.9311076,24 C21.9929219,18.046 19.9859515,18 19.9410862,18 L19.9410862,30.007 L21.9151512,30.007 L21.9151512,32 L19.9410862,32 L2.0049721,32 L-1.77635684e-15,32 L-1.77635684e-15,30.007 L2.0059691,30.007 L2.0059691,0 L19.9400892,0 L19.9400892,16 C19.9849545,16.002 23.9241199,16.143 23.9241199,21 C23.9241199,25.886 24.580149,27 25.9181293,27 C27.2561096,27 28.9091433,26.847 28.9091433,20 C28.9091433,13.154 24.9211246,11 24.9211246,11 L24.9211246,8 L21.9301106,5 L21.9301106,2 L30.9031527,11 L30.9031527,20 C30.9041497,20 32.1185014,29.248 25.9191263,29 C23.0248217,28.886 21.9031915,26.771 21.9311076,24 Z M18,3 L4,3 L4,14 L18,14 L18,3 L18,3 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

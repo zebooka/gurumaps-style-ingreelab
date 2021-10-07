@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="29" viewBox="0 0 21 29">
+  <g fill="none" fill-rule="evenodd" transform="matrix(0 -1 -1 0 20.5 29)">
+    <polygon fill="gray" points="0 11 0 1 11 0 19.5 2.5 29 13 22.5 17 0 20"/>
+    <polygon fill="#FFF" fill-opacity=".2" points="11 0 19.5 2.5 13 6"/>
+    <polygon fill="#FFF" fill-opacity=".2" points="0 11 6.5 5.5 9 8.5 13 14.5"/>
+    <polygon fill="#000" fill-opacity=".1" points="6.5 5.5 11 0 13 6"/>
+    <polygon fill="#000" fill-opacity=".1" points="9 8.5 13 6 29 13 13 14.5"/>
+    <polygon fill="#000" fill-opacity=".2" points="9 8.5 6.5 5.5 13 6"/>
+    <polygon fill="#000" fill-opacity=".2" points="0 20 0 11 13 14.5 29 13 22.5 17"/>
+  </g>
+</svg>

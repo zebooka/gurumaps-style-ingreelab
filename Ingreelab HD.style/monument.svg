@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="30px" viewBox="0 0 24 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>monument</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="p" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="monument" sketch:type="MSLayerGroup" fill="#888888">
+            <path d="M0,30 L0,26 L24,26 L24,30 L0,30 L0,30 Z M3,22 L21,22 L21,24 L3,24 L3,22 L3,22 Z M7,6 L12,0 L17,6 L19,20 L5,20 L7,6 L7,6 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

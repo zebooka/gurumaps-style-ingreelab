@@ -1,0 +1,573 @@
+// Intreelab.net alike style
+// Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
+// Color styles by Anton Bondar http://zebooka.com
+
+line {
+/******************************* Highways *******************************/
+    // highways is displayed on top of any other stuff
+    |z9-[highway] {
+        layer: 5;
+    }
+    |z13-{
+        [highway],[railway] {
+            layer: eval(any(tag(layer), 0) + 5);
+        }
+    }
+/*
+ zlinear is used for linear interpolation of width, based on zoom level
+ first param is zoom when interpolation starts, if object is visible earlier
+ second params is used for all zooms less than first param.
+ For example line|z6-[highway=motorway] is displayed at 6 zoom level, but
+ width: eval( zlinear(    7,     1pt,2pt,2pt,3pt,3pt,3pt,4pt,4pt,5pt) );
+ width defined only from 7-th. This means that 1pt width is used for all zooms less than 7.
+*/
+    |z5-[highway=motorway] {
+    //                          5   6   7   c8  c9  c10 c11 c12 c13 c14 c15
+        width: eval( zlinear(5, 2pt,3pt,3pt,3pt,3pt,4pt,4pt,5pt,5pt,5pt,max(8pt, metric(any(tag(lanes),3)*3)) ));
+        color: @color_trunk;
+        z-index: 5;
+        linecap: round;
+    }
+
+    |z11-[highway=motorway_link] {
+    //                           c11 c12 c13 c14 c15
+        width: eval( zlinear(11, 0pt,0pt,1pt,1pt,max(4pt, metric(any(tag(lanes),2)*2)) ));
+        color: @color_motorway_casing;
+        z-index:-1;
+    }
+
+    |z6-[highway=motorway],
+    |z11-[highway=motorway_link] {
+        color: @color_motorway;
+        casing-color: @color_motorway_casing;
+        casing-width: 1pt;
+    }
+
+    |z5-[highway=trunk] {
+    //                          5   6   7   c8  c9  c10 c11 c12 c13 c14 c15
+        width: eval( zlinear(5, 2pt,3pt,3pt,3pt,3pt,4pt,4pt,5pt,5pt,5pt,max(8pt, metric(any(tag(lanes),3)*3)) ));
+        color: @color_trunk;
+        z-index: 4;
+        linecap: round;
+    }
+
+    |z12-[highway=trunk_link] {
+    //                           c   c13 c14 c15
+        width: eval( zlinear(12, 2pt,3pt,3pt,max(5pt, metric(any(tag(lanes),2)*2)) ));
+        color: @color_trunk_casing;
+        z-index: -2;
+    }
+
+    |z6-[highway=trunk],
+    |z12-[highway=trunk_link] {
+        color: @color_trunk;
+        casing-color: @color_trunk_casing;
+        casing-width: 1pt;
+    }
+
+    |z6-[highway=primary] {
+    //                          6   7   8   9   c10 c11 c12 c13 c14 c15
+        width: eval( zlinear(6, 2pt,2pt,2pt,2pt,3pt,2pt,3pt,3pt,3pt,max(4pt, metric(any(tag(lanes),2)*2)) ));
+        color: @color_primary;
+        z-index: 3;
+        linecap: round;
+    }
+
+    |z10-[highway=primary_link] {
+    //                           c12 c13 c14 c15
+        width: eval( zlinear(12, 0pt,1pt,1pt,max(3pt, metric(any(tag(lanes),2)*2)) ));
+        color: @color_primary_casing;
+        z-index: -3;
+    }
+
+    |z8-[highway=primary],
+    |z10-[highway=primary_link] {
+        color: @color_primary;
+        casing-color: @color_primary_casing;
+        casing-width: 1pt;
+    }
+
+    |z8-[highway=secondary],
+    |z8-[highway=raceway] {
+    //                           11  c12 c13 c14 c15
+        width: eval( zlinear(11, 2pt,3pt,4pt,4pt,max(4pt, metric(any(tag(lanes),2)*2)) ));
+        color: @color_secondary;
+        z-index: 2;
+        linecap: round;
+    }
+
+    |z11-{
+        [highway=secondary_link] {
+        //                           c12 c13 c14 c15
+            width: eval( zlinear(12, 0pt,1pt,1pt,max(3pt, metric(any(tag(lanes),2)*2)) ));
+            color: @color_secondary_casing;
+            z-index: -4;
+        }
+    }
+
+    |z11-{
+        [highway=secondary], [highway=secondary_link], [highway=raceway] {
+            color: @color_secondary;
+            casing-color: @color_secondary_casing;
+            casing-width: 0.5pt;
+        }
+    }
+
+    |z10-{
+        [highway=tertiary], line|z12-[highway=tertiary_link] {
+            //                       11  12  13  14  15
+            width: eval( zlinear(11, 1pt,2pt,2pt,2pt,3pt,max(3pt, metric(any(tag(lanes),2)*2)) ));
+            color: @color_tertiary_small;
+            z-index: 1;
+            linecap: round;
+        }
+    }
+
+    |z11-{
+        [highway=tertiary], [highway=tertiary_link] {
+            color: @color_tertiary;
+            casing-color: @color_tertiary_casing;
+            casing-width: 0.5pt;
+        }
+    }
+
+    |z13-{
+        [highway=residential], [highway=living_street] {
+            //                       13  14  15
+            width: eval( zlinear(13, 2px,2pt,max(3pt, 4m) ));
+            color: @color_residential;
+            casing-color: @color_residential_casing;
+            casing-width: 0.5pt;
+            linecap: round;
+        }
+    }
+
+    |z13-{
+        [highway=unclassified], [highway=bus_guideway], [highway=road], [highway=service] {
+            //                           13  14  15
+            width: eval( zlinear(13, 2px,2pt,max(3pt, 4m) ));
+            color: @color_small_road;
+            casing-color: @color_small_road_casing;
+            casing-width: 0.5pt;
+            linecap: round;
+        }
+    }
+
+    |z16-{
+        [highway][oneway=yes] {
+            fill-image:"arrow.svg";
+        }
+        [highway][oneway=-1] {
+            fill-image:"arrow-back.svg";
+        }
+    }
+    /****************************** Detailed highways ************************/
+
+    /*
+     we use real road sizes since 17 zoom level.
+
+     eval() - evaluates function
+     any() - checks it's parameters and usees first non Null
+     tag() - read tag value
+     metric() - set units to meters
+
+     width: eval( metric(any(tag(lanes),3)*2) );
+     if there is lanes use it, otherwise use 3 as default value.
+     Use 2 as line width, and set units of result to meters.
+    */
+
+    /****************************** Small roads, or roads with different colors ************************/
+
+    // tracks
+    |z12-{
+        [highway=track] {
+            dashes-color: @color_track_dashes;
+            dashes:8,2;
+            @if SubStyle == Car
+                //                              14   15     16
+                dashes-width: eval( zlinear(12, 2pt, 2.5pt, 3pt ));
+                width:        eval( zlinear(12, 2pt, 2.5pt, 3pt ));
+            @else
+                dashes-width: eval( zlinear(12, 1pt, 1.5pt, 2pt ));
+                width:        eval( zlinear(12, 2pt, 2.5pt, 3pt ));
+            @endif
+            [tracktype=grade5]{
+                dashes:4,2;
+            }
+            [tracktype=grade4]{
+                dashes:5,2;
+            }
+            [tracktype=grade3]{
+                dashes:6,2;
+            }
+            [tracktype=grade2]{
+                dashes:7,2;
+            }
+            [tracktype=grade1]{
+                dashes:8,2;
+            }
+            |z15-{
+                casing-color: @color_footway_casing;
+                casing-width: 1pt;
+            }
+        }
+        @if Style == Outdoor
+        // pedestrian
+            [highway=pedestrian] {
+            //                           14  15  16  17
+                width: eval( zlinear(14, 2pt,3pt,3pt,4pt ) );
+                color: @color_pedestrian_casing;
+                |z16- {
+                    color: @color_pedestrian;
+                    casing-color: @color_pedestrian_casing;
+                    casing-width: 1pt;
+                }
+            }
+        @elif SubStyle != Car
+            [highway=pedestrian] {
+                width:        eval( zlinear(14, 4pt,5pt,5pt,6pt ) );
+                dashes-width: eval( zlinear(14, 2pt,3pt,3pt,4pt ) );
+                dashes-color: @color_pedestrian;
+                dashes: 8,4;
+            }
+        @endif
+    }
+
+    |z13-{
+        //[highway=proposed], proposed roads is not displayed because they are not there yet. no construction started.
+        [highway=construction], [highway][access=private] {
+        //                                  13  14  15  16
+        @if SubStyle == Car
+            dashes-width: eval( zlinear(13, 2pt,3pt,3pt,4pt ));
+        @else
+            dashes-width: eval( zlinear(13, 1pt,2pt,2pt,3pt ));
+        @endif
+            dashes-color: @color_road_construction;
+            dashes:8,4;
+        }
+    }
+
+    |z12-{
+        [highway=path], |z15-[highway=footway], |z14-[highway=cycleway], |z14-[highway=bridleway] {
+            //                                  16  17
+            width:        eval( zlinear(16, 3pt,4pt ));
+            dashes-width: eval( zlinear(16, 1pt,2pt ));
+            dashes:4,1;
+        }
+        [highway=path], |z14-[highway=bridleway], |z15-[highway=footway] {
+            dashes-color: @color_footway_dashes;
+        }
+        |z14-[highway=cycleway] {
+            dashes-color: @color_cycleway_dashes;
+            dashes:2,2;
+        }
+        |z15-[highway=steps] {
+            //                                  16  17
+            width:        eval( zlinear(16, 5pt,6pt ));
+            dashes-width: eval( zlinear(16, 3pt,4pt ));
+            dashes-color: @color_footway_dashes;
+            dashes:2,2;
+        }
+    }
+
+    // Bridges
+    |z13-[highway]{
+        [access=private] {
+            dashes-color: @color_private;
+        }
+        [bridge] {
+            casing-color: @color_bridge;
+            casing-width:1pt;
+            linecap:none;
+            z-index: 6;
+            |z15-{
+                [highway=footway], [highway=path], [highway=cycleway], [highway=bridleway] {
+                    color: @color_small_road;
+                }
+            }
+        }
+        [tunnel] {
+            color: @color_tunnel;
+        }
+    }
+
+    // railways
+    [railway] {
+        |z15-[bridge] {
+            color: @color_small_road;
+        }
+        |z10-[railway=rail] {
+            dashes-color: @color_railway_dashes;
+            dashes: 8,8;
+            width: 4pt;
+            dashes-width: 2pt;
+            galileo-stencil-type: drop-same;
+            galileo-stencil-ref: 4;
+            linecap: none;
+            z-index: 6;
+            |z15- {
+            //                           17  18
+                width: eval( zlinear(17, 4pt,6pt) );
+                fill-image: "railway.png";
+                dashes-width: none;
+                galileo-stencil-type: none;
+            }
+        }
+        
+        |z13-[railway=tram] {
+        //                                  15  16
+            width: eval( zlinear(       15, 3pt,4pt ) );
+            dashes-width: eval( zlinear(15, 1pt,2pt ) );
+            dashes-color: @color_railway_dashes;
+            dashes:6,2;
+            z-index: 6;
+        }
+        
+        |z13-[railway=subway] {
+        //                                  15  16
+            width: eval( zlinear(       15, 3pt,4pt ) );
+            dashes-width: eval( zlinear(15, 1pt,2pt ) );
+            dashes-color: @color_railway_dashes;
+            dashes:8,8;
+        }
+        
+        |z16-{
+            [railway=platform] {
+                [!layer], [layer>=0] {
+                    width: eval( zlinear(16, metric(3) ) );
+                    color: #aaa;
+                    casing-color: @color_railway_dashes;
+                    casing-width:1pt;
+                    linecap: round;
+                }
+            }
+        }
+        
+        |z14-[railway=light_rail],
+        |z15-[railway=funicular],
+        |z14-[railway=narrow_gauge] {
+            dashes-width: 1pt;
+            dashes-color: @color_bridge;
+            dashes:2,2;
+            z-index: 1;
+        }
+        
+        |z15-( [layer<0], [tunnel] ) {
+            dashes-color: @color_railroad_tunnel;
+            dashes-width: 3pt;
+            fill-image: none;
+            width: none;
+            layer: -4;
+        }
+        
+        |z15-[bridge] {
+            casing-color: @color_bridge;
+            casing-width:1pt;
+            linecap:none;
+            z-index: 6;
+        }
+    }
+
+    |z13-{
+        [man_made=pier],[man_made=groyne] {
+        //                                13  14    15    16    17    18
+            width: eval( zlinear(    13,    1pt,2pt,2pt,3pt,3pt,4pt ) );
+            color: @color_ground;
+        }
+    }
+
+    // rivers and streams
+    |z10-{
+        [waterway=river] {
+            [!layer],[layer>=0] {
+                //                                10    11    12    13    14    15    16
+                    width: eval( zlinear( 10,     1px,1pt,2pt,3pt,4pt,5pt,6pt ) );
+                    color: @color_water;
+                    z-index: -20;
+                }
+        }
+    }
+
+    |z14-[waterway] {
+        [waterway=stream], [waterway=canal], [waterway=drain], [waterway=ditch] {
+            width: eval( zlinear( 14, 1pt,    3pt, 3m ) );
+            color: @color_water;
+            z-index: -20;
+        }
+        [layer<0] {
+            width: eval( zlinear( 14, 1pt, 2pt, 3m ) );
+            color: @color_water_underground;
+            layer:0;
+        }
+    }
+    // tree row
+    |z13-[natural=tree_row] {
+        width: 3pt;
+        color: @color_wood;
+        z-index: -10;
+    }
+
+    // runway
+    |z14-{
+        [aeroway=runway] {
+            width: 8pt;
+            color: @color_aeroway_runway_line;
+        }
+        [aeroway=taxiway] {
+            width: 4pt;
+            color: @color_aeroway_runway_line;
+        }
+    }
+
+    /******************** Line names *************************/
+
+    // road references
+    |z9-( [highway=motorway], [highway=trunk], [highway=primary] ),
+    |z10-[highway=secondary] {
+        text: eval(any(tag('int_ref'), tag('ref')));
+        text-color: @color_suburb_text;
+        font-size:8;
+        font-stroke-width:1pt;
+        font-stroke-color: @color_label_stroke;
+        text-priority: 4;
+    }
+
+    |z10-( [highway=motorway], [highway=trunk], [highway=primary] ),
+    |z11-[highway=secondary] {
+        text: eval(any(tag('ref'), tag('int_ref')));
+    }
+
+    // highway names
+    |z13-( [highway=motorway], [highway=trunk], [highway=primary] ),
+    |z14-[highway=secondary] {
+        text: eval(any(locTag('name'), tag('ref'), tag('int_ref')));
+        text-color: @color_label_text;
+        font-size:11;
+        font-stroke-width:2pt;
+        font-stroke-color: @color_label_stroke;
+        text-priority: 5;
+    }
+
+
+    // bigger font size from zoom 11
+    |z10-[highway=primary],
+    |z10-[highway=secondary],
+    |z11-[highway=motorway],
+    |z11-[highway=trunk] {
+        font-size:10;
+    }
+
+    |z15-{
+        [highway=residential], [highway=living_street], [highway=tertiary], [highway=service], [highway=unclassified], [highway=bus_guideway], [highway=road] {
+            text: eval(locTag('name'));
+            text-priority: 4;
+            text-color: @color_label_text;
+            font-size:10;
+            font-stroke-width:1pt;
+            font-stroke-color: @color_label_stroke;
+        }
+    @if SubStyle != Car
+        // small highway name rule
+        [highway=footway], [highway=path], [highway=cycleway], [highway=bridleway], [highway=steps] {
+            text: eval(locTag('name'));
+            text-priority: 3;
+            text-color: @color_label_text;
+            font-size:10;
+            font-stroke-width:1pt;
+            font-stroke-color: @color_label_stroke;
+        }
+    @endif
+    }
+
+    |z13-[highway][access=private] {
+        text-color: @color_private_access_text;
+    }
+
+    // river names
+    |z16-[waterway=river],
+    |z17-[waterway=stream] {
+        text: eval(locTag('name'));
+        text-color: @color_water_text;
+        font-size:11;
+        font-stroke-width:2pt;
+        font-stroke-color: @color_water;
+    }
+
+    @if PistesAndLifts
+        |z15-[piste:difficulty] {
+            text:eval(any(locTag('name'), tag('ref')));
+            text-color: @color_label_text;
+            font-size:12;
+            font-stroke-width:2pt;
+            font-stroke-color: @color_label_stroke;
+        }
+
+        |z13-{
+            [piste:difficulty] {
+                color:white;
+                width:2pt;
+                dashes-width: none;
+            }
+            [piste:difficulty=novice] {
+                color: @color_difficulty_novice;
+                text-color: @color_difficulty_novice;
+            }
+            [piste:difficulty=easy] {
+                color: @color_difficulty_easy;
+                text-color: @color_difficulty_easy;
+            }
+            [piste:difficulty=intermediate] {
+                color: @color_difficulty_intermediate;
+                text-color: @color_difficulty_intermediate;
+            }
+            [piste:difficulty=advanced],
+            [piste:difficulty=expert],
+            [piste:difficulty=extreme] {
+                color: @color_difficulty_expert;
+                text-color: @color_difficulty_expert;
+            }
+
+            [piste:difficulty=extreme] {
+                dashes: 4,4;
+                dashes-width: 2pt;
+            }
+            [piste:difficulty=freeride] {
+                text-color: @color_difficulty_freeride;
+                dashes-color: @color_difficulty_freeride;
+                dashes: 4,4;
+                dashes-width: 2pt;
+            }
+
+            [aerialway] { // chair_lift, cable_car, drag_lift
+                color: black;
+                width: 1pt;
+                dashes: 2,6;
+                dashes-width: 4pt;
+                dashes-color: black;
+            }
+        }
+
+        |z15-[aerialway] {
+            text:eval(any(locTag('name'), tag('ref')));
+            text-color: @color_aerialway_text;
+            font-size:12;
+            font-stroke-width:2pt;
+            font-stroke-color: @color_label_stroke;
+        }
+    @endif
+    
+    |z14-[man_made=cutline] {
+        color: @color_ground;
+        width:3pt;
+    }
+
+@if Style == Outdoor
+    |z14-[natural=cliff] {
+        width: 8pt;
+        fill-image: 'cliff.png';
+        dashes: 8,0;
+        dashes-width: 1pt;
+        dashes-color: #808080;
+    }
+@endif
+}

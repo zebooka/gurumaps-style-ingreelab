@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="29px" viewBox="0 0 35 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>education</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="p" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="education" sketch:type="MSLayerGroup" fill="#888888">
+            <path d="M26.604,18.271 L26.604,14.271 L26.422,14.271 C25.588,11.989 21.957,10.271 17.604,10.271 C13.251,10.271 9.621,11.989 8.787,14.271 L8.605,14.271 L8.605,18.271 L0.605,10.271 L16.605,0.271 L18.605,0.271 L34.605,10.271 L26.604,18.271 L26.604,18.271 Z M4.604,18.271 L6.604,20.271 L6.604,22.271 L8.604,28.271 L2.604,28.271 L4.604,22.271 L4.604,18.271 L4.604,18.271 Z M17.604,12.271 C21.469,12.271 24.604,14.062 24.604,16.271 L24.604,23.785 C22.956,22.869 20.45,22.271 17.604,22.271 C14.758,22.271 12.252,22.869 10.604,23.785 L10.604,16.271 C10.604,14.062 13.738,12.271 17.604,12.271 L17.604,12.271 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

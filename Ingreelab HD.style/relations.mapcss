@@ -1,0 +1,107 @@
+@if Style == Outdoor
+relation[type=route] {
+//    outline-width: 5pt;
+//    outline-color: pink;
+
+@if SubStyle == Hike
+    relation[route=hiking],
+    relation[route=foot] {
+        line|z9-12 {
+            layer: 6;
+            relation[network=lwn] {
+                width: eval( zlinear(9, 1px,1pt,2pt,3pt,4pt ));
+                color: #0000ff80; // blue
+                z-index: 1;
+                details-enabled: true;
+            }
+            relation[network=rwn] {
+                width: eval( zlinear(9, 1pt,2pt,3pt,4pt ));
+                color: #ab28ff; // violet
+                z-index: 2;
+                details-enabled: true;
+            }
+            relation[network=iwn],
+            relation[network=nwn] {
+                width: eval( zlinear(9, 2pt,3pt,3pt,4pt ));
+                color: #ff0000aa; // red
+                z-index: 3;
+                details-enabled: true;
+            }
+        }
+        line|z13-16 {
+            outline-width: eval( zlinear(13, 6pt,8pt,10pt,12pt ));
+            outline-color: #00000000; // if there is no valid network tag, outline is sensless
+            relation[network=lwn] {
+                outline-color: #0000ff50;
+                details-enabled: true;
+            }
+            relation[network=rwn] {
+                outline-color: #ab28ff50;
+                details-enabled: true;
+            }
+            relation[network=iwn],
+            relation[network=nwn] {
+                outline-color: #ff000050;
+                details-enabled: true;
+            }
+        }
+    }
+@endif
+@if SubStyle == Bike
+    relation[route=bicycle] {
+        line|z9-12 {
+            layer: 6;
+            relation[network=lcn] {
+                width: eval( zlinear(9, 1px,1pt,2pt,3pt,4pt ));
+                color: #0000ff80; // blue
+                z-index: 1;
+                details-enabled: true;
+            }
+            relation[network=rcn] {
+                width: eval( zlinear(9, 1pt,2pt,3pt,4pt ));
+                color: #ab28ff; // violet
+                z-index: 2;
+                details-enabled: true;
+            }
+            relation[network=icn],
+            relation[network=ncn] {
+                width: eval( zlinear(9, 2pt,3pt,3pt,4pt ));
+                color: #ff0000aa; // red
+                z-index: 3;
+                details-enabled: true;
+            }
+        }
+        line|z13-16 {
+            outline-width: eval( zlinear(13, 6pt,8pt,10pt,12pt ));
+            outline-color: #00000000; // if there is no valid network tag, outline is sensless
+            relation[network=lcn] {
+                outline-color: #0000ff50;
+                details-enabled: true;
+            }
+            relation[network=rcn] {
+                outline-color: #ab28ff50;
+                details-enabled: true;
+            }
+            relation[network=icn],
+            relation[network=ncn] {
+                outline-color: #ff000050;
+                details-enabled: true;
+            }
+        }
+    }
+@endif
+}
+@endif
+
+@if SelectedRelations
+    @SelectedRelations {
+        line|z9-12 {
+            outline-width: eval( zlinear(9, 4pt,5pt,5pt,6pt ));
+            outline-color: #ff000050;
+        }
+        line|z13- {
+            width: eval( zlinear(9, 2pt,3pt,3pt,4pt ));
+            color: #ff0000aa; // red
+        }
+    }
+@endif

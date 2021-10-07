@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="28px" height="30px" viewBox="0 0 28 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>mall</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="p" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="mall" sketch:type="MSLayerGroup" fill="#888888">
+            <path d="M-1.77635684e-15,30 L28,30 L25.2000998,8 C25.1991016,8 2.79990018,8 2.79990018,8 L-1.77635684e-15,30 Z M8,13 C6.896,13 6,12.1061989 6,11 C6,9.89380106 6.896,9 8,9 C9.104,9 10,9.89572321 10,11 C10,12.1061989 9.104,13 8,13 L8,13 Z M20,13 C18.896,13 18,12.1061989 18,11 C18,9.89572321 18.896,9 20,9 C21.104,9 22,9.89572321 22,11 C22,12.1042768 21.106,13 20,13 Z M13.4995139,0 C9.9157879,0 7,3.14018692 7,7 L8.50018697,7 C8.50018697,4.03091301 10.7431755,1.61538462 13.4995139,1.61538462 C16.2558522,1.61538462 18.499813,4.03091301 18.499813,7 L20,7 C20,3.14018692 17.0832398,0 13.4995139,0 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
