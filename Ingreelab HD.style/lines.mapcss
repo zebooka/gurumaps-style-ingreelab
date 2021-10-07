@@ -310,18 +310,20 @@ line {
         }
         |z10-[railway=rail] {
             dashes-color: @color_railway_dashes;
-            dashes: 8,8;
+            dashes: 4,2;
             width: 4pt;
             dashes-width: 2pt;
             galileo-stencil-type: drop-same;
             galileo-stencil-ref: 4;
             linecap: none;
             z-index: 6;
-            |z15- {
+            |z14- {
             //                           17  18
                 width: eval( zlinear(17, 4pt,6pt) );
-                fill-image: "railway.png";
-                dashes-width: none;
+                color: @color_railway_dashes;
+                dashes-color: @color_railway_gap;
+                dashes: 8,8;
+                dashes-width: eval( zlinear(17, 2pt,3pt) );
                 galileo-stencil-type: none;
             }
         }
@@ -571,13 +573,13 @@ line {
         width:3pt;
     }
 
-@if Style == Outdoor
-    |z14-[natural=cliff] {
+    |z13-[natural=cliff],
+    |z13-[natural=earth_bank] {
         width: 8pt;
         fill-image: 'cliff.png';
         dashes: 8,0;
-        dashes-width: 1pt;
-        dashes-color: #808080;
+        //                              14  15
+        dashes-width: eval( zlinear(14, 1pt,2pt) );
+        dashes-color: @color_cliff;
     }
-@endif
 }
