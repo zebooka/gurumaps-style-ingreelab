@@ -246,6 +246,10 @@ area {
         fill-color: @color_glacier;
         z-index:-10;
     }
+    |z9-[natural=bare_rock] { // TODO: not supported yet
+        fill-color: gray;
+        z-index:-10;
+    }
 
     // 0
 

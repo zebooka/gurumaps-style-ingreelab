@@ -582,4 +582,9 @@ line {
         dashes-width: eval( zlinear(14, 1pt,2pt) );
         dashes-color: @color_cliff;
     }
+
+    |z11-[natural=ridge] {
+        width: 1pt;
+        color: brown;
+    }
 }
