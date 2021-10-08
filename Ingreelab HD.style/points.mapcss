@@ -897,9 +897,9 @@ node,area {
             // parkings
             [amenity=parking] {
                 text-priority: -1;
-                icon-image:"parking.svg";
-                icon-scale:0.50;
-                icon-tint:#B0A18B;
+                icon-image: "parking.svg";
+                icon-scale: 0.50;
+                icon-tint: #0077ff;
             }
         }
     @endif
