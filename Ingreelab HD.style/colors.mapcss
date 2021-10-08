@@ -36,7 +36,7 @@
 @color_playground: #B9E6C0;
 @color_private: #cccca7;
 @color_quarry: #C4C2C2;
-@color_sand: #F7ECD2; // l: -0.07
+@color_sand: #fff2b3; // l: -0.07
 @color_scrub: #C8D7AB;
 @color_sports_centre: #DFFCE2;
 @color_stadium: #9EC7BC;
