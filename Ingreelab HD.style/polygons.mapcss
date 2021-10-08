@@ -105,6 +105,9 @@ area {
     |z13-[landuse=cemetery]{
         z-index: -14;
         fill-color: @color_landuse_cemetery;
+        |z14- {
+            fill-image: "cemetery.png";
+        }
     }
 
     |z15-[landuse=railway]{
