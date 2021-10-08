@@ -275,16 +275,15 @@ area {
         }
     }
 
-    @if SubStyle != Car
-        |z10-[leisure=nature_reserve] {
-            color: @color_national_park;
-            width: 3pt;
-        }
-        |z9-[boundary=national_park] {
-            color: @color_national_park;
-            width: 2pt;
-        }
-    @endif
+    |z10-[leisure=nature_reserve] {
+        color: @color_national_park;
+        width: 3pt;
+    }
+    |z9-[boundary=national_park] {
+        color: @color_national_park;
+        width: 2pt;
+        fill-image: @image_national_park_area;
+    }
 
     |z11-[aeroway=aerodrome] {
         fill-color: @color_aeroway_aerodrome;

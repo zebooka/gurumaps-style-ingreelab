@@ -6,6 +6,7 @@
     @import "colors_dark.mapcss";
     @image_noData: "noData_dark.png";
     @image_forbidden_area: "forbidden_area_dark.png";
+    @image_national_park_area: "national_park_area_dark.png";
     @image_wood: "wood_dark.png";
     @image_garden: "garden_dark.png";
     @image_scrub: "scrub_dark.png";
@@ -19,6 +20,7 @@
     @import "colors.mapcss";
     @image_noData: "noData.png";
     @image_forbidden_area: "forbidden_area.png";
+    @image_national_park_area: "national_park_area.png";
     @image_wood: "wood.png";
     @image_garden: "garden.png";
     @image_scrub: "scrub.png";
