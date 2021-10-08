@@ -504,13 +504,13 @@ node,area {
 
         node|z13-[railway=halt] {
             icon-image:"railway_station.svg";
-            icon-scale:w;
+            icon-scale:2;
             icon-tint:@color_railway_station;
         }
 
         |z13-[railway=station][transport=subway] {
-            icon-image:"subway.svg";
-            icon-scale:2;
+            icon-image:"subway_m.svg";
+            icon-scale:3;
             icon-tint:eval(any(tag('colour'), @color_icon_tint));
 
             text-priority: 6; // выше чем у названий дорог
