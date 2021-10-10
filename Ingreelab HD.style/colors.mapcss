@@ -2,6 +2,7 @@
 // Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
 // Copyright (c) 2021 Anton Bondar http://zebooka.com
 
+@color_aerialway: #444;
 @color_aeroway_aerodrome: #F8E6E0;
 @color_aeroway_apron: #DED0D5;
 @color_aeroway_runway: #F1F8FC;

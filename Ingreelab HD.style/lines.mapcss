@@ -536,18 +536,18 @@ line {
             }
 
             [aerialway] { // chair_lift, cable_car, drag_lift
-                color: black;
+                color: @color_aerialway;
                 width: 1pt;
                 dashes: 2,6;
                 dashes-width: 4pt;
-                dashes-color: black;
+                dashes-color: @color_aerialway;
             }
         }
 
         |z15-[aerialway] {
             text:eval(any(locTag('name'), tag('ref')));
             text-color: @color_aerialway_text;
-            font-size:12;
+            font-size: 12;
             font-stroke-width:2pt;
             font-stroke-color: @color_label_stroke;
         }
