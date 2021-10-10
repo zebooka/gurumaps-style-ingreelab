@@ -44,11 +44,9 @@
 @color_swimming_pool: #6FB8E3;
 @color_tunnel: #D0D0D0;
 @color_water: #507DBF; ///
-@color_water_icon: #003c6b;
 @color_water_underground: #507DBF66;
 @color_wetland: #95E0B899;
 @color_wood: #8FB078; // l: -0.07
-@color_wood_icon: #3E7326;
 
 @color_label_text: #21211F;
 @color_name_text: #2E2D2B;
@@ -74,8 +72,13 @@
 @color_difficulty_expert: #000;
 @color_difficulty_freeride: #FFA500;
 
-@color_icon_tint: #866E54;
 @color_icon_capital_tint: #3A3A3A;
+@color_icon_charging_station: #75e300;
+@color_icon_fuel: #ee4000;
+@color_icon_parking: #0077ff;
+@color_icon_tint: #866E54;
+@color_icon_water: #003c6b;
+@color_icon_wood: #3E7326;
 
 // roads of all kinds
 @color_motorway_casing: #663a0e; // l: 0.1
@@ -96,18 +99,18 @@
 @color_small_road: #EEE; // l: 0.4
 @color_small_road_casing: #808080; // l: 0.1
 @color_bridge: #A4A8AB; // l: 0.1
-@color_railroad_tunnel: #A4A8ABAA; // l: 0.1
+@color_road_construction: #F7BE81; // l: 0.1
+@color_track_dashes: #555; // l: 0.4
+@color_path_dashes: #555;
+
 @color_cycleway_dashes: #6876e1; // l: 0.1
 @color_footway_area: #F8F1EA; // l: 0.1
 @color_footway_casing: #fefefe30;
-@color_road_construction: #F7BE81; // l: 0.1
 @color_dashes_casing: #FEFEFE30;
-
 @color_footway_dashes: #555; // l: 0.1
-@color_path_dashes: #555;
-@color_track_dashes: #555; // l: 0.4
 @color_pedestrian: #777;
 
+@color_railroad_tunnel: #A4A8ABAA; // l: 0.1
 @color_railway: #999; // l: 0.1
 @color_railway_gap: #CCC; // l: 0.1
 @color_railway_dashes: #555; // l: 0.1
