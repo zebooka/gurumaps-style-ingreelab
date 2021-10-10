@@ -285,22 +285,20 @@ line {
             color: @color_small_road;
         }
         |z10-[railway=rail] {
-            dashes-color: @color_railway_dashes;
-            dashes: 4,2;
-            width: 4pt;
-            dashes-width: 2pt;
+            //color: @color_railway_dashes;
+            //dashes-color: @color_railway_gap;
+            //dashes-color: @color_railway_dashes;
+            //dashes: 4,2;
+            width: 3pt;
+            //dashes-width: 1pt;
             galileo-stencil-type: drop-same;
             galileo-stencil-ref: 4;
             linecap: none;
             z-index: 6;
-            |z14- {
-            //                           17  18
-                width: eval( zlinear(17, 4pt,6pt) );
-                color: @color_railway_dashes;
-                dashes-color: @color_railway_gap;
-                dashes: 8,8;
-                dashes-width: eval( zlinear(17, 2pt,3pt) );
-                galileo-stencil-type: none;
+            fill-image: "railway.png";
+            |z12- {
+                width: 4pt;
+                fill-image: "railway12.png";
             }
         }
         
