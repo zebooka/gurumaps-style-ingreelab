@@ -79,7 +79,7 @@ area {
 
     // -14
     // green color again
-    |z11-{
+    |z10-{
         [landuse=farm], [landuse=village_green], [landuse=recreation_ground], [landuse=vineyard], [leisure=common], [leisure=golf_course] {
             z-index: -14;
             fill-color: @color_farm;

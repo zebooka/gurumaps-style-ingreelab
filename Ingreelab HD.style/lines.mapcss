@@ -69,6 +69,8 @@ line {
     //                          6   7   8   9   c10 c11 c12 c13 c14 c15
         width: eval( zlinear(6, 2pt,2pt,2pt,2pt,3pt,2pt,3pt,3pt,3pt,max(4pt, metric(any(tag(lanes),2)*2)) ));
         color: @color_primary;
+        casing-color: @color_primary_casing;
+        casing-width: 0.5pt;
         z-index: 3;
         linecap: round;
     }
@@ -91,6 +93,8 @@ line {
     //                           11  c12 c13 c14 c15
         width: eval( zlinear(11, 2pt,3pt,4pt,4pt,max(4pt, metric(any(tag(lanes),2)*2)) ));
         color: @color_secondary;
+        casing-color: @color_secondary_casing;
+        casing-width: 0.5pt;
         z-index: 2;
         linecap: round;
     }
@@ -128,7 +132,7 @@ line {
     |z10-{
         [highway=tertiary], line|z12-[highway=tertiary_link] {
             //                       11  12  13  14  15
-            width: eval( zlinear(11, 1pt,2pt,2pt,2pt,3pt,max(3pt, metric(any(tag(lanes),2)*2)) ));
+            width: eval( zlinear(11, 1.5pt,2pt,2pt,2pt,3pt,max(3pt, metric(any(tag(lanes),2)*2)) ));
             color: @color_tertiary_small;
             z-index: 1;
             linecap: round;
