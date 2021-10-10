@@ -18,7 +18,7 @@
 @color_cliff: #b25c16;
 @color_construction: #6e6e6e;
 @color_farm: #CFDEC6;
-@color_farmyard: #EDDDCA; // s: -0.15
+@color_farmyard: #cba57b; // s: -0.15
 @color_glacier: #E0F8F7;
 @color_grass: #C8DF9F; // l: -0.07
 @color_ground: #EAE3D3; // s: -0.35
