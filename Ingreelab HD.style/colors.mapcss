@@ -23,7 +23,7 @@
 @color_ground: #EAE3D3; // s: -0.35
 @color_hedge: #749933;
 @color_hospital: #FCFCDC;
-@color_landuse_cemetery: #a6a6a6; // s: -0.15
+@color_landuse_cemetery: #a6b09c; // s: -0.15
 @color_landuse_commercial: #F3E3D9; // s: -0.15
 @color_landuse_parking: #FFFCA0; 
 @color_landuse_residential: #D6D5B4; // s: -0.15 
