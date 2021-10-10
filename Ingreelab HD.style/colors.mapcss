@@ -16,6 +16,7 @@
 @color_building_planned: #E1D4C6;
 @color_building_stroke: #B39B7C;
 @color_cliff: #b25c16;
+@color_construction: #6e6e6e;
 @color_farm: #CFDEC6;
 @color_farmyard: #EDDDCA; // s: -0.15
 @color_glacier: #E0F8F7;

@@ -63,11 +63,19 @@ area {
 
     // mud of all kinds
     |z13-{
-        [landuse=construction], [landuse=brownfield], [natural=mud] {
+        [landuse=brownfield], [natural=mud] {
             z-index: -15;
             fill-color: @color_mud;
         }
     }
+
+    |z13-[landuse=construction] {
+        z-index: -15;
+        fill-color: @color_construction;
+        fill-image: "construction.png";
+    }
+
+
 
     // -14
     // green color again
