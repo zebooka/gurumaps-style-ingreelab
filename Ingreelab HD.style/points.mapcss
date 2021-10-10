@@ -135,9 +135,9 @@ node,area {
             text: eval(locTag('name'));
             text-color: @color_water_text;
             text-priority: 5;
-            font-size:16;
-            font-stroke-width:2pt;
-            font-stroke-color: @color_water;
+            font-size: 16;
+            font-stroke-width: 1pt;
+            font-stroke-color: @color_label_stroke;
         }
 
         |z5-8[place=ocean] {
@@ -154,9 +154,9 @@ node,area {
             [landuse=basin]  {
                 text: eval(locTag('name'));
                 text-color: @color_water_text;
-                font-size:9;
-                font-stroke-width:2pt;
-                font-stroke-color: @color_water;
+                font-size: 10;
+                font-stroke-width: 1pt;
+                font-stroke-color: @color_label_stroke;
             }
         }
 
@@ -1100,10 +1100,10 @@ node,area {
             }
         }
         |z14-[natural=spring] {
-            text:"s";
-            text-color: @color_water;
-            font-size:12;
-            font-stroke-width:2pt;
+            text: "s";
+            text-color: @color_water_text;
+            font-size: 12;
+            font-stroke-width: 1pt;
             font-stroke-color: @color_label_stroke;
         }
 @if SubStyle == Bike

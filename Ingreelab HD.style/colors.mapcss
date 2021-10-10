@@ -59,7 +59,7 @@
 @color_public_transport_text: #383835;
 @color_private_access_text: #8b100e;
 @color_label_stroke: #FFFFFFEE;
-@color_water_text: #FFF;
+@color_water_text: #365380;
 @color_aerialway_text: #000;
 @color_shop_text: #5B3A05;
 @color_beach_text: #807459;
