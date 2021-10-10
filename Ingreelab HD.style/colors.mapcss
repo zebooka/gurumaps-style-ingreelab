@@ -44,7 +44,7 @@
 @color_swimming_pool: #6FB8E3;
 @color_tunnel: #D0D0D0;
 @color_water: #507DBF; ///
-@color_water_icon: #135386;
+@color_water_icon: #003c6b;
 @color_water_underground: #507DBF66;
 @color_wetland: #95E0B899;
 @color_wood: #8FB078; // l: -0.07
@@ -65,6 +65,8 @@
 @color_beach_text: #807459;
 @color_peak_text: #A52A2A;
 @color_volcano_text: #FF0000;
+@color_trunk_text: #222;
+@color_trunk_text_stroke: #F98819;
 
 @color_difficulty_novice: #008000;
 @color_difficulty_easy: #0000FF;

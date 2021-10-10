@@ -175,38 +175,35 @@ node,area {
         |z16-[landuse=reservoir] {
             text: eval(locTag('name'));
             text-color: @color_water_text;
-            font-size:12;
-            font-stroke-width:2pt;
-            font-stroke-color: @color_water;
-
+            font-size: 12;
+            font-stroke-width: 1pt;
+            font-stroke-color: @color_label_stroke;
             text-priority: 2;
         }
     }
 
-    @if SubStyle != Car
-        area{
-            |z9-[boundary=national_park],
-            |z10-[leisure=nature_reserve] {
-                text: eval(locTag('name'));
-                text-color: @color_national_park_text;
-                text-priority: 4;
-                font-size: 8;
-                font-stroke-width:2pt;
-                font-stroke-color: @color_wood;
-            }
-            |z15-(
-                [leisure=park],
-                [leisure=garden]
-            ) {
-                text: eval(locTag('name'));
-                text-color: @color_national_park_text;
-                text-priority: -1; // если хватает места - покажем
-                font-size: 8;
-                font-stroke-width:2pt;
-                font-stroke-color: @color_wood;
-            }
+    area{
+        |z9-[boundary=national_park],
+        |z10-[leisure=nature_reserve] {
+            text: eval(locTag('name'));
+            text-color: @color_national_park_text;
+            text-priority: 4;
+            font-size: 8;
+            font-stroke-width: 2pt;
+            font-stroke-color: @color_wood;
         }
-    @endif
+        |z15-(
+            [leisure=park],
+            [leisure=garden]
+        ) {
+            text: eval(locTag('name'));
+            text-color: @color_national_park_text;
+            text-priority: -1; // если хватает места - покажем
+            font-size: 8;
+            font-stroke-width: 2pt;
+            font-stroke-color: @color_wood;
+        }
+    }
 
     |z14-[ref] {
         [boundary=forest_compartment],
@@ -215,7 +212,7 @@ node,area {
             text-color: @color_national_park_text;
             text-priority: -2; // если хватает места - покажем
             font-size: 6;
-            font-stroke-width:1pt;
+            font-stroke-width: 1pt;
             font-stroke-color: @color_wood;
             |z15-{
                 font-size: 8;
