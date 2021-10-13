@@ -2,41 +2,41 @@
 // Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
 // Copyright (c) 2021 Anton Bondar http://zebooka.com
 
-@color_aerialway: #444;
+@color_aerialway: #444; // l: 0.1
 @color_aeroway_aerodrome: #F8E6E0;
 @color_aeroway_apron: #DED0D5;
 @color_aeroway_runway: #F1F8FC;
 @color_aeroway_runway_line: #BDBDBD;
-@color_allotments: #CBB990; 
+@color_allotments: #CBB990; // l: 0
 @color_barrier: #E6A176;
 @color_boundary_country: #ad6cad;
 @color_boundary_other: #ad6cad;
 @color_boundary_state: #ad6cad;
 @color_bridge: #CCC;
 @color_building: #A5A5A5; // l: 0.07 
-@color_building_planned: #E1D4C6;
-@color_building_stroke: #B39B7C;
-@color_cliff: #b25c16;
+@color_building_planned: #E1D4C6; // l: 0
+@color_building_stroke: #B39B7C; // l: 0
+@color_cliff: #b25c16; // l: -0.3
 @color_construction: #6e6e6e;
-@color_farm: #CFDEC6;
-@color_farmyard: #cba57b; // s: -0.15
-@color_glacier: #E0F8F7;
+@color_farm: #CFDEC6; // l: 0.1
+@color_farmyard: #cba57b; // s: -0.3
+@color_glacier: #E0F8F7; // l: 0.1
 @color_grass: #C8DF9F; // l: -0.07
 @color_ground: #EAE3D3; // s: -0.35
 @color_hedge: #749933;
 @color_hospital: #FCFCDC;
 @color_landuse_cemetery: #a6b09c; // s: -0.15
 @color_landuse_commercial: #F3E3D9; // s: -0.15
-@color_landuse_parking: #FFFCA0; 
+@color_landuse_parking: #FFFCA0; // l: 0
 @color_landuse_residential: #D6D5B4; // s: -0.15 
 @color_market: #D9E5B3;
-@color_mud: #E9DFBF;
+@color_mud: #E9DFBF; // l: 0.1
 @color_national_park: #ACCB8A;
 @color_nature_reserve: #BCDB9A30;
 @color_orchard: #C6D876; // l: -0.095
 @color_pitch: #BCDFCD;
 @color_playground: #B9E6C0;
-@color_private: #cccca7;
+@color_private: #cccca7; // l: 0
 @color_quarry: #C4C2C2;
 @color_sand: #fff2b3; // l: -0.07
 @color_scrub: #C8D7AB;
@@ -44,28 +44,28 @@
 @color_stadium: #9EC7BC;
 @color_swimming_pool: #6FB8E3;
 @color_tunnel: #D0D0D0;
-@color_water: #507DBF; ///
+@color_water: #507DBF; // l: -0.2
 @color_water_underground: #507DBF66;
-@color_wetland: #95E0B899;
-@color_wood: #8FB078; // l: -0.07
+@color_wetland: #95E0B899; // l: 0.1
+@color_wood: #8FB078; // l: -0.15
 
-@color_label_text: #21211F;
-@color_name_text: #2E2D2B;
-@color_suburb_text: #7A7C7E;
+@color_label_text: #21211F; // l: 0
+@color_name_text: #2E2D2B;  // l: 0
+@color_suburb_text: #7A7C7E;  // l: 0
 @color_national_park_text: #567634;
 @color_building_text: #937D65;
 @color_entrance_text: #977f65;
 @color_public_transport_text: #383835;
 @color_private_access_text: #8b100e;
-@color_label_stroke: #FFFFFFEE;
+@color_label_stroke: #FFFFFFEE;  // l: 0
 @color_water_text: #365380;
 @color_aerialway_text: #000;
 @color_shop_text: #5B3A05;
 @color_beach_text: #807459;
 @color_peak_text: #A52A2A;
 @color_volcano_text: #FF0000;
-@color_trunk_text: #222;
-@color_trunk_text_stroke: #F98819;
+@color_trunk_text: #222; // c: #F98819
+@color_trunk_text_stroke: #F98819; // c: #222
 
 @color_difficulty_novice: #008000;
 @color_difficulty_easy: #0000FF;
@@ -73,46 +73,47 @@
 @color_difficulty_expert: #000;
 @color_difficulty_freeride: #FFA500;
 
-@color_icon_capital_tint: #3A3A3A;
+@color_icon_capital_tint: #3A3A3A; // l: 0.1
 @color_icon_charging_station: #75e300;
 @color_icon_fuel: #ee4000;
 @color_icon_parking: #0077ff;
-@color_icon_tint: #866E54;
-@color_icon_water: #003c6b;
-@color_icon_wood: #3E7326;
+@color_icon_tint: #866E54; // l: -0.1
+@color_icon_water: #003c6b; // l: -0.1
+@color_icon_wood: #3E7326; // l: -0.1
 
 // roads of all kinds
-@color_motorway_casing: #663a0e; // l: 0.1
-@color_motorway: #F98819; // l: 0.1
-@color_trunk_casing: #663a0e; // l: 0.1
-@color_trunk: #F98819; // l: 0.1
-@color_primary_casing: #663a0e; // l: 0.1
-@color_primary: #F98819; // l: 0.1
-@color_secondary_casing: #663a0e; // l: 0.1
-@color_secondary: #F98819; // l: 0.1
-@color_raceway_casing: #b36d60; // l: 0.1 
+@color_road_casing: #663a0e; // c: #000
+@color_road: #F98819; // l: 0
+
+@color_motorway_casing: @color_road_casing;
+@color_motorway: @color_road;
+@color_trunk_casing: @color_road_casing;
+@color_trunk: @color_road;
+@color_primary_casing: @color_road_casing;
+@color_primary: @color_road;
+@color_secondary_casing: @color_road_casing;
+@color_secondary: @color_road;
+@color_raceway_casing: #b36d60;
 @color_raceway: #ff9b8a; // l: 0.1 
-@color_tertiary_casing: #663a0e; // l: 0.1
-@color_tertiary: #F98819; // l: 0.1
-@color_tertiary_small: #b36212; // l: 0.1
-@color_residential: #FEFED0; // l: 0.4 
-@color_residential_casing: #8c8c8c; // l: 0.1 
-@color_small_road: #EEE; // l: 0.4
-@color_small_road_casing: #808080; // l: 0.1
-@color_bridge: #A4A8AB; // l: 0.1
-@color_road_construction: #F7BE81; // l: 0.1
-@color_track_dashes: #555; // l: 0.4
-@color_path_dashes: #555;
+@color_tertiary_casing: @color_road_casing;
+@color_tertiary: @color_road;
+@color_tertiary_small: #b36212; // l: -0.1
+@color_residential: #FEFED0; // l: 0.1
+@color_residential_casing: #8c8c8c; // c: #000
+@color_small_road: #EEE; // l: 0.3
+@color_small_road_casing: #808080; // c: #000
+@color_bridge: #A4A8AB; // l: -0.1
+@color_road_construction: #F7BE81; // l: 0
+@color_track_dashes: #555; // c: #333
+@color_path_dashes: #555; // c: #333
 
 @color_cycleway_dashes: #6876e1; // l: 0.1
-@color_footway_area: #F8F1EA; // l: 0.1
-@color_footway_casing: #fefefe30;
-@color_dashes_casing: #FEFEFE30;
-@color_footway_dashes: #555; // l: 0.1
-@color_pedestrian: #777;
+@color_footway_area: #F8F1EA; // l: 0.3
+@color_footway_dashes: #555; // c: #333
+@color_pedestrian: #777; // c: #444
 
 @color_railroad_tunnel: #A4A8ABAA; // l: 0.1
 @color_railway: #999; // l: 0.1
 @color_railway_gap: #CCC; // l: 0.1
 @color_railway_dashes: #555; // l: 0.1
-@color_railway_station: #2471ff;
+@color_railway_station: #2471ff; // l: 0.1

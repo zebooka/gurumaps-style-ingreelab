@@ -216,10 +216,6 @@ line {
             [tracktype=grade1]{
                 dashes:8,2;
             }
-            |z15-{
-                casing-color: @color_footway_casing;
-                casing-width: 1pt;
-            }
         }
         [highway=pedestrian] {
             width:        eval( zlinear(14, 4pt,5pt,5pt,6pt ) );
@@ -299,10 +295,10 @@ line {
             galileo-stencil-ref: 4;
             linecap: none;
             z-index: 6;
-            fill-image: "railway.png";
+            fill-image: @image_railway;
             |z12- {
                 width: 4pt;
-                fill-image: "railway12.png";
+                fill-image: @image_railway12;
             }
         }
         

@@ -13,6 +13,8 @@
     @image_orchard: "orchard_dark.png";
     @image_plant_nursery: "plant_nursery_dark.png";
     @image_quarry: "quarry_dark.png";
+    @image_railway: "railway_dark.png";
+    @image_railway12: "railway12_dark.png";
     @image_sand: "sand_dark.png";
     @image_scrub: "scrub_dark.png";
     @image_vineyard: "vineyard_dark.png";
@@ -28,6 +30,8 @@
     @image_orchard: "orchard.png";
     @image_plant_nursery: "plant_nursery.png";
     @image_quarry: "quarry.png";
+    @image_railway: "railway.png";
+    @image_railway12: "railway12.png";
     @image_sand: "sand.png";
     @image_scrub: "scrub.png";
     @image_vineyard: "vineyard.png";
