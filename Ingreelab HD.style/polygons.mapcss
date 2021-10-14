@@ -72,7 +72,7 @@ area {
     |z13-[landuse=construction] {
         z-index: -15;
         fill-color: @color_construction;
-        fill-image: "construction.png";
+        fill-image: @image_construction;
     }
 
 
@@ -114,7 +114,7 @@ area {
         z-index: -14;
         fill-color: @color_landuse_cemetery;
         |z14- {
-            fill-image: "cemetery.png";
+            fill-image: @image_cemetery;
         }
     }
 

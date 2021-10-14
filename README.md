@@ -20,6 +20,7 @@ It will be added into the offline maps list as `Ingreelab HD`.
 * Android: https://play.google.com/store/apps/details?id=com.bodunov.galileo
 
 * Default style: https://github.com/GuruMaps/MapStyle
+* MapCSS: https://gurumaps.app/manuals/ios/06-mapcss.html
 
 ## Authors
 

@@ -2,48 +2,48 @@
 // Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
 // Copyright (c) 2021 Anton Bondar http://zebooka.com
 
-@color_aerialway: #D4D4D4; // l: 0.1
-@color_aeroway_aerodrome: #F8E6E0;
-@color_aeroway_apron: #DED0D5;
-@color_aeroway_runway: #F1F8FC;
-@color_aeroway_runway_line: #BDBDBD;
-@color_allotments: #6E5D34; // l: 0
-@color_barrier: #E6A176;
+@color_aerialway: #777; // c: #777
+@color_aeroway_aerodrome: #481E10; // l: 0.1
+@color_aeroway_apron: #4C363E; // l: 0.1
+@color_aeroway_runway: #0B2738; // l: 0.1
+@color_aeroway_runway_line: #5B5B5B; // l: 0.1
+@color_allotments: #806B3C; // l: 0.05
+@color_barrier: #B45920; // l: 0.1
 @color_boundary_country: #ad6cad;
 @color_boundary_other: #ad6cad;
 @color_boundary_state: #ad6cad;
-@color_bridge: #CCC;
-@color_building: #6B6B6B; // l: 0.07 
+@color_bridge: #323232; // l: 0
+@color_building: #737373; // l: 0.1
 @color_building_planned: #392C1E; // l: 0
 @color_building_stroke: #836B4C; // l: 0
 @color_cliff: #8B4811; // l: -0.3
-@color_construction: #6e6e6e;
+@color_construction: #404040; // c: #404040
 @color_farm: #415933; // l: 0.1
-@color_farmyard: #685C4F; // s: -0.3
+@color_farmyard: #5F4325; // l: -0.1
 @color_glacier: #104846; // l: 0.1
 @color_grass: #344517; // l: -0.07
 @color_ground: #202020; // s: -0.35
-@color_hedge: #749933;
-@color_hospital: #FCFCDC;
-@color_landuse_cemetery: #59555C; // s: -0.15
+@color_hedge: #A7CC66; // l: -0
+@color_hospital: #222202; // l: 0
+@color_landuse_cemetery: #42473d; // c: #42473d
 @color_landuse_commercial: #22160F; // s: -0.15
-@color_landuse_parking: #5F5C00; // l: 0
+@color_landuse_parking: #99825f; // c: #99825f
 @color_landuse_residential: #424131; // s: -0.15 
-@color_market: #D9E5B3;
+@color_market: #404C19; // l: 0
 @color_mud: #655623; // l: 0.1
-@color_national_park: #ACCB8A;
-@color_nature_reserve: #BCDB9A30;
+@color_national_park: #567534; // l: 0
+@color_nature_reserve: #46652430; // l: 0
 @color_orchard: #56631C; // l: -0.095
-@color_pitch: #BCDFCD;
-@color_playground: #B9E6C0;
+@color_pitch: #204230; // l: 0
+@color_playground: #18461F; // l: 0
 @color_private: #585832; // l: 0
-@color_quarry: #C4C2C2;
+@color_quarry: #3D3B3B; // l: 0
 @color_sand: #282100; // l: -0.07
-@color_scrub: #C8D7AB;
+@color_scrub: #455428; // l: 0
 @color_sports_centre: #DFFCE2;
-@color_stadium: #9EC7BC;
-@color_swimming_pool: #6FB8E3;
-@color_tunnel: #D0D0D0;
+@color_stadium: #386156; // l: 0
+@color_swimming_pool: #1C6590; // l: 0
+@color_tunnel: #2F2F2F; // l: 0
 @color_water: #243E64; // l: -0.2
 @color_water_underground: #507DBF66;
 @color_wetland: #2A915A99; // l: 0.1
@@ -67,16 +67,16 @@
 @color_trunk_text: #F98819; // c: #F98819
 @color_trunk_text_stroke: #222; // c: #222
 
-@color_difficulty_novice: #008000;
-@color_difficulty_easy: #0000FF;
-@color_difficulty_intermediate: #FF0000;
-@color_difficulty_expert: #000;
-@color_difficulty_freeride: #FFA500;
+@color_difficulty_novice: #060; // c: #060
+@color_difficulty_easy: #00C; // c: #00C
+@color_difficulty_intermediate: #C00; // c: #C00
+@color_difficulty_expert: #70A; // c: #70A
+@color_difficulty_freeride: #A60; // c: #A60
 
 @color_icon_capital_tint: #DEDEDE; // l: 0.1
 @color_icon_charging_station: #75e300;
 @color_icon_fuel: #ee4000;
-@color_icon_parking: #0077ff;
+@color_icon_parking: #0052af; // c: #0052af
 @color_icon_tint: #94795C; // l: -0.1
 @color_icon_water: #61B9FF; // l: -0.1
 @color_icon_wood: #85CC65; // l: -0.1

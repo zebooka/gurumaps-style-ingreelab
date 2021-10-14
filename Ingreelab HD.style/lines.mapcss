@@ -551,7 +551,7 @@ line {
     
     |z14-[man_made=cutline] {
         color: @color_ground;
-        width:3pt;
+        width: 3pt;
     }
 
     |z13-[natural=cliff],
