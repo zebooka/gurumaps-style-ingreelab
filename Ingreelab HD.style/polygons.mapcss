@@ -172,10 +172,13 @@ area {
             fill-color: @color_allotments;
         }
     }
-    @if Style == Outdoor
+    //@if Style == Outdoor
         |z15-{
             [natural=wood], [landuse=forest] {
-                fill-image: @image_wood;
+                [leaf_type=broadleaved] { fill-image: @image_wood_broad; } // TODO: not implemented in map data
+                [leaf_type=leafless] { fill-image: @image_wood_leafless; } // TODO: not implemented in map data
+                [leaf_type=mixed] { fill-image: @image_wood_mixed; } // TODO: not implemented in map data
+                [leaf_type=needleleaved] { fill-image: @image_wood_needle; } // TODO: not implemented in map data
             }
             [leisure=garden] {
                 fill-image: @image_garden;
@@ -189,27 +192,18 @@ area {
             [landuse=orchard] {
                 fill-image: @image_orchard;
             }
-            [landuse=plant_nursery], [landuse=greenhouse_horticulture] {
-                fill-image: @image_plant_nursery;
-            }
-            [landuse=allotments] {
-                fill-image: @image_allotments;
-            }
             [landuse=quarry] {
                 fill-image: @image_quarry;
             }
-            [leisure=dog_park] {
-                fill-image: @image_dog_park;
-            }
         }
-    @endif
+    //@endif
 
-    @if SubStyle != Car
+    //@if SubStyle != Car
         |z16-[leisure=sports_centre]{
             z-index: -13;
             fill-color: @color_sports_centre;
         }
-    @endif
+    //@endif
 
     // -12
 

@@ -171,10 +171,10 @@ line {
 
     |z16-{
         [highway][oneway=yes] {
-            fill-image:"arrow.svg";
+            fill-image: "icon/arrow.svg";
         }
         [highway][oneway=-1] {
-            fill-image:"arrow-back.svg";
+            fill-image: "icon/arrow-back.svg";
         }
     }
     /****************************** Detailed highways ************************/

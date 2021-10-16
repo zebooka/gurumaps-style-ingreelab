@@ -4,50 +4,51 @@
 
 @if Theme == Dark
     @import "colors_dark.mapcss";
-    @image_allotments: "allotments_dark.png";
-    @image_cemetery: "cemetery_dark.png";
-    @image_construction: "construction_dark.png";
-    @image_dog_park: "dog_park_dark.png";
-    @image_forbidden_area: "forbidden_area_dark.png";
-    @image_garden: "garden_dark.png";
-    @image_national_park_area: "national_park_area_dark.png";
-    @image_noData: "noData_dark.png";
-    @image_orchard: "orchard_dark.png";
-    @image_plant_nursery: "plant_nursery_dark.png";
-    @image_quarry: "quarry_dark.png";
-    @image_railway: "railway_dark.png";
-    @image_railway12: "railway12_dark.png";
-    @image_sand: "sand_dark.png";
-    @image_scrub: "scrub_dark.png";
-    @image_vineyard: "vineyard_dark.png";
-    @image_wood: "wood_dark.png";
+    @image_cemetery: "dark/cemetery.png";
+    @image_construction: "dark/construction.png";
+    @image_forbidden_area: "dark/forbidden_area.png";
+    @image_garden: "dark/garden.png";
+    @image_national_park_area: "dark/national_park_area.png";
+    @image_nodata: "dark/nodata.png";
+    @image_orchard: "dark/orchard.png";
+    @image_quarry: "dark/quarry.png";
+    @image_railway: "dark/railway.png";
+    @image_railway12: "dark/railway12.png";
+    @image_sand: "dark/sand.png";
+    @image_scrub: "dark/scrub.png";
+    @image_vineyard: "dark/vineyard.png";
+    @image_wetland: "dark/wetland.png";
+    @image_wood_broad: "dark/wood_broad.png";
+    @image_wood_leafless: "dark/wood_leafless.png";
+    @image_wood_mixed: "dark/wood_mixed.png";
+    @image_wood_needle: "dark/wood_needle.png";
 @else // Default colors
     @import "colors.mapcss";
-    @image_allotments: "allotments.png";
-    @image_cemetery: "cemetery.png";
-    @image_construction: "construction.png";
-    @image_dog_park: "dog_park.png";
-    @image_forbidden_area: "forbidden_area.png";
-    @image_garden: "garden.png";
-    @image_national_park_area: "national_park_area.png";
-    @image_noData: "noData.png";
-    @image_orchard: "orchard.png";
-    @image_plant_nursery: "plant_nursery.png";
-    @image_quarry: "quarry.png";
-    @image_railway: "railway.png";
-    @image_railway12: "railway12.png";
-    @image_sand: "sand.png";
-    @image_scrub: "scrub.png";
-    @image_vineyard: "vineyard.png";
-    @image_wood: "wood.png";
+    @image_cemetery: "light/cemetery.png";
+    @image_construction: "light/construction.png";
+    @image_forbidden_area: "light/forbidden_area.png";
+    @image_garden: "light/garden.png";
+    @image_national_park_area: "light/national_park_area.png";
+    @image_nodata: "light/nodata.png";
+    @image_orchard: "light/orchard.png";
+    @image_quarry: "light/quarry.png";
+    @image_railway: "light/railway.png";
+    @image_railway12: "light/railway12.png";
+    @image_sand: "light/sand.png";
+    @image_scrub: "light/scrub.png";
+    @image_vineyard: "light/vineyard.png";
+    @image_wetland: "light/wetland.png";
+    @image_wood_broad: "light/wood_broad.png";
+    @image_wood_leafless: "light/wood_leafless.png";
+    @image_wood_mixed: "light/wood_mixed.png";
+    @image_wood_needle: "light/wood_needle.png";
 @endif
-@image_wetland: "wetland.png";
 
 // canvas color
 canvas
 {
     fill-color: @color_ground;
-    fill-image: @image_noData;
+    fill-image: @image_nodata;
 }
 
 // for any object with tag 'layer', set it's property 'layer', to value of 'layer' tag
