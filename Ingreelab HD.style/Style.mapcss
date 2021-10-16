@@ -5,6 +5,7 @@
 @if Theme == Dark
     @import "colors_dark.mapcss";
     @image_cemetery: "dark/cemetery.png";
+    @image_cliff: "light/cliff.png";
     @image_construction: "dark/construction.png";
     @image_forbidden_area: "dark/forbidden_area.png";
     @image_garden: "dark/garden.png";
@@ -25,6 +26,7 @@
 @else // Default colors
     @import "colors.mapcss";
     @image_cemetery: "light/cemetery.png";
+    @image_cliff: "light/cliff.png";
     @image_construction: "light/construction.png";
     @image_forbidden_area: "light/forbidden_area.png";
     @image_garden: "light/garden.png";

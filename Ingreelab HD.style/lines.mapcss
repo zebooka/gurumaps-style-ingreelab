@@ -557,7 +557,7 @@ line {
     |z13-[natural=cliff],
     |z13-[natural=earth_bank] {
         width: 8pt;
-        fill-image: 'cliff.png';
+        fill-image: @image_cliff;
         dashes: 8,0;
         //                              14  15
         dashes-width: eval( zlinear(14, 1pt,2pt) );
