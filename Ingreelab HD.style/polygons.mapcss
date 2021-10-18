@@ -172,7 +172,6 @@ area {
             fill-color: @color_allotments;
         }
     }
-    //@if Style == Outdoor
         |z15-{
             [natural=wood], [landuse=forest] {
                 [leaf_type=broadleaved] { fill-image: @image_wood_broad; } // TODO: not implemented in map data
@@ -196,14 +195,11 @@ area {
                 fill-image: @image_quarry;
             }
         }
-    //@endif
 
-    //@if SubStyle != Car
         |z16-[leisure=sports_centre]{
             z-index: -13;
             fill-color: @color_sports_centre;
         }
-    //@endif
 
     // -12
 
@@ -352,12 +348,10 @@ area {
 
     // all buildings
     [building] {
-        @if SubStyle != Car
-            |z13-{
-                z-index: 3;
-                fill-color: @color_building;
-            }
-        @endif
+        |z13-{
+            z-index: 3;
+            fill-color: @color_building;
+        }
 
         // building stroke
         |z15-{

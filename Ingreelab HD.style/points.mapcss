@@ -109,12 +109,10 @@ node,area {
             [tourism=theme_park],
             [tourism=zoo]
         @endif
-        @if SubStyle != Car
             area(
                 [highway=pedestrian],
                 [highway=footway]
             ),
-        @endif
         @if Sport
             [leisure=stadium],
         @endif
@@ -396,8 +394,7 @@ node,area {
         text-priority: 0;
     }
 
-    @if SubStyle != Car
-        area|z17-[landuse=cemetery]
+        area|z15-[landuse=cemetery]
         {
             text: eval(locTag('name'));
             text-color: @color_label_text;
@@ -405,7 +402,6 @@ node,area {
             font-stroke-width:1pt;
             font-stroke-color: @color_label_stroke;
         }
-    @endif
 
     // public transport stops
     @if PublicTransport
@@ -428,7 +424,6 @@ node,area {
         font-stroke-color: @color_label_stroke;
     }
 
-    @if SubStyle != Car
         area|z15-[natural=beach] {
             text: eval(locTag('name'));
             text-color: @color_beach_text;
@@ -436,7 +431,6 @@ node,area {
             font-stroke-width: 1pt;
             font-stroke-color: @color_sand;
         }
-    @endif
 
     /************************** Polygon or Node icons **************************/
 
@@ -450,7 +444,6 @@ node,area {
         }
     @endif
 
-    @if SubStyle != Car
         |z17-{
             [amenity=toilets] {
                 icon-image: "icon/wc.svg";
@@ -464,7 +457,6 @@ node,area {
                 icon-tint: @color_icon_tint;
             }
         }
-    @endif
 
     @if Culture
         |z17-[amenity=library] {
@@ -818,7 +810,6 @@ node,area {
     @endif
 
     // TODO: make it @if Style == Outdoor || Tourism
-    @if Style == Outdoor
         // node|z16-[tourism=attraction],
         |z16-{
             [tourism=information], [shop=ticket] {
@@ -851,7 +842,6 @@ node,area {
                 icon-tint: @color_icon_tint;
             }
         }
-    @endif
 
     // Car-everything
     |z15-{
@@ -997,14 +987,12 @@ node,area {
     */
 
     // playgroinds
-    @if SubStyle != Car
         |z17-[leisure=playground]
         {
             icon-image: "icon/playground.svg";
             icon-scale:0.50;
             icon-tint: @color_icon_tint;
         }
-    @endif
 
     // water transport
     node|z16-[amenity=ferry_terminal]
@@ -1104,7 +1092,6 @@ node,area {
             font-stroke-width: 1pt;
             font-stroke-color: @color_label_stroke;
         }
-@if SubStyle == Bike
         |z16-{
             icon-scale:0.50;
             icon-tint: @color_icon_tint;
@@ -1118,7 +1105,6 @@ node,area {
                 icon-image: "icon/bike_service.svg";
             }
         }
-@endif
     }
 
     |z13-{
