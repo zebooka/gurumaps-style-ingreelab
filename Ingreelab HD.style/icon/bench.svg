@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="11" viewBox="0 0 24 11">
-  <g fill="#888" fill-rule="evenodd">
-    <rect width="24" height="3"/>
-    <polygon points="6 0 8 0 5 11 3 11"/>
-    <polygon points="16 0 18 0 21 11 19 11"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="11"><g fill="#888" fill-rule="evenodd"><path d="M0 0h24v3H0z"/><path d="M6 0h2L5 11H3zM16 0h2l3 11h-2z"/></g></svg>

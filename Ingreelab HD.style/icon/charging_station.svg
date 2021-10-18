@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="31px" height="32px" viewBox="0 0 31 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>charging_station</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="p" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="charging_station" sketch:type="MSLayerGroup" fill="#888888">
-            <path d="M31,6 L30,6 L30,2 C30.0030531,2.164 29.7468378,1.907 29,2 C29.1147735,1.907 29,6 29,6 L25,6 L25,2 C24.4789707,1.907 24.2227553,2.164 24,2 L24,6 L23,6 C23.2258085,9.794 23.233784,11.781 27,12 C27.6841548,13.946 28.9094025,16.866 29,20 C28.9094025,26.848 27.2564646,27.001 26,27 C24.5806592,27.001 23.9246682,25.887 24,21 C23.9246682,16.144 19.9857312,16.003 20,16 L20,0 L2,0 L2,30 L0,30 L0,32 L2,32 L20,32 L22,32 L22,30 L20,30 L20,18 C19.9847343,18 21.9915883,18.046 22,24 C21.901863,26.771 23.0234283,28.886 26,29 C31.2302947,29 30.9980061,22.586 31,20 C30.9980061,16.8 29.7219141,13.821 29,12 C30.9900305,11.325 31,9.39 31,6 Z M4,14 L4,3 L18,3 L18,14 L4,14 Z" id="Shape" sketch:type="MSShapeGroup"></path>
-        </g>
-    </g>
-</svg>
+<svg width="31" height="32" xmlns="http://www.w3.org/2000/svg"><path d="M31 6h-1V2c.003.164-.253-.093-1 0 .115-.093 0 4 0 4h-4V2c-.521-.093-.777.164-1 0v4h-1c.226 3.794.234 5.781 4 6 .684 1.946 1.91 4.866 2 8-.09 6.848-1.744 7.001-3 7-1.42.001-2.075-1.113-2-6-.075-4.856-4.014-4.997-4-5V0H2v30H0v2h22v-2h-2V18c-.015 0 1.992.046 2 6-.098 2.771 1.023 4.886 4 5 5.23 0 4.998-6.414 5-9-.002-3.2-1.278-6.179-2-8 1.99-.675 2-2.61 2-6ZM4 14V3h14v11H4Z" fill="#888" fill-rule="evenodd"/></svg>

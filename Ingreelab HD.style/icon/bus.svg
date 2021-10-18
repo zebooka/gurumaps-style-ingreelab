@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="26px" height="32px" viewBox="0 0 26 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>autobus</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="p" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="autobus" sketch:type="MSLayerGroup" fill="#888888">
-            <path d="M23,27 L21.221,27 L19.071,27 L6.93,27 L4.78,27 L3,27 C1.343,27 0,25.656 0,24 L0,16 L1,3 C1,1.343 2.343,0 4,0 L22,0 C23.656,0 25,1.343 25,3 L26,16 L26,24 C26,25.656 24.656,27 23,27 L23,27 Z M4,24 C5.104,24 6,23.104 6,22 C6,20.896 5.104,20 4,20 C2.896,20 2,20.896 2,22 C2,23.104 2.896,24 4,24 L4,24 Z M20,2 L6,2 C5.447,2 5,2.448 5,3 C5,3.552 5.447,4 6,4 L20,4 C20.553,4 21,3.552 21,3 C21,2.448 20.553,2 20,2 L20,2 Z M23,6 C23,4.896 22.104,5 21,5 L5,5 C3.896,5 3,4.896 3,6 L2,14 C2,15.104 2.896,17 4,17 L22,17 C23.104,17 24,15.104 24,14 L23,6 L23,6 Z M22,20 C20.896,20 20,20.896 20,22 C20,23.104 20.896,24 22,24 C23.104,24 24,23.104 24,22 C24,20.896 23.104,20 22,20 L22,20 Z M3,28 L5,28 C5.552,28 6,28.447 6,29 L6,31 C6,31.553 5.552,32 5,32 L3,32 C2.447,32 2,31.553 2,31 L2,29 C2,28.447 2.447,28 3,28 L3,28 Z M21,28 L23,28 C23.552,28 24,28.447 24,29 L24,31 C24,31.553 23.552,32 23,32 L21,32 C20.447,32 20,31.553 20,31 L20,29 C20,28.447 20.447,28 21,28 L21,28 Z" id="Shape" sketch:type="MSShapeGroup"></path>
-        </g>
-    </g>
-</svg>
+<svg width="26" height="32" xmlns="http://www.w3.org/2000/svg"><path d="M23 27H3a3 3 0 0 1-3-3v-8L1 3a3 3 0 0 1 3-3h18a3 3 0 0 1 3 3l1 13v8c0 1.656-1.344 3-3 3ZM4 24a2 2 0 1 0-.001-4.001A2 2 0 0 0 4 24ZM20 2H6a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2Zm3 4c0-1.104-.896-1-2-1H5c-1.104 0-2-.104-2 1l-1 8c0 1.104.896 3 2 3h18c1.104 0 2-1.896 2-3l-1-8Zm-1 14a2 2 0 1 0 .001 4.001A2 2 0 0 0 22 20ZM3 28h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Zm18 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z" fill="#888" fill-rule="evenodd"/></svg>

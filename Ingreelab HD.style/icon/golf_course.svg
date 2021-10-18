@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>golf</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="p" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="golf" sketch:type="MSLayerGroup" fill="#888888">
-            <path d="M27.5,29.166 C25.016,29.166 23,27.152 23,24.666 C23,22.183 25.016,20.166 27.5,20.166 C29.984,20.166 32,22.183 32,24.666 C32,27.152 29.984,29.166 27.5,29.166 L27.5,29.166 Z M12,0.167 L29,8.167 L12,16.167 L12,0.167 L12,0.167 Z M10,31.999 C4.477,31.999 0,29.985 0,27.499 C0,25.165 3.946,23.247 9,23.022 L9,0 L11,0 L11,23.022 C16.053,23.247 20,25.165 20,27.499 C20,29.985 15.521,31.999 10,31.999 Z M11,26.197 L11,27.166 L9,27.166 L9,26.197 C6.718,26.336 5,26.941 5,27.666 C5,28.494 7.238,29.166 10,29.166 C12.762,29.166 15,28.494 15,27.666 C15,26.941 13.282,26.335 11,26.197 L11,26.197 Z" id="Shape" sketch:type="MSShapeGroup"></path>
-        </g>
-    </g>
-</svg>
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"><path d="M27.5 29.166a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9ZM12 .167l17 8-17 8v-16Zm-2 31.832c-5.523 0-10-2.014-10-4.5 0-2.334 3.946-4.252 9-4.477V0h2v23.022c5.053.225 9 2.143 9 4.477 0 2.486-4.479 4.5-10 4.5Zm1-5.802v.969H9v-.969c-2.282.139-4 .744-4 1.469 0 .828 2.238 1.5 5 1.5s5-.672 5-1.5c0-.725-1.718-1.331-4-1.469Z" fill="#888" fill-rule="evenodd"/></svg>

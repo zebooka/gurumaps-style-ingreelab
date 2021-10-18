@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="21" height="29" viewBox="0 0 21 29">
-  <g fill="none" fill-rule="evenodd" transform="matrix(0 -1 -1 0 20.5 29)">
-    <polygon fill="gray" points="0 11 0 1 11 0 19.5 2.5 29 13 22.5 17 0 20"/>
-    <polygon fill="#FFF" fill-opacity=".2" points="11 0 19.5 2.5 13 6"/>
-    <polygon fill="#FFF" fill-opacity=".2" points="0 11 6.5 5.5 9 8.5 13 14.5"/>
-    <polygon fill="#000" fill-opacity=".1" points="6.5 5.5 11 0 13 6"/>
-    <polygon fill="#000" fill-opacity=".1" points="9 8.5 13 6 29 13 13 14.5"/>
-    <polygon fill="#000" fill-opacity=".2" points="9 8.5 6.5 5.5 13 6"/>
-    <polygon fill="#000" fill-opacity=".2" points="0 20 0 11 13 14.5 29 13 22.5 17"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="29"><g fill="none" fill-rule="evenodd"><path fill="gray" d="M9.5 29h10l1-11L18 9.5 7.5 0l-4 6.5L.5 29z"/><path fill="#FFF" fill-opacity=".2" d="M20.5 18 18 9.5 14.5 16zM9.5 29l5.5-6.5-3-2.5-6-4z"/><path fill="#000" fill-opacity=".1" d="m15 22.5 5.5-4.5-6-2zM12 20l2.5-4-7-16L6 16z"/><path fill="#000" fill-opacity=".2" d="m12 20 3 2.5-.5-6.5zM.5 29h9L6 16 7.5 0l-4 6.5z"/></g></svg>
