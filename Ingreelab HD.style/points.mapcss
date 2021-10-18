@@ -974,18 +974,6 @@ node,area {
         }
     @endif
 
-    // bicycle * is removed from main style temporary
-    /*
-    node|z16-[amenity=bicycle_parking],
-    node|z16-[amenity=bicycle_rental],
-    node|z16-[shop=bicycle]
-    {
-        icon-image: "icon/bike.svg";
-        icon-scale:0.50;
-        icon-tint: @color_icon_tint;
-    }
-    */
-
     // playgroinds
         |z17-[leisure=playground]
         {
@@ -1092,7 +1080,11 @@ node,area {
             font-stroke-width: 1pt;
             font-stroke-color: @color_label_stroke;
         }
-        |z16-{
+        |z16-(
+            [amenity=bicycle_parking],
+            [amenity=bicycle_rental],
+            [amenity=bicycle_repair_station]
+        ) {
             icon-scale:0.50;
             icon-tint: @color_icon_tint;
             [amenity=bicycle_parking] {
