@@ -116,4 +116,4 @@
 @color_railway: #999; // l: 0.1
 @color_railway_gap: #CCC; // l: 0.1
 @color_railway_dashes: #555; // l: 0.1
-@color_railway_station: #2471ff; // l: 0.1
+@color_railway_station: #555; // l: 0.1

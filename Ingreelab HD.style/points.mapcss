@@ -411,16 +411,15 @@ node,area {
     @endif
     @if Railway
         |z14-[railway=station][transport=subway],
-        |z15-[railway=station],
-        node|z16-[railway=halt],
+        |z14-[railway=station],
+        node|z14-[railway=halt],
     @endif
     {
         text: eval(locTag('name'));
         text-priority: 5;
         text-color: @color_public_transport_text;
-
-        font-size:11;
-        font-stroke-width:0.8pt;
+        font-size: 10;
+        font-stroke-width: 2pt;
         font-stroke-color: @color_label_stroke;
     }
 
@@ -487,29 +486,27 @@ node,area {
     @if Railway
         |z13-[railway=station] {
             icon-image: "icon/railway_station.svg";
-            icon-scale:2;
-            icon-tint:@color_railway_station;
+            icon-scale: 2.4;
+            icon-tint: @color_railway_station;
         }
 
         node|z13-[railway=halt] {
             icon-image: "icon/railway_station.svg";
-            icon-scale:2;
-            icon-tint:@color_railway_station;
+            icon-scale: 1.8;
+            icon-tint: @color_railway_station;
         }
 
         |z13-[railway=station][transport=subway] {
-            icon-image: "icon/subway_m.svg";
-            icon-scale:3;
-            icon-tint:eval(any(tag('colour'), @color_icon_tint));
-
+            icon-image: "icon/subway.svg";
+            icon-scale: 2;
+            icon-tint: eval(any(tag('colour'), @color_icon_tint));
             text-priority: 6; // выше чем у названий дорог
         }
 
         node|z15-[railway=subway_entrance] {
             icon-image: "icon/circle.svg";
-            icon-scale:1;
-            icon-tint:eval(any(tag('colour'), @color_icon_tint));
-
+            icon-scale: 1;
+            icon-tint: eval(any(tag('colour'), @color_icon_tint));
             text-priority: 7; // выше чем у названий дорог
         }
     @endif
