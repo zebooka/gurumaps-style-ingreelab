@@ -49,13 +49,13 @@
 @color_wetland: #95E0B899; // l: 0.1
 @color_wood: #8FB078; // l: -0.15
 
-@color_label_text: #21211F; // l: 0
-@color_name_text: #2E2D2B;  // l: 0
+@color_label_text: #21211F; // l: -0.1
+@color_name_text: #2E2D2B;  // l: -0.1
 @color_suburb_text: #7A7C7E;  // l: 0
 @color_national_park_text: #567634;
 @color_building_text: #937D65;
 @color_entrance_text: #977f65;
-@color_public_transport_text: #383835;
+@color_public_transport_text: #383835; // l: -0.1
 @color_private_access_text: #8b100e;
 @color_label_stroke: #FFFFFFEE;  // l: 0
 @color_water_text: #365380;
@@ -64,8 +64,8 @@
 @color_beach_text: #807459;
 @color_peak_text: #A52A2A;
 @color_volcano_text: #FF0000;
-@color_trunk_text: #222; // c: #F98819
-@color_trunk_text_stroke: #F98819; // c: #222
+@color_trunk_text: #222;
+@color_trunk_text_stroke: #F98819;
 
 @color_difficulty_novice: #080; // c: #060
 @color_difficulty_easy: #00F; // c: #00C
@@ -77,7 +77,7 @@
 @color_icon_charging_station: #75e300;
 @color_icon_fuel: #ee4000;
 @color_icon_parking: #0077ff; // c: #0052af
-@color_icon_tint: #866E54; // l: -0.1
+@color_icon_tint: #814311; // l: -0.1
 @color_icon_water: #003c6b; // l: -0.1
 @color_icon_wood: #3E7326; // l: -0.1
 
