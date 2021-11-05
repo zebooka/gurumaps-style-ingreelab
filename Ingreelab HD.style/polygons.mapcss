@@ -292,6 +292,9 @@ area {
             color: @color_national_park;
             width: 3pt;
             fill-image: @image_national_park_area;
+            [natural=water] {
+                fill-image: none; // TODO: temporary fix for conflict when lake is natural park/reserve
+            }
         }
     }
 
