@@ -182,13 +182,14 @@ node,area {
 
     area{
         |z9-[boundary=national_park],
-        |z10-[leisure=nature_reserve] {
+        |z9-[leisure=nature_reserve] {
             text: eval(locTag('name'));
             text-color: @color_national_park_text;
             text-priority: 4;
-            font-size: 8;
+            font-size: 9;
+            font-weight: bold;
             font-stroke-width: 2pt;
-            font-stroke-color: @color_wood;
+            font-stroke-color: @color_label_stroke;
         }
         |z15-(
             [leisure=park],
@@ -199,7 +200,7 @@ node,area {
             text-priority: -1; // если хватает места - покажем
             font-size: 8;
             font-stroke-width: 2pt;
-            font-stroke-color: @color_wood;
+            font-stroke-color: @color_label_stroke;
         }
     }
 
