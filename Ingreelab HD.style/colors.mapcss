@@ -18,6 +18,7 @@
 @color_building_stroke: #B39B7C; // l: 0
 @color_cliff: #b25c16; // l: -0.3
 @color_construction: #6e6e6e; // c: #404040
+@color_danger_area: #cb8a8a; // l: 0
 @color_farm: #CFDEC6; // l: 0.1
 @color_farmyard: #cba57b; // l: -0.1
 @color_glacier: #E0F8F7; // l: 0.1

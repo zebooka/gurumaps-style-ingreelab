@@ -286,18 +286,6 @@ area {
         }
     }
 
-    |z9- {
-        [boundary=national_park], [leisure=nature_reserve] {
-            z-index: 2;
-            color: @color_national_park;
-            width: 3pt;
-            fill-image: @image_national_park_area;
-            [natural=water] {
-                fill-image: none; // TODO: temporary fix for conflict when lake is natural park/reserve
-            }
-        }
-    }
-
     |z11-[aeroway=aerodrome] {
         fill-color: @color_aeroway_aerodrome;
     }
@@ -333,9 +321,11 @@ area {
     // 2
 
     // fill image of military area desplayed on top of the other objects
-    |z11-{
-        [landuse=military],[military=danger_area] {
+    |z9- {
+        [landuse=military], [military=danger_area] {
             z-index: 2;
+            color: @color_danger_area;
+            width: eval( zlinear(9, 1pt,2pt) );
             fill-image: @image_forbidden_area;
         }
     }
@@ -343,6 +333,18 @@ area {
     |z13-[leisure=track] {
         z-index: 2;
         fill-color: @color_farm;
+    }
+
+    |z9- {
+        [boundary=national_park], [leisure=nature_reserve] {
+            z-index: 2;
+            color: @color_national_park;
+            width: eval( zlinear(9, 1pt,2pt,3pt) );
+            fill-image: @image_national_park_area;
+            [natural=water] {
+                fill-image: none; // TODO: temporary fix for conflict when lake is natural park/reserve
+            }
+        }
     }
 
     // 3
