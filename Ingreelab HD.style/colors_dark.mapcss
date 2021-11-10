@@ -35,38 +35,41 @@
 @color_national_park: #567534; // l: 0
 @color_nature_reserve: #46652430; // l: 0
 @color_orchard: #56631C; // l: -0.095
+@color_peak: #CB9467; // l: -0.1
 @color_pitch: #204230; // l: 0
 @color_playground: #18461F; // l: 0
 @color_private: #585832; // l: 0
 @color_quarry: #3D3B3B; // l: 0
+@color_ridge: #724927; // l: -0.1
 @color_sand: #282100; // l: -0.07
 @color_scrub: #455428; // l: 0
 @color_sports_centre: #DFFCE2;
 @color_stadium: #386156; // l: 0
 @color_swimming_pool: #1C6590; // l: 0
 @color_tunnel: #2F2F2F; // l: 0
+@color_volcano: #F10; // c: #F10
 @color_water: #243E64; // l: -0.2
 @color_water_underground: #507DBF66;
 @color_wetland: #2A915A99; // l: 0.1
 @color_wood: #415632; // l: -0.15
 
+@color_aerialway_text: #FFFFFF; // l: 0
+@color_beach_text: #A69A7E; // l: 0
+@color_building_text: #9A846C; // l: 0
+@color_entrance_text: #9A8268; // l: 0
+@color_label_stroke: #000000EE;  // l: 0
 @color_label_text: #C7C7C3; // l: -0.1
 @color_name_text: #BBB9B6;  // l: -0.1
-@color_suburb_text: #818384;  // l: 0
 @color_national_park_text: #567634;
-@color_building_text: #937D65;
-@color_entrance_text: #977f65;
+@color_peak_text: #CB9467; // l: -0.1
+@color_private_access_text: #F17573; // l: 0
 @color_public_transport_text: #B1B1AC; // l: -0.1
-@color_private_access_text: #8b100e;
-@color_label_stroke: #000000EE;  // l: 0
-@color_water_text: #365380;
-@color_aerialway_text: #000;
-@color_shop_text: #5B3A05;
-@color_beach_text: #807459;
-@color_peak_text: #A52A2A;
-@color_volcano_text: #FF0000;
+@color_shop_text: #FAD8A3; // l: 0
+@color_suburb_text: #818384;  // l: 0
 @color_trunk_text: #222;
 @color_trunk_text_stroke: #F98819;
+@color_volcano_text: #F10; // c: #F10
+@color_water_text: #5B80B9; // l: -0.1
 
 @color_difficulty_novice: #060; // c: #060
 @color_difficulty_easy: #00C; // c: #00C
