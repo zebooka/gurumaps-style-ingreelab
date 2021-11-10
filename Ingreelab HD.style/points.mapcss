@@ -1034,18 +1034,20 @@ node,area {
         |z11-{
             [natural=peak] {
                 icon-image: "icon/triangle.svg";
-                icon-tint: brown;
+                icon-tint: @color_peak;
             }
             [natural=volcano] {
                 icon-image: "icon/triangle.svg";
-                icon-tint: red;
+                icon-tint: @color_volcano;
+                icon-scale: 1.5;
             }
-            [mountain_pass=yes] { // TODO: not supported yet
+            [mountain_pass=yes] {
                 icon-image: "icon/cross.svg";
-                icon-tint: brown;
+                icon-tint: @color_peak;
+                icon-scale: 0.7;
             }
         }
-        |z13-{
+        |z12-{
             [natural=peak],
             [natural=saddle] {
                 text: eval( cond( locTag('name'), cond( tag('ele'), locTag('name') . ' ' . formatElevation(tag('ele')) , locTag('name') ), formatElevation(tag('ele')) ) );
@@ -1055,12 +1057,13 @@ node,area {
                 font-stroke-color: @color_label_stroke;
                 icon-scale: 1.5;
             }
-            [mountain_pass=yes] { // TODO: not supported yet
+            [mountain_pass=yes] {
                 text: eval( cond( locTag('name'), cond( tag('ele'), locTag('name') . ' ' . formatElevation(tag('ele')) , locTag('name') ), formatElevation(tag('ele')) ) . cond( tag('rtsa_scale'), ' (' . tag('rtsa_scale') . ')', '') );
                 text-color: @color_peak_text;
                 font-size: 11;
                 font-stroke-width: 2pt;
                 font-stroke-color: @color_label_stroke;
+                icon-scale: 1;
             }
             [natural=volcano] {
                 text:eval(locTag('name'));
@@ -1068,7 +1071,7 @@ node,area {
                 font-size: 11;
                 font-stroke-width: 2pt;
                 font-stroke-color: @color_label_stroke;
-                icon-scale: 1.5;
+                icon-scale: 2;
             }
         }
         |z14-[natural=spring] {

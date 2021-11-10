@@ -565,7 +565,7 @@ line {
     }
 
     |z11-[natural=ridge] {
-        width: 1pt;
-        color: brown;
+        width: eval( zlinear(11, 1pt,2pt) );
+        color: @color_ridge;
     }
 }
