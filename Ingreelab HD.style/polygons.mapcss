@@ -362,16 +362,13 @@ area {
             width: 1px;
             color: @color_building_stroke;
             fill-color: @color_building;
-            [building=planned] {
+            [building=planned], [building=construction] {
                 fill-color: @color_building_planned;
-            }
-            [building=construction] {
-                fill-color: @color_building_planned;
+                fill-image: @image_forbidden_area;
 
-                dashes-width: 1pt;
+                dashes-width: 2pt;
                 dashes-color: @color_building_stroke;
                 dashes: 4,4,4,4;
-
                 width: none;
             }
         }

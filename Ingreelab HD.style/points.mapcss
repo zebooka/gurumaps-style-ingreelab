@@ -648,7 +648,7 @@ node,area {
         {
             icon-image: "icon/atm.svg";
             icon-scale:0.50;
-            icon-tint: @color_building_text;
+            icon-tint: @color_icon_tint;
         }
 
         |z17-[amenity=bank],
@@ -656,7 +656,7 @@ node,area {
         {
             icon-image: "icon/bank.svg";
             icon-scale:0.50;
-            icon-tint: @color_building_text;
+            icon-tint: @color_icon_tint;
         }
     @endif
 
@@ -801,7 +801,7 @@ node,area {
             [artwork_type=fountain], [amenity=fountain] {
                 icon-image: "icon/fountain.svg";
                 icon-scale:0.50;
-                icon-tint: @color_building_text;
+                icon-tint: @color_icon_tint;
             }
         }
         */
@@ -863,7 +863,7 @@ node,area {
         [shop=car][service=repair] {
             icon-image: "icon/car_service.svg";
             icon-scale:0.50;
-            icon-tint: @color_building_text;
+            icon-tint: @color_icon_tint;
         }
         [amenity=car_rental],
         [shop=car][service=dealer],
@@ -871,12 +871,12 @@ node,area {
         [shop=motorcycle] {
             icon-image: "icon/car_rental.svg";
             icon-scale:0.50;
-            icon-tint: @color_building_text;
+            icon-tint: @color_icon_tint;
         }
         [amenity=car_sharing] {
             icon-image: "icon/car_sharing.svg";
             icon-scale:0.50;
-            icon-tint: @color_building_text;
+            icon-tint: @color_icon_tint;
         }
         // parkings
         [amenity=parking] {
@@ -942,12 +942,12 @@ node,area {
             [shop=convenience], [shop=beverages], [shop=alcohol], [shop=butcher] {
                 icon-image: "icon/store.svg";
                 icon-scale:0.50;
-                icon-tint: @color_building_text;
+                icon-tint: @color_icon_tint;
             }
             [amenity=marketplace] {
                 icon-image: "icon/market.svg";
                 icon-scale:0.50;
-                icon-tint: @color_building_text;
+                icon-tint: @color_icon_tint;
             }
             [shop=mall], [shop=shoes], [shop=department_store], [shop=boutique] {
                 icon-image: "icon/mall.svg";
