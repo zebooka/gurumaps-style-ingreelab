@@ -1048,8 +1048,7 @@ node,area {
             }
         }
         |z12-{
-            [natural=peak],
-            [natural=saddle] {
+            [natural=peak], [natural=saddle] {
                 text: eval( cond( locTag('name'), cond( tag('ele'), locTag('name') . ' ' . formatElevation(tag('ele')) , locTag('name') ), formatElevation(tag('ele')) ) );
                 text-color: @color_peak_text;
                 font-size: 11;
@@ -1073,6 +1072,11 @@ node,area {
                 font-stroke-color: @color_label_stroke;
                 icon-scale: 2;
             }
+        }
+        |z13-{
+            [natural=peak], [natural=saddle] { icon-scale: 1.8; }
+            [mountain_pass=yes] { icon-scale: 1.2; }
+            [natural=volcano] { icon-scale: 2.4; }
         }
         |z14-[natural=spring] {
             text: "s";
