@@ -115,6 +115,7 @@
 @color_footway_area: #875A2D; // l: 0.3
 @color_footway_dashes: #333; // c: #333
 @color_pedestrian: #444; // c: #444
+@color_steps_dashes: #555; // c: #555
 
 @color_railroad_tunnel: #6C7175AA; // l: 0.1
 @color_railway: #7F7F7F; // l: 0.1

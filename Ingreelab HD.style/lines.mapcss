@@ -250,10 +250,10 @@ line {
             dashes:2,2;
         }
         |z15-[highway=steps] {
-            //                                  16  17
-            width:        eval( zlinear(16, 5pt,6pt ));
-            dashes-width: eval( zlinear(16, 3pt,4pt ));
-            dashes-color: @color_footway_dashes;
+            //                              16   17
+            width:        eval( zlinear(16, 6pt, 8pt ));
+            dashes-width: eval( zlinear(16, 4pt, 6pt ));
+            dashes-color: @color_steps_dashes;
             dashes:2,2;
         }
     }
