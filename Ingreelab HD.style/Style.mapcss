@@ -10,6 +10,7 @@
     @image_forbidden_area: "dark/forbidden_area.png";
     @image_garden: "dark/garden.png";
     @image_national_park_area: "dark/national_park_area.png";
+    @image_national_park_water_area: "dark/national_park_water_area.png";
     @image_nodata: "dark/nodata.png";
     @image_orchard: "dark/orchard.png";
     @image_quarry: "dark/quarry.png";
@@ -31,6 +32,7 @@
     @image_forbidden_area: "light/forbidden_area.png";
     @image_garden: "light/garden.png";
     @image_national_park_area: "light/national_park_area.png";
+    @image_national_park_water_area: "light/national_park_water_area.png";
     @image_nodata: "light/nodata.png";
     @image_orchard: "light/orchard.png";
     @image_quarry: "light/quarry.png";

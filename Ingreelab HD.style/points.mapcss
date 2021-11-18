@@ -190,6 +190,9 @@ node,area {
             font-weight: bold;
             font-stroke-width: 2pt;
             font-stroke-color: @color_label_stroke;
+            [natural=water] {
+                text-color: @color_water_text;
+            }
         }
         |z15-(
             [leisure=park],
