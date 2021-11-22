@@ -240,7 +240,7 @@ node,area {
     }
 
     @if BuildingName
-        area|z17-[building],
+        area|z16-[building],
         |z17-[landuse=construction]
         {
             text: eval( cond( tag('addr:housenumber'),
@@ -248,7 +248,7 @@ node,area {
                             any( locTag('name'), tag('addr:housename') ) ) );
 
             text-color: @color_building_text;
-            font-size: 10;
+            font-size: 9;
             font-stroke-width: 0.8pt;
             font-stroke-color: @color_label_stroke;
             text-priority: 1;
