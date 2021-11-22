@@ -56,6 +56,7 @@
 @color_aerialway_text: #000; // l: 0
 @color_beach_text: #807459; // l: 0
 @color_building_text: #937D65; // l: 0
+@color_danger_text: #b04e4e; // l: 0
 @color_entrance_text: #977f65; // l: 0
 @color_label_stroke: #FFFFFFEE;  // l: 0
 @color_label_text: #21211F; // l: -0.1

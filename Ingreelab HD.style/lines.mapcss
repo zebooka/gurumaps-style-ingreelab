@@ -376,7 +376,7 @@ line {
         }
     }
 
-    |z13-[waterway] {
+    |z12-[waterway] {
         [waterway=stream], [waterway=canal], [waterway=drain], [waterway=ditch] {
             width: eval( zlinear( 14, 1pt, 3pt, 3m ) );
             color: @color_water;
@@ -483,8 +483,9 @@ line {
     |z13-[waterway=stream] {
         text: eval(locTag('name'));
         text-color: @color_water_text;
-        font-size: 10;
-        font-stroke-width: 1pt;
+        font-size: 9;
+        font-weight: bold;
+        font-stroke-width: 1.5pt;
         font-stroke-color: @color_label_stroke;
     }
 
