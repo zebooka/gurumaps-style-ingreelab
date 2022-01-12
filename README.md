@@ -2,6 +2,8 @@
 
 Custom style for Guru Maps inspired by `Ingreelab.net` tiles render, to improve readability of maps.
 
+![Example of rendering](screenshot.jpg)
+
 
 ## How to use
 
