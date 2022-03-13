@@ -350,7 +350,7 @@ node,area {
     @endif
     @if Tourism
         |z18-(
-            [tourism=information], [tourism=attraction], [tourism=viewpoint],[shop=ticket]
+            [shop=ticket], [tourism=information], [tourism=attraction], [tourism=viewpoint]
         ),
     @endif
     @if Car
@@ -826,7 +826,6 @@ node,area {
         */
     @endif
 
-    // TODO: make it @if Style == Outdoor || Tourism
         // node|z16-[tourism=attraction],
         |z16-{
             [tourism=information], [shop=ticket] {
