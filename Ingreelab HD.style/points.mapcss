@@ -349,12 +349,17 @@ node,area {
         ),
     @endif
     @if Tourism
-        |z18-(
-            [shop=ticket], [tourism=information], [tourism=attraction], [tourism=viewpoint]
+        |z15-(
+            [shop=ticket],
+            [tourism=attraction],
+            [tourism=information],
+            [tourism=viewpoint],
+            [historic=fort],
+            [historic=ruins]
         ),
     @endif
     @if Car
-        |z17-(
+        |z13-(
             [amenity=fuel],[amenity=charging_station]
         ),
         |z18-(
@@ -394,7 +399,8 @@ node,area {
     @if Beauty
         |z17-( [shop=hairdresser], [shop=beauty], [shop=tattoo], [shop=massage], [leisure=sauna], [amenity=sauna] ),
     @endif
-        |z16-[waterway=waterfall],
+        |z13-[waterway=waterfall],
+        |z13-[highway=ford]
     @if Sport
         |z17-(
             [amenity=swimming_pool],
@@ -574,7 +580,30 @@ node,area {
         icon-tint: @color_icon_tint;
     }
 
-    node|z16-{
+    node|z12-{
+        [waterway=waterfall] {
+            icon-image: "icon/waterfall.svg";
+            icon-scale:0.50;
+            icon-tint: @color_icon_water;
+        }
+        [highway=ford] {
+            icon-image: "icon/ford.svg";
+            icon-scale:0.50;
+            icon-tint: @color_icon_water;
+        }
+        |z13-[historic=ruins] {
+            icon-image: "icon/ruins.svg";
+            icon-scale:0.50;
+            icon-tint: @color_icon_tint;
+        }
+        [tourism=viewpoint] {
+            icon-image: "icon/viewpoint.svg";
+            icon-scale:0.50;
+            icon-tint: @color_icon_tint;
+        }
+    }
+
+    node|z15-{
         [tourism=picnic_site],
         [leisure=picnic_table] {
             icon-image: "icon/picnic_table.svg";
@@ -597,12 +626,6 @@ node,area {
         
         [leisure=fishing] {
             icon-image: "icon/fishing.svg";
-            icon-scale:0.50;
-            icon-tint: @color_icon_water;
-        }
-
-        [waterway=waterfall] {
-            icon-image: "icon/waterfall.svg";
             icon-scale:0.50;
             icon-tint: @color_icon_water;
         }
@@ -826,38 +849,32 @@ node,area {
         */
     @endif
 
-        // node|z16-[tourism=attraction],
-        |z16-{
-            [tourism=information], [shop=ticket] {
-                icon-image: "icon/info.svg";
-                icon-scale:0.50;
-                icon-tint: @color_icon_tint;
-            }
-            
-            [tourism=information][information=guidepost] {
-                icon-image: "icon/guidepost.svg";
-                icon-scale:0.50;
-                icon-tint: @color_icon_tint;
-            }
-
-            [tourism=information][information=map] {
-                icon-image: "icon/info_map.svg";
-                icon-scale:0.50;
-                icon-tint: @color_icon_tint;
-            }
-            
-            [tourism=information][information=board] {
-                icon-image: "icon/info_board.svg";
-                icon-scale:0.50;
-                icon-tint: @color_icon_tint;
-            }
-
-            [tourism=viewpoint] {
-                icon-image: "icon/viewpoint.svg";
-                icon-scale:0.50;
-                icon-tint: @color_icon_tint;
-            }
+    // node|z16-[tourism=attraction],
+    |z14-{
+        [tourism=information], [shop=ticket] {
+            icon-image: "icon/info.svg";
+            icon-scale:0.50;
+            icon-tint: @color_icon_tint;
         }
+
+        [tourism=information][information=guidepost] {
+            icon-image: "icon/guidepost.svg";
+            icon-scale:0.50;
+            icon-tint: @color_icon_tint;
+        }
+
+        [tourism=information][information=map] {
+            icon-image: "icon/info_map.svg";
+            icon-scale:0.50;
+            icon-tint: @color_icon_tint;
+        }
+
+        [tourism=information][information=board] {
+            icon-image: "icon/info_board.svg";
+            icon-scale:0.50;
+            icon-tint: @color_icon_tint;
+        }
+    }
 
     // Car-everything
     |z15-{

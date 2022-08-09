@@ -99,7 +99,7 @@ area {
     }
     
     // generalized buildings
-    |z11-12[landuse=residential]{
+    |z10-12[landuse=residential]{
         z-index: -14;
         fill-color: @color_landuse_residential;
     }

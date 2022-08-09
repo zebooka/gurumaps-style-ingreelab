@@ -83,7 +83,7 @@
 @color_icon_fuel: #ee4000;
 @color_icon_parking: #0077ff; // c: #0052af
 @color_icon_tint: #814311; // l: -0.1
-@color_icon_water: #003c6b; // l: -0.1
+@color_icon_water: #003f72; // c: #61B9FF
 @color_icon_wood: #3E7326; // l: -0.1
 
 // roads of all kinds
