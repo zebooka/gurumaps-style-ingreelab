@@ -190,7 +190,7 @@ line {
         dashes: 8,4;
         dashes-width: eval(zlinear(13, 2pt,3pt,3pt,4pt));
         dashes-color: @private_dashes;
-        text-color: @color_private_access_text; // TODO
+        text-color: @private_label;
     }
 
     // bridges

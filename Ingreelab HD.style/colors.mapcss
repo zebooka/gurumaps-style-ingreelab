@@ -43,6 +43,7 @@
 @track_dashes: #555; // c: #333
 @road_construction: #F7BE81; // l: 0
 @private_dashes: #ccc; // l: 0
+@private_label: #8b100e; // l: 0
 @bridge: #ccc; // l: 0
 @tunnel: #d0d0d0; // l: 0
 @aeroway_runway_line: #BDBDBD; // l: 0.1
@@ -89,7 +90,6 @@
 @color_boundary_country: #ad6cad;
 @color_boundary_other: #ad6cad;
 @color_boundary_state: #ad6cad;
-@color_bridge: #CCC; // l: 0
 @color_building: #A5A5A5; // l: 0.1
 @color_building_planned: #E1D4C6; // l: 0
 @color_building_stroke: #B39B7C; // l: 0
@@ -136,12 +136,9 @@
 @color_entrance_text: #977f65; // l: 0
 @color_national_park_text: #567634;
 @color_peak_text: #724927; // l: -0.1
-@color_private_access_text: #8b100e; // l: 0
+
 @color_public_transport_text: #383835; // l: -0.1
 @color_shop_text: #5B3A05; // l: 0
-@color_suburb_text: #7A7C7E;  // l: 0
-@color_trunk_text: #222;
-@color_trunk_text_stroke: #F98819;
 @color_volcano_text: #ff4400; // c: #F10
 @color_water_text: #365380; // l: -0.1
 
@@ -155,22 +152,6 @@
 @color_icon_water: #003f72; // c: #61B9FF
 @color_icon_wood: #3E7326; // l: -0.1
 
-// roads of all kinds
-@color_small_road: #EEE; // l: 0.3
-@color_bridge: #A4A8AB; // l: -0.1
-@color_road_construction: #F7BE81; // l: 0
-
-@color_track_dashes: #555; // c: #333
-@color_path_dashes: #555; // c: #333
-
-@color_cycleway_dashes: #6876e1; // l: 0.1
 @color_footway_area: #F8F1EA; // l: 0.3
-@color_footway_dashes: #555; // c: #333
-@color_pedestrian: #777; // c: #444
-@color_steps_dashes: #999; // c: #555
-
-@color_railroad_tunnel: #A4A8ABAA; // l: 0.1
 @color_railway: #999; // l: 0.1
-@color_railway_gap: #CCC; // l: 0.1
-@color_railway_dashes: #555; // l: 0.1
 @color_railway_station: #555; // l: 0.1

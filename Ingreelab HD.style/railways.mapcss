@@ -56,7 +56,7 @@ line {
         |z14-[railway=narrow_gauge] {
             dashes: 2,2;
             dashes-width: 1pt;
-            dashes-color: @color_bridge;
+            dashes-color: @bridge;
             z-index: 1;
         }
         //
