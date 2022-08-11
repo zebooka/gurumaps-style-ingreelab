@@ -2,45 +2,64 @@
 // Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
 // Copyright (c) 2022 Anton Bondar https://zebooka.com
 
-// Suffixes: _text (replace to _label?), _stroke, _icon
+// Suffixes: _label, _stroke, _icon, _darker, _casing, _dashes
 
-// GENERAL
+
 @color_label_stroke: #ffffffee;  // l: 0
 @color_label_text: #303030; // l: -0.1
 @color_name_text: #303030;  // l: -0.1
 @color_ground: #EAE3D3; // s: -0.35
 
-// ---
-@label_stroke: #ffffffee; // l: 0
-@name_text: #303030; // l: -0.1
-@name_text_dimmed: #303030bb; // l: -0.1
+// GENERAL
+@name_stroke: #ffffffee; // l: 0
+@name_label: #303030; // l: -0.1
+@name_label_dimmed: #303030bb; // l: -0.1
 
 // COUNTRIES
-@country_stroke: @label_stroke;
-@country_text: @name_text;
-@country_part_text: @name_text_dimmed;
+@country_label: @name_label;
+@country_stroke: @name_stroke;
+@country_part_label: @name_label_dimmed;
 @boundary_color: #ad6cad;
 
 // CITIES
-@city_stroke: @label_stroke;
-@city_text: @name_text;
+@city_label: @name_label;
+@city_stroke: @name_stroke;
 @capital_icon: #6e216e; // l: 0
-@suburb_text: #7a7c7e; // l: 0
-@suburb_stroke: @label_stroke;
+@suburb_label: #7a7c7e; // l: 0
+@suburb_stroke: @name_stroke;
 
 // ROADS
 @main_road: #F98819; // l: 0
 @main_road_darker: #b36212; // l: -0.1
 @main_road_casing: #663a0e; // c: #000
+@main_road_label: #222;
+@main_road_stroke: #F98819;
 @raceway: #ff9b8a; // l: 0.1
 @raceway_casing: #b36d60;
-@residential_road: #FEFED0; // l: 0.1
+@residential_road: #fefed0; // l: 0.1
 @residential_road_casing: #8c8c8c; // c: #000
-@small_road: #EEE; // l: 0.3
+@small_road: #eee; // l: 0.3
 @small_road_casing: #808080; // c: #000
+@track_dashes: #555; // c: #333
+@road_construction: #F7BE81; // l: 0
+@private_dashes: #ccc; // l: 0
+@bridge: #ccc; // l: 0
+@tunnel: #d0d0d0; // l: 0
 
+// FOOTWAYS
+@pedestrian_road: #777; // c: #444
+@footway_dashes: #555; // c: #333
+@footway_area: #f8f1ea; // l: 0.3
+@steps_dashes: #999; // c: #555
+@cycleway_dashes: #6876e1; // l: 0.1
 
-// RAILROADS
+// RAILWAYS
+@railway_tunnel: #a4a8abaa; // l: 0.1
+@railway: #999; // l: 0.1
+@railway_gap: #ccc; // l: 0.1
+@railway_dashes: #555; // l: 0.1
+@railway_station: #555; // l: 0.1
+@railway_platform: #aaa; // c: #aaa
 
 // --- OLD to refactor
 
@@ -88,7 +107,6 @@
 @color_sports_centre: #DFFCE2;
 @color_stadium: #9EC7BC; // l: 0
 @color_swimming_pool: #6FB8E3; // l: 0
-@color_tunnel: #D0D0D0; // l: 0
 @color_volcano: #ff4400; // c: #F10
 @color_water: #507DBF; // l: -0.2
 @color_water_underground: #507DBF66;
@@ -129,6 +147,7 @@
 @color_small_road: #EEE; // l: 0.3
 @color_bridge: #A4A8AB; // l: -0.1
 @color_road_construction: #F7BE81; // l: 0
+
 @color_track_dashes: #555; // c: #333
 @color_path_dashes: #555; // c: #333
 

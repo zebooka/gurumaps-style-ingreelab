@@ -1,0 +1,48 @@
+// Ingreelab alike map style for Guru Maps, originally based on Default style.
+// Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
+// Copyright (c) 2022 Anton Bondar https://zebooka.com
+
+line {
+    |z12-[highway=pedestrian] {
+        width: eval(zlinear(14, 4pt,5pt,5pt,6pt));
+        dashes: 8,4;
+        dashes-width: eval(zlinear(14, 2pt,3pt,3pt,4pt));
+        dashes-color: @pedestrian_road;
+    }
+
+    |z12-[highway=path],
+    |z14-[highway=bridleway],
+    |z15-[highway=footway] {
+        width: eval(zlinear(16, 3pt,4pt));
+        dashes: 4,1;
+        dashes-width: eval(zlinear(16, 1pt,2pt));
+        dashes-color: @footway_dashes;
+    }
+
+    |z14-[highway=cycleway] {
+        width: eval(zlinear(16, 3pt,4pt));
+        dashes: 2,2;
+        dashes-width: eval(zlinear(16, 1pt,2pt));
+        dashes-color: @cycleway_dashes;
+    }
+
+    |z15-[highway=steps] {
+        width: eval(zlinear(16, 6pt,8pt));
+        dashes: 2,2;
+        dashes-width: eval(zlinear(16, 4pt,6pt));
+        dashes-color: @steps_dashes;
+    }
+
+    |z15-[highway=footway],
+    |z15-[highway=path],
+    |z15-[highway=cycleway],
+    |z15-[highway=bridleway],
+    |z15-[highway=steps] {
+        text: eval(locTag('name'));
+        text-priority: 3;
+        text-color: @name_label;
+        font-size: 10;
+        font-stroke-width: 1pt;
+        font-stroke-color: @name_stroke;
+    }
+}

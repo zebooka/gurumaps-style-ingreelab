@@ -6,4 +6,73 @@ line {
     |z13-[railway] {
         layer: eval(any(tag(layer), 0) + 5);
     }
+
+    [railway] {
+        |z10-[railway=rail] {
+            //color: @color_railway_dashes;
+            //dashes-color: @color_railway_gap;
+            //dashes-color: @color_railway_dashes;
+            //dashes: 4,2;
+            width: 3pt;
+            //dashes-width: 1pt;
+            galileo-stencil-type: drop-same;
+            galileo-stencil-ref: 4;
+            linecap: none;
+            z-index: 6;
+            fill-image: @image_railway;
+            |z12- {
+                width: 4pt;
+                fill-image: @image_railway12;
+            }
+        }
+
+        |z13-[railway=tram] {
+            width: eval(zlinear(15, 3pt,4pt));
+            dashes: 6,2;
+            dashes-width: eval(zlinear(15, 1pt,2pt));
+            dashes-color: @railway_dashes;
+            z-index: 6;
+        }
+
+        |z13-[railway=subway] {
+            width: eval(zlinear(15, 3pt,4pt));
+            dashes: 8,8;
+            dashes-width: eval(zlinear(15, 1pt,2pt));
+            dashes-color: @railway_dashes;
+        }
+
+        |z16-[railway=platform] {
+            [!layer], [layer>=0] {
+                width: eval(zlinear(16, metric(3)));
+                color: @railway_platform;
+                casing-color: @railway_dashes;
+                casing-width: 1pt;
+                linecap: round;
+            }
+        }
+
+        |z14-[railway=light_rail],
+        |z15-[railway=funicular],
+        |z14-[railway=narrow_gauge] {
+            dashes: 2,2;
+            dashes-width: 1pt;
+            dashes-color: @color_bridge;
+            z-index: 1;
+        }
+        //
+        |z15-( [layer<0], [tunnel] ) {
+            dashes-color: @railway_tunnel;
+            dashes-width: 3pt;
+            fill-image: none;
+            width: none;
+            layer: -4;
+        }
+
+        |z15-[bridge] {
+            color: @bridge;
+            width: eval(zlinear(15, 6pt,8pt,10pt));
+            linecap: none;
+            z-index: 6;
+        }
+    }
 }

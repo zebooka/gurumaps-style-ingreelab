@@ -10,7 +10,7 @@ node,area {
         |z6-[population>50000],
         |z7-{
             text: eval(locTag('name'));
-            text-color: @city_text;
+            text-color: @city_label;
             font-size: 12;
             font-stroke-color: @city_stroke;
             font-stroke-width: 1pt;
@@ -25,7 +25,7 @@ node,area {
 
     |z8-[place=town] {
         text: eval(locTag('name'));
-        text-color: @city_text;
+        text-color: @city_label;
         font-size: 10;
         font-stroke-color: @city_stroke;
         font-stroke-width: 1pt;
@@ -41,7 +41,7 @@ node,area {
     |z10-[place=hamlet],
     |z11-[place=isolated_dwelling] {
         text: eval(locTag('name'));
-        text-color: @city_text;
+        text-color: @city_label;
         font-size: 8;
         font-stroke-color: @city_stroke;
         font-stroke-width: 1pt;
@@ -59,7 +59,7 @@ node,area {
             icon-scale: 1.5;
             icon-tint: @capital_icon;
             text: eval(locTag('name'));
-            text-color: @city_text;
+            text-color: @city_label;
             font-size: 14;
             font-stroke-width: 2pt;
             font-stroke-color: @city_stroke;
@@ -70,7 +70,7 @@ node,area {
 
     |z11-[place=suburb] {
         text: eval(locTag('name'));
-        text-color: @suburb_text;
+        text-color: @suburb_label;
         font-size: 11;
         font-stroke-width: 1pt;
         font-stroke-color: @suburb_stroke;

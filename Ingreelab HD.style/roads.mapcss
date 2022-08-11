@@ -152,4 +152,119 @@ line {
     |z16-[highway][oneway=-1] {
         fill-image: "icon/arrow-back.svg";
     }
+
+    // tracks
+    |z12-[highway=track] {
+        dashes-color: @track_dashes;
+        dashes: 8,2;
+        dashes-width: eval(zlinear(12, 1pt,1.5pt,2pt,2.5pt,3pt));
+        width: eval(zlinear(12, 2pt,2.5pt,3pt,3.5pt,4pt));
+
+        [tracktype=grade5] {
+            dashes: 4,2;
+        }
+        [tracktype=grade4] {
+            dashes: 5,2;
+        }
+        [tracktype=grade3] {
+            dashes: 6,2;
+        }
+        [tracktype=grade2] {
+            dashes: 7,2;
+        }
+        [tracktype=grade1] {
+            dashes: 8,2;
+        }
+    }
+
+    // contruction
+    |z13-[highway=construction] {
+        // [highway=proposed], proposed roads is not displayed because they are not there yet. no construction started.
+        dashes: 8,4;
+        dashes-width: eval(zlinear(13, 2pt,3pt,3pt,4pt));
+        dashes-color: @road_construction;
+    }
+
+    // private roads
+    |z13-[highway][access=private] {
+        dashes: 8,4;
+        dashes-width: eval(zlinear(13, 2pt,3pt,3pt,4pt));
+        dashes-color: @private_dashes;
+        text-color: @color_private_access_text; // TODO
+    }
+
+    // bridges
+    |z13-[highway][bridge] {
+        casing-color: @bridge;
+        casing-width: 1pt;
+        linecap: none;
+        z-index: 6;
+
+        |z15-[highway=footway],
+        |z15-[highway=path],
+        |z15-[highway=cycleway],
+        |z15-[highway=bridleway] {
+            color: @small_road;
+        }
+    }
+
+    [tunnel] {
+        color: @tunnel;
+    }
+
+    /* == Road names ================================================================== */
+
+    |z9-[highway=motorway],
+    |z9-[highway=trunk],
+    |z9-[highway=primary],
+    |z10-[highway=secondary] {
+        text: eval(any(tag('ref'), tag('int_ref')));
+        text-color: @main_road_label;
+        font-size: 8;
+        font-stroke-width: 3pt;
+        font-stroke-color: @main_road_stroke;
+        text-priority: 4;
+    }
+
+    |z10-[highway=motorway],
+    |z10-[highway=trunk],
+    |z11-[highway=primary],
+    |z11-[highway=secondary] {
+        font-size: 10;
+    }
+
+    |z14-[highway=motorway],
+    |z14-[highway=trunk],
+    |z14-[highway=primary],
+    |z14-[highway=secondary] {
+        font-size: 11;
+        text-priority: 5;
+        font-stroke-width: 2pt;
+
+        [!name] {
+            text: eval(any(locTag('name'), tag('ref'), tag('int_ref')));
+            text-color: @main_road_label;
+            font-stroke-color: @main_road_stroke;
+        }
+        [name] {
+            text: eval(locTag('name'));
+            text-color: @name_label;
+            font-stroke-color: @name_stroke;
+        }
+    }
+
+    |z15-[highway=tertiary],
+    |z15-[highway=residential],
+    |z15-[highway=living_street],
+    |z15-[highway=service],
+    |z15-[highway=unclassified],
+    |z15-[highway=bus_guideway],
+    |z15-[highway=road] {
+        text: eval(locTag('name'));
+        text-priority: 4;
+        text-color: @name_label;
+        font-size: 10;
+        font-stroke-width: 1pt;
+        font-stroke-color: @name_stroke;
+    }
 }

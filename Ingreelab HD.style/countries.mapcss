@@ -6,7 +6,7 @@ node,area {
     [place=country] {
         |z2-8 {
             text: eval(locTag('name'));
-            text-color: @country_text;
+            text-color: @country_label;
             font-size: 16;
             font-stroke-width: 2pt;
             font-stroke-color: @country_stroke;
@@ -24,7 +24,7 @@ node,area {
         // states
         |z5-8[admin_level=3] {
             text: eval(locTag('name'));
-            text-color: @country_part_text;
+            text-color: @country_part_label;
             font-size: 14;
             font-stroke-width: 2pt;
             font-stroke-color: @country_stroke;
@@ -34,7 +34,7 @@ node,area {
         // regions
         |z6-8[admin_level=4] {
             text: eval(locTag('name'));
-            text-color: @country_part_text;
+            text-color: @country_part_label;
             font-size: 12;
             font-stroke-width: 2pt;
             font-stroke-color: @country_stroke;
