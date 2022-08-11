@@ -6,20 +6,32 @@ node,area {
     [place=country] {
         |z2-8 {
             text: eval(locTag('name'));
-            text-color: @country_name_text;
+            text-color: @country_text;
             font-size: 16;
             font-stroke-width: 2pt;
             font-stroke-color: @country_stroke;
             text-priority: 10;
             text-big-padding: true;
-        }
-        |z2-4 {
-            font-size: 12;
-            text-big-padding: false;
+
+            |z2-4 {
+               font-size: 12;
+                text-big-padding: false;
+            }
         }
     }
 
     [boundary=administrative] {
+        // states
+        |z5-8[admin_level=3] {
+            text: eval(locTag('name'));
+            text-color: @country_part_text;
+            font-size: 14;
+            font-stroke-width: 2pt;
+            font-stroke-color: @country_stroke;
+            text-priority: 8;
+            text-big-padding: true;
+        }
+        // regions
         |z6-8[admin_level=4] {
             text: eval(locTag('name'));
             text-color: @country_part_text;
@@ -29,14 +41,52 @@ node,area {
             text-priority: 8;
             text-big-padding: true;
         }
-        |z5-8[admin_level=3] {
-            text: eval(locTag('name'));
-            text-color: @country_part_text;
-            font-size: 14;
-            font-stroke-width: 2pt;
-            font-stroke-color: @country_stroke;
-            text-priority: 8;
-            text-big-padding: true;
+    }
+}
+
+area {
+    [boundary=administrative] {
+        // countries
+        [admin_level=2] {
+            z-index: 5;
+            width: eval(zlinear(6, 2pt,3pt,3pt,4pt));
+            color: @boundary_color;
+        }
+        // states
+        |z5-[admin_level=3] {
+            z-index: 4;
+            galileo-stencil-type: drop-same;
+            galileo-stencil-ref: 1;
+            width: eval(zlinear(6, 1pt,1.5pt,2pt,2pt,3pt));
+            color: @boundary_color;
+        }
+        // regions
+        |z6-[admin_level=4] {
+            z-index: 3;
+            galileo-stencil-type: drop-same;
+            galileo-stencil-ref: 2;
+
+            dashes-width: eval(zlinear(7, 1pt,1.5pt,2pt,3pt));
+            dashes-color: @boundary_color;
+            dashes: 20,2,2,2;
+        }
+        // subregions
+        |z11-[admin_level=6] {
+            z-index: 2;
+            galileo-stencil-type: drop-same;
+            galileo-stencil-ref: 2;
+            dashes-width: eval(zlinear(12, 1pt,1.5pt,2pt));
+            dashes-color: @boundary_color;
+            dashes: 8,2,2,2,2,2;
+        }
+        // suburbs
+        |z11-[admin_level=9] {
+            z-index: 2;
+            galileo-stencil-type: drop-same;
+            galileo-stencil-ref: 2;
+            dashes-width: eval(zlinear(11, 1pt,1.5pt,2pt));
+            dashes-color: @boundary_color;
+            dashes: 2,4,2,4,2,4,2,4;
         }
     }
 }

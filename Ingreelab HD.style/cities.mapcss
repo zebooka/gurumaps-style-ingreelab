@@ -10,7 +10,7 @@ node,area {
         |z6-[population>50000],
         |z7-{
             text: eval(locTag('name'));
-            text-color: @city_name_text;
+            text-color: @city_text;
             font-size: 12;
             font-stroke-color: @city_stroke;
             font-stroke-width: 1pt;
@@ -25,7 +25,7 @@ node,area {
 
     |z8-[place=town] {
         text: eval(locTag('name'));
-        text-color: @city_name_text;
+        text-color: @city_text;
         font-size: 10;
         font-stroke-color: @city_stroke;
         font-stroke-width: 1pt;
@@ -41,13 +41,12 @@ node,area {
     |z10-[place=hamlet],
     |z11-[place=isolated_dwelling] {
         text: eval(locTag('name'));
-        text-color: @city_name_text;
+        text-color: @city_text;
         font-size: 8;
         font-stroke-color: @city_stroke;
         font-stroke-width: 1pt;
         font-weight: light;
         text-priority: 6;
-        text-big-padding: true;
 
         |z10- {
             font-size: 10;
@@ -57,27 +56,27 @@ node,area {
     |z5-12[capital=yes] {
         [admin_level=2],[!admin_level] {
             icon-image: "icon/circle.svg";
-            icon-scale: 1.2;
-            icon-tint: @color_icon_capital_tint;
+            icon-scale: 1.5;
+            icon-tint: @capital_icon;
             text: eval(locTag('name'));
-            text-color: @color_label_text;
+            text-color: @city_text;
             font-size: 14;
             font-stroke-width: 2pt;
-            font-stroke-color: @color_label_stroke;
+            font-stroke-color: @city_stroke;
             text-priority: 9;
             text-big-padding: false;
         }
     }
 
     |z11-[place=suburb] {
+        text: eval(locTag('name'));
+        text-color: @suburb_text;
+        font-size: 11;
+        font-stroke-width: 1pt;
+        font-stroke-color: @suburb_stroke;
+
         |z11-13 {
             text-big-padding: true;
         }
-
-        text: eval(locTag('name'));
-        text-color: @color_suburb_text;
-        font-size: 11;
-        font-stroke-width: 1pt;
-        font-stroke-color: @color_label_stroke;
     }
 }

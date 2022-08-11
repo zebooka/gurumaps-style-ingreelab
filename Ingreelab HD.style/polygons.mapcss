@@ -4,53 +4,6 @@
 
 /******************************* Polygons *******************************/
 area {
-    [boundary=administrative] {
-        // country boundaries
-        [admin_level=2] {
-            z-index: 4;
-            width: eval( zlinear(7, 2pt,3pt,3pt,4pt ));
-            color: @color_boundary_country;
-        }
-        // states boundaries
-        |z5-[admin_level=3] {
-            z-index: 3;
-            galileo-stencil-type: drop-same;
-            galileo-stencil-ref: 1;
-            width: eval( zlinear(8, 1pt,2pt,2pt,3pt ));
-            color: @color_boundary_state;
-        }
-        // regions
-        |z6-[admin_level=4] {
-            z-index: 2;
-            galileo-stencil-type: drop-same;
-            galileo-stencil-ref: 2;
-
-            dashes-width: eval( zlinear(8, 1pt,2pt,2pt,3pt ));
-            dashes-color: @color_boundary_other;
-            dashes: 20,2,2,2;
-        }
-        // subregions
-        |z13-[admin_level=6] {
-            z-index: 2;
-            galileo-stencil-type: drop-same;
-            galileo-stencil-ref: 3;
-
-            dashes-width: 1pt;
-            dashes-color: @color_boundary_other;
-            dashes: 8,1,1,1;
-        }
-        // suburbs
-        |z11-13[admin_level=9] {
-            z-index: 1;
-            galileo-stencil-type: drop-same;
-            galileo-stencil-ref: 3;
-
-            dashes-width: 1pt;
-            dashes-color: @color_boundary_other;
-            dashes:4,4,4,4;
-        }
-    }
-
     // Other types of polygons. Less importnant is on top.
 
     // -15

@@ -2,24 +2,33 @@
 // Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
 // Copyright (c) 2022 Anton Bondar https://zebooka.com
 
+// Suffixes: _text (replace to _label?), _stroke, _icon
+
 // GENERAL
-@color_label_stroke: #FFFFFFEE;  // l: 0
+@color_label_stroke: #ffffffee;  // l: 0
 @color_label_text: #303030; // l: -0.1
 @color_name_text: #303030;  // l: -0.1
+@color_ground: #EAE3D3; // s: -0.35
+
 // ---
-@label_stroke: @color_label_stroke;
+@label_stroke: #ffffffee; // l: 0
 @name_text: #303030; // l: -0.1
-@name_text_dimmed: #303030BB; // l: -0.1
+@name_text_dimmed: #303030bb; // l: -0.1
 
 // COUNTRIES
 @country_stroke: @label_stroke;
-@country_name_text: @name_text;
+@country_text: @name_text;
 @country_part_text: @name_text_dimmed;
+@boundary_color: #ad6cad;
 
 // CITIES
 @city_stroke: @label_stroke;
-@city_name_text: @name_text;
+@city_text: @name_text;
+@capital_icon: #6e216e; // l: 0
+@suburb_text: #7a7c7e; // l: 0
+@suburb_stroke: @label_stroke;
 
+// --- OLD to refactor
 
 @color_aerialway: #444; // c: #777
 @color_aeroway_aerodrome: #F8E6E0; // l: 0.1
@@ -42,7 +51,7 @@
 @color_farmyard: #cba57b; // l: -0.1
 @color_glacier: #E0F8F7; // l: 0.1
 @color_grass: #C8DF9F; // l: -0.07
-@color_ground: #EAE3D3; // s: -0.35
+
 @color_hedge: #749933; // l: -0
 @color_hospital: #FCFCDC; // l: 0
 @color_landuse_cemetery: #a6b09c; // c: #42473d
