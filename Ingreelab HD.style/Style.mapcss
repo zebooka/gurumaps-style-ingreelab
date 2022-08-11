@@ -69,6 +69,7 @@ canvas
 @import "roads.mapcss";
 @import "footways.mapcss";
 @import "railways.mapcss";
+@import "water.mapcss";
 //@import "poi.mapcss";
 
 @import "points.mapcss";
