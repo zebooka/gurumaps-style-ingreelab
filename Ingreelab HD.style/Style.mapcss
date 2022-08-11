@@ -66,6 +66,9 @@ canvas
 
 @import "countries.mapcss";
 @import "cities.mapcss";
+@import "roads.mapcss";
+@import "railways.mapcss";
+//@import "poi.mapcss";
 
 @import "points.mapcss";
 @import "relations.mapcss";

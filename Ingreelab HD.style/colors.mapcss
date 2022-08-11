@@ -28,6 +28,20 @@
 @suburb_text: #7a7c7e; // l: 0
 @suburb_stroke: @label_stroke;
 
+// ROADS
+@main_road: #F98819; // l: 0
+@main_road_darker: #b36212; // l: -0.1
+@main_road_casing: #663a0e; // c: #000
+@raceway: #ff9b8a; // l: 0.1
+@raceway_casing: #b36d60;
+@residential_road: #FEFED0; // l: 0.1
+@residential_road_casing: #8c8c8c; // c: #000
+@small_road: #EEE; // l: 0.3
+@small_road_casing: #808080; // c: #000
+
+
+// RAILROADS
+
 // --- OLD to refactor
 
 @color_aerialway: #444; // c: #777
@@ -112,26 +126,7 @@
 @color_icon_wood: #3E7326; // l: -0.1
 
 // roads of all kinds
-@color_road_casing: #663a0e; // c: #000
-@color_road: #F98819; // l: 0
-
-@color_motorway_casing: @color_road_casing;
-@color_motorway: @color_road;
-@color_trunk_casing: @color_road_casing;
-@color_trunk: @color_road;
-@color_primary_casing: @color_road_casing;
-@color_primary: @color_road;
-@color_secondary_casing: @color_road_casing;
-@color_secondary: @color_road;
-@color_raceway_casing: #b36d60;
-@color_raceway: #ff9b8a; // l: 0.1 
-@color_tertiary_casing: @color_road_casing;
-@color_tertiary: @color_road;
-@color_tertiary_small: #b36212; // l: -0.1
-@color_residential: #FEFED0; // l: 0.1
-@color_residential_casing: #8c8c8c; // c: #000
 @color_small_road: #EEE; // l: 0.3
-@color_small_road_casing: #808080; // c: #000
 @color_bridge: #A4A8AB; // l: -0.1
 @color_road_construction: #F7BE81; // l: 0
 @color_track_dashes: #555; // c: #333

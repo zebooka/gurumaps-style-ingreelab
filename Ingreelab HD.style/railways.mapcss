@@ -1,0 +1,9 @@
+// Ingreelab alike map style for Guru Maps, originally based on Default style.
+// Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
+// Copyright (c) 2022 Anton Bondar https://zebooka.com
+
+line {
+    |z13-[railway] {
+        layer: eval(any(tag(layer), 0) + 5);
+    }
+}

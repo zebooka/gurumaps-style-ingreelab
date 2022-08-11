@@ -1,0 +1,155 @@
+// Ingreelab alike map style for Guru Maps, originally based on Default style.
+// Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
+// Copyright (c) 2022 Anton Bondar https://zebooka.com
+
+line {
+    // highways are displayed on top of any other stuff
+    [highway] {
+        linecap: round;
+
+        |z9- { layer: 5; }
+        |z13- { layer: eval(any(tag(layer), 0) + 5); }
+    }
+
+    // motorway
+    |z5-[highway=motorway] {
+        //                        -5    6     7    8   9   10  11  12  13  14  15+
+        width: eval( zlinear(5, 1.5pt,1.5pt,1.5pt,3pt,3pt,4pt,4pt,5pt,5pt,5pt,max(8pt, metric(any(tag(lanes),3)*3)) ));
+        color: @main_road_darker;
+        z-index: 5;
+    }
+    |z12-[highway=motorway_link] {
+        //                       -12  13  14  15+
+        width: eval( zlinear(12, 2pt,2pt,max(4pt, metric(any(tag(lanes),2)*2)) ));
+        color: @main_road_darker;
+        z-index: -1;
+    }
+    |z6-[highway=motorway],
+    |z13-[highway=motorway_link] {
+        color: @main_road;
+        casing-color: @main_road_casing;
+        casing-width: 1pt;
+    }
+
+    // trunk
+    |z5-[highway=trunk] {
+        //                        -5    6     7    8   9   10  11  12  13  14  15+
+        width: eval( zlinear(5, 1.5pt,1.5pt,1.5pt,3pt,3pt,4pt,4pt,5pt,5pt,5pt,max(8pt, metric(any(tag(lanes),3)*3)) ));
+        color: @main_road_darker;
+        z-index: 4;
+    }
+    |z12-[highway=trunk_link] {
+        //                       -12  13  14  15+
+        width: eval( zlinear(12, 2pt,2pt,max(4pt, metric(any(tag(lanes),2)*2)) ));
+        color: @main_road_darker;
+        z-index: -2;
+    }
+    |z6-[highway=trunk],
+    |z13-[highway=trunk_link] {
+        color: @main_road;
+        casing-color: @main_road_casing;
+        casing-width: 1pt;
+    }
+
+    // primary
+    |z6-[highway=primary] {
+        //                        -6   7   8   9   10  11  12  13  14  15+
+        width: eval( zlinear(6, 1.5pt,2pt,2pt,2pt,3pt,2pt,3pt,3pt,3pt,max(4pt, metric(any(tag(lanes),2)*2)) ));
+        color: @main_road_darker;
+        z-index: 3;
+    }
+    |z13-[highway=primary_link] {
+        //                       -13   14   15+
+        width: eval( zlinear(13, 1pt,1.5pt,max(3pt, metric(any(tag(lanes),2)*2)) ));
+        color: @main_road_darker;
+        z-index: -3;
+    }
+    |z8-[highway=primary],
+    |z14-[highway=primary_link] {
+        color: @main_road;
+        casing-color: @main_road_casing;
+        casing-width: 1pt;
+    }
+
+    // secondary
+    |z8-[highway=secondary] {
+        //                       -11  12  13  14  15+
+        width: eval( zlinear(11, 2pt,3pt,4pt,4pt,max(4pt, metric(any(tag(lanes),2)*2)) ));
+        color: @main_road_darker;
+        z-index: 2;
+    }
+
+    |z13-[highway=secondary_link] {
+        //                        -13  14+
+        width: eval( zlinear(13, 1.5pt,max(2pt, metric(any(tag(lanes),2)*2)) ));
+        color: @main_road_darker;
+        z-index: -4;
+    }
+    |z11-[highway=secondary],
+    |z14-[highway=secondary_link] {
+        color: @main_road;
+        casing-color: @main_road_casing;
+        casing-width: 0.5pt;
+    }
+
+    // tertiary
+    |z10-[highway=tertiary] {
+        //                         -11  12  13  14  15+
+        width: eval( zlinear(11, 1.5pt,2pt,2pt,2pt,3pt,max(3pt, metric(any(tag(lanes),2)*2)) ));
+        color: @main_road_darker;
+        z-index: 1;
+    }
+    |z14-[highway=tertiary_link] {
+        width: eval( zlinear(14, 1pt,max(2pt, metric(any(tag(lanes),2)*2)) ));
+        color: @main_road_darker;
+        z-index: -4;
+    }
+    |z11-[highway=tertiary],
+    |z15-[highway=tertiary_link] {
+        color: @main_road;
+        casing-color: @main_road_casing;
+        casing-width: 0.5pt;
+    }
+
+    // raceway
+    |z8-[highway=raceway] {
+        //                       -11  12  13  14  15+
+        width: eval( zlinear(11, 1pt,2pt,2pt,3pt,max(4pt, metric(any(tag(lanes),2)*2)) ));
+        color: @raceway;
+        z-index: 2;
+    }
+    |z12-[highway=raceway] {
+        color: @raceway;
+        casing-color: @raceway_casing;
+        casing-width: 0.5pt;
+    }
+
+    // residential and other
+    |z12-[highway=residential],
+    |z12-[highway=living_street] {
+        //                       -13  14  15+
+        width: eval( zlinear(13, 2pt,2pt,max(3pt, 4m) ));
+        color: @residential_road;
+        casing-color: @residential_road_casing;
+        casing-width: 0.5pt;
+    }
+
+    |z12-[highway=unclassified],
+    |z13-[highway=bus_guideway],
+    |z13-[highway=road],
+    |z13-[highway=service] {
+        //                       -13  14  15+
+        width: eval( zlinear(13, 2pt,2pt,max(3pt, 4m) ));
+        color: @small_road;
+        casing-color: @small_road_casing;
+        casing-width: 0.5pt;
+    }
+
+    // direction arrows
+    |z16-[highway][oneway=yes] {
+        fill-image: "icon/arrow.svg";
+    }
+    |z16-[highway][oneway=-1] {
+        fill-image: "icon/arrow-back.svg";
+    }
+}
