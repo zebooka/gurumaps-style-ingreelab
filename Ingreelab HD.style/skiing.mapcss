@@ -1,0 +1,65 @@
+// Ingreelab alike map style for Guru Maps, originally based on Default style.
+// Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
+// Copyright (c) 2022 Anton Bondar https://zebooka.com
+
+line {
+    @if PistesAndLifts
+        |z14-[piste:difficulty] {
+            text: eval(any(locTag('name'), tag('ref')));
+            text-color: @name_label;
+            font-size: 9;
+            font-stroke-width: 2pt;
+            font-stroke-color: @name_stroke;
+        }
+
+        |z13-{
+            [piste:difficulty] {
+                color: @piste_difficulty_unknown;
+                width: 3pt;
+                dashes: 20,1;
+                dashes-width: 3pt;
+            }
+            [piste:difficulty=novice] {
+                dashes-color: @piste_difficulty_novice;
+                text-color: @piste_difficulty_novice;
+            }
+            [piste:difficulty=easy] {
+                dashes-color: @piste_difficulty_easy;
+                text-color: @piste_difficulty_easy;
+            }
+            [piste:difficulty=intermediate] {
+                dashes-color: @piste_difficulty_intermediate;
+                text-color: @piste_difficulty_intermediate;
+            }
+            [piste:difficulty=advanced],
+            [piste:difficulty=expert],
+            [piste:difficulty=extreme] {
+                dashes-color: @piste_difficulty_expert;
+                text-color: @piste_difficulty_expert;
+            }
+
+            [piste:difficulty=freeride] {
+                text-color: @piste_difficulty_freeride;
+                dashes-color: @piste_difficulty_freeride;
+                dashes: 10,2;
+            }
+
+            // chair_lift, cable_car, drag_lift
+            [aerialway] {
+                color: @aerialway;
+                width: 1pt;
+                dashes: 2,6;
+                dashes-width: 4pt;
+                dashes-color: @aerialway;
+            }
+        }
+
+        |z15-[aerialway] {
+            text: eval(any(locTag('name'), tag('ref')));
+            text-color: @name_label;
+            font-size: 10;
+            font-stroke-width: 2pt;
+            font-stroke-color: @name_stroke;
+        }
+    @endif
+}

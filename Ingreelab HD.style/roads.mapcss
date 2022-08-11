@@ -267,4 +267,17 @@ line {
         font-stroke-width: 1pt;
         font-stroke-color: @name_stroke;
     }
+
+
+    // runway (airports)
+    |z14-{
+        [aeroway=runway] {
+            width: 8pt;
+            color: @aeroway_runway_line;
+        }
+        [aeroway=taxiway] {
+            width: 4pt;
+            color: @aeroway_runway_line;
+        }
+    }
 }

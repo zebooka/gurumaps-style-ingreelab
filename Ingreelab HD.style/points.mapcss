@@ -1045,7 +1045,7 @@ node,area {
     |z13-{
         [landuse=winter_sports] {
             text:eval(locTag('name'));
-            text-color: @color_difficulty_expert;
+            text-color: @piste_difficulty_expert;
             font-size:11;
             font-stroke-width:2pt;
             font-stroke-color: @color_label_stroke;
