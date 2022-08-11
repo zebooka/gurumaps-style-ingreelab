@@ -1,0 +1,42 @@
+// Ingreelab alike map style for Guru Maps, originally based on Default style.
+// Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
+// Copyright (c) 2022 Anton Bondar https://zebooka.com
+
+node,area {
+    [place=country] {
+        |z2-8 {
+            text: eval(locTag('name'));
+            text-color: @country_name_text;
+            font-size: 16;
+            font-stroke-width: 2pt;
+            font-stroke-color: @country_stroke;
+            text-priority: 10;
+            text-big-padding: true;
+        }
+        |z2-4 {
+            font-size: 12;
+            text-big-padding: false;
+        }
+    }
+
+    [boundary=administrative] {
+        |z6-8[admin_level=4] {
+            text: eval(locTag('name'));
+            text-color: @country_part_text;
+            font-size: 12;
+            font-stroke-width: 2pt;
+            font-stroke-color: @country_stroke;
+            text-priority: 8;
+            text-big-padding: true;
+        }
+        |z5-8[admin_level=3] {
+            text: eval(locTag('name'));
+            text-color: @country_part_text;
+            font-size: 14;
+            font-stroke-width: 2pt;
+            font-stroke-color: @country_stroke;
+            text-priority: 8;
+            text-big-padding: true;
+        }
+    }
+}

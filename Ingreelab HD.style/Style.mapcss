@@ -63,5 +63,7 @@ canvas
 
 @import "polygons.mapcss";
 @import "lines.mapcss";
+@import "countries.mapcss";
+@import "cities.mapcss";
 @import "points.mapcss";
 @import "relations.mapcss";

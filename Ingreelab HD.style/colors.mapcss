@@ -1,6 +1,25 @@
-// Ingreelab alike map style for Guru Maps
+// Ingreelab alike map style for Guru Maps, originally based on Default style.
 // Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
-// Copyright (c) 2021 Anton Bondar http://zebooka.com
+// Copyright (c) 2022 Anton Bondar https://zebooka.com
+
+// GENERAL
+@color_label_stroke: #FFFFFFEE;  // l: 0
+@color_label_text: #303030; // l: -0.1
+@color_name_text: #303030;  // l: -0.1
+// ---
+@label_stroke: @color_label_stroke;
+@name_text: #303030; // l: -0.1
+@name_text_dimmed: #303030BB; // l: -0.1
+
+// COUNTRIES
+@country_stroke: @label_stroke;
+@country_name_text: @name_text;
+@country_part_text: @name_text_dimmed;
+
+// CITIES
+@city_stroke: @label_stroke;
+@city_name_text: @name_text;
+
 
 @color_aerialway: #444; // c: #777
 @color_aeroway_aerodrome: #F8E6E0; // l: 0.1
@@ -58,9 +77,6 @@
 @color_building_text: #665746; // l: 0
 @color_danger_text: #b04e4e; // l: 0
 @color_entrance_text: #977f65; // l: 0
-@color_label_stroke: #FFFFFFEE;  // l: 0
-@color_label_text: #21211F; // l: -0.1
-@color_name_text: #2E2D2B;  // l: -0.1
 @color_national_park_text: #567634;
 @color_peak_text: #724927; // l: -0.1
 @color_private_access_text: #8b100e; // l: 0
