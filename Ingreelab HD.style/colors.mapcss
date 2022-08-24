@@ -64,8 +64,8 @@
 @railway_platform: #aaa; // c: #aaa
 
 // WATER
-@water: #507dbf; // l: -0.2
-@water_underground: #507dbf66;
+@color_water: #507dbf; // l: -0.2
+@color_water_underground: #507dbf66;
 @water_label: #365380; // l: -0.1
 @water_stroke: @name_stroke;
 

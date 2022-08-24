@@ -19,13 +19,136 @@ line {
         width: 8pt;
         fill-image: @image_cliff;
         dashes: 8,0;
-        //                              14  15
-        dashes-width: eval( zlinear(14, 1pt,2pt) );
+        dashes-width: eval(zlinear(14, 1pt,2pt));
         dashes-color: @color_cliff;
     }
 
     |z11-[natural=ridge] {
         width: eval( zlinear(11, 1pt,2pt) );
         color: @color_ridge;
+    }
+}
+
+area {
+    // ==================================================================================================== -15
+    |z13-[place=islet],
+    |z11-[place=island]
+    {
+        z-index: -15;
+        fill-color: @color_ground;
+    }
+
+    |z13-{
+        [landuse=brownfield],
+        [natural=mud] {
+            z-index: -15;
+            fill-color: @color_mud;
+        }
+    }
+
+    // ==================================================================================================== -14
+    |z13-{
+        [natural=beach],
+        [natural=sand],
+        [landuse=salt_pond] {
+            z-index: -14;
+            fill-color: @color_sand;
+            fill-image: @image_sand;
+        }
+
+        [landuse=quarry] {
+            z-index: -14;
+            fill-color: @color_quarry;
+        }
+    }
+
+
+    |z10-{
+        [natural=wood],
+        [landuse=forest] {
+            z-index: -13;
+            fill-color: @color_wood;
+        }
+        [leisure=nature_reserve] {
+            z-index: -13;
+            fill-color: @color_nature_reserve;
+        }
+    }
+
+    |z13-{
+        [natural=scrub] {
+            z-index: -13;
+            fill-color: @color_scrub;
+        }
+    }
+
+
+    |z15-{
+        [natural=wood],
+        [landuse=forest] {
+            [leaf_type=broadleaved] { fill-image: @image_wood_broad; } // TODO: not implemented in map data
+            [leaf_type=leafless] { fill-image: @image_wood_leafless; } // TODO: not implemented in map data
+            [leaf_type=mixed] { fill-image: @image_wood_mixed; } // TODO: not implemented in map data
+            [leaf_type=needleleaved] { fill-image: @image_wood_needle; } // TODO: not implemented in map data
+        }
+        [landuse=quarry] {
+            fill-image: @image_quarry;
+        }
+    }
+
+    |z15-{
+        [natural=scrub] {
+            fill-image: @image_scrub;
+        }
+        [landuse=quarry] {
+            fill-image: @image_quarry;
+        }
+    }
+
+    |z11-[natural=fell] {
+        z-index: -12;
+        fill-color: @color_grass;
+    }
+    |z13-{
+        [landuse=pasture],
+        [landuse=meadow],
+        [landuse=grass],
+        [landuse=greenfield],
+        [natural=grassland],
+        [natural=heath] {
+            z-index: -12;
+            fill-color: @color_grass;
+        }
+    }
+
+    |z9-[natural=glacier] {
+        fill-color: @color_glacier;
+        z-index: -10;
+    }
+    |z9-[natural=bare_rock] { // TODO: not supported yet
+        fill-color: gray;
+        z-index: -10;
+    }
+
+    [natural=wetland] {
+        |z9-10 {
+            fill-color: @color_wetland;
+        }
+        |z11- {
+            fill-image: @image_wetland;
+        }
+    }
+
+    |z9- {
+        [boundary=national_park],
+        [leisure=nature_reserve] {
+            z-index: 2;
+            color: @color_national_park;
+            width: eval( zlinear(9, 1pt,2pt,3pt) );
+            fill-image: @image_national_park_area;
+            [natural=water] {
+                fill-image: @image_national_park_water_area; // TODO: temporary fix for conflict when lake is natural park/reserve
+            }
+        }
     }
 }

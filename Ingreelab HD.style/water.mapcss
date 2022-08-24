@@ -15,7 +15,7 @@ line {
         [!layer], [layer>=0] {
             //                       10  11  12  13  14  15  16
             width: eval(zlinear(10, 1px,1pt,2pt,3pt,4pt,5pt,6pt));
-            color: @water;
+            color: @color_water;
             z-index: -20;
         }
     }
@@ -27,13 +27,13 @@ line {
         [waterway=drain],
         [waterway=ditch] {
             width: eval(zlinear(14, 1pt,3pt,3m));
-            color: @water;
+            color: @color_water;
             z-index: -20;
         }
 
         [layer<0] {
             width: eval(zlinear(14, 1pt,2pt,3m));
-            color: @water_underground;
+            color: @color_water_underground;
             layer: 0;
         }
     }
@@ -47,5 +47,36 @@ line {
         font-weight: bold;
         font-stroke-width: 1.5pt;
         font-stroke-color: @water_stroke;
+    }
+}
+
+area {
+    [natural=oceanwater] {
+        z-index: -12;
+        fill-color: @color_water;
+    }
+
+    |z5-{
+        |z9-[natural=bay], // - часто из заливов не вырезают острова. И они в результате тонут под водой.
+        |z9-[landuse=basin],
+        [natural=water],
+        [landuse=reservoir],
+        [waterway=riverbank] {
+            fill-color: @color_water;
+        }
+    }
+
+    // swamp
+
+    |z13-{
+        // pier and groyne displayed on top of the water
+        [man_made=pier],
+        [man_made=groyne] {
+            fill-color: @color_ground;
+        }
+        // dock над домом. т.к. может быть домом
+        [waterway=dock] {
+            fill-color: @color_water;
+        }
     }
 }

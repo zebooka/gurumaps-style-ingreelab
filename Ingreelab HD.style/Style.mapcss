@@ -61,7 +61,6 @@ canvas
     layer: eval(tag(layer));
 }
 
-@import "polygons.mapcss";
 
 @import "countries.mapcss";
 @import "cities.mapcss";
@@ -71,6 +70,7 @@ canvas
 @import "water.mapcss";
 @import "skiing.mapcss";
 @import "natural.mapcss";
+@import "buildings.mapcss";
 
 //@import "poi.mapcss";
 
