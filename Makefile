@@ -1,4 +1,4 @@
-.PHONY: help clean publish version
+.PHONY: help dark-colors build publish clean
 .DEFAULT := help
 
 MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
@@ -16,7 +16,13 @@ help:
 
 ##@ Development
 
-publish: ## Publish new release to GitHub
+dark-colors:
+	php ./generate-dark-colors.php
+	git status --short
+
+##@ Release
+
+build: ## Build new release assets
 	git status --short
 	git describe --tags --candidates=0
 	#test -z "$$(git status --porcelain)" && exit $?
@@ -25,6 +31,8 @@ publish: ## Publish new release to GitHub
 	cp README.md "Ingreelab HD.style/"
 	tar -czvf $(BUILD_DIR)/$(ASSET).tar.gz "Ingreelab HD.style/"
 	zip -r $(BUILD_DIR)/$(ASSET).zip "Ingreelab HD.style/"
+
+publish: build ## Publish new release to GitHub
 	cd $(BUILD_DIR) && gh release create "$(RELEASE)" -F $(BUILD_DIR)/$(ASSET).CHANGELOG.md "$(ASSET).tar.gz#Release (tar.gz)" "$(ASSET).zip#Release (zip)"
 
 clean: ## Clean
