@@ -22,7 +22,7 @@ dark-colors:
 
 ##@ Release
 
-build: ## Build new release assets
+build: clean ## Build new release assets
 	git status --short
 	git describe --tags --candidates=0
 	#test -z "$$(git status --porcelain)" && exit $?

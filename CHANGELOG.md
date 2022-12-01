@@ -1,6 +1,6 @@
 # Ingreelab changelog
 
-## NEW
+## v2.0.0-beta1
 
 * Refactoring of style structure.
 * Countries, states and cities in separate files.
@@ -8,6 +8,7 @@
 * Roads/railroads/footways separated.
 * Natural objects separated.
 * Areas refactored and separated.
+* Cities names are visible from zoom 9.
 
 ## v1.0.3
 

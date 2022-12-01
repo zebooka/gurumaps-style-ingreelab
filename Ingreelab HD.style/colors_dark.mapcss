@@ -1,18 +1,95 @@
-// Ingreelab alike map style for Guru Maps
+// Ingreelab alike map style for Guru Maps, originally based on Default style.
 // Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
-// Copyright (c) 2021 Anton Bondar http://zebooka.com
+// Copyright (c) 2022 Anton Bondar https://zebooka.com
 
-@color_aerialway: #777; // c: #777
+// Suffixes: _label, _stroke, _icon, _darker, _casing, _dashes
+
+
+@color_label_stroke: #000000EE;  // l: 0
+@color_label_text: #B5B5B5; // l: -0.1
+@color_name_text: #B5B5B5;  // l: -0.1
+@color_ground: #202020; // s: -0.35
+
+// GENERAL
+@name_stroke: #000000EE; // l: 0
+@name_label: #B5B5B5; // l: -0.1
+@name_label_dimmed: #B5B5B5BB; // l: -0.1
+
+// COUNTRIES
+@country_label: @name_label;
+@country_stroke: @name_stroke;
+@country_part_label: @name_label_dimmed;
+@boundary_color: #ad6cad;
+
+// CITIES
+@city_label: @name_label;
+@city_stroke: @name_stroke;
+@capital_icon: #DE91DE; // l: 0
+@suburb_label: #818384; // l: 0
+@suburb_stroke: @name_stroke;
+
+// ROADS
+@main_road: #E67506; // l: 0
+@main_road_darker: #E8821D; // l: -0.1
+@main_road_casing: #000; // c: #000
+@main_road_label: #222;
+@main_road_stroke: #F98819;
+@raceway: #A81800; // l: 0.1
+@raceway_casing: #b36d60;
+@residential_road: #606002; // l: 0.1
+@residential_road_casing: #000; // c: #000
+@small_road: #5D5D5D; // l: 0.3
+@small_road_casing: #000; // c: #000
+@track_dashes: #333; // c: #333
+@road_construction: #7D4507; // l: 0
+@private_dashes: #323232; // l: 0
+@private_label: #F17573; // l: 0
+@bridge: #323232; // l: 0
+@tunnel: #2F2F2F; // l: 0
+@aeroway_runway_line: #5B5B5B; // l: 0.1
+
+// FOOTWAYS
+@pedestrian_road: #444; // c: #444
+@footway_dashes: #333; // c: #333
+@footway_area: #875A2D; // l: 0.3
+@steps_dashes: #555; // c: #555
+@cycleway_dashes: #2638C1; // l: 0.1
+
+// RAILWAYS
+@railway_tunnel: #6C7175AA; // l: 0.1
+@railway: #7F7F7F; // l: 0.1
+@railway_gap: #4C4C4C; // l: 0.1
+@railway_dashes: #C3C3C3; // l: 0.1
+@railway_station: #C3C3C3; // l: 0.1
+@railway_platform: #aaa; // c: #aaa
+
+// WATER
+@color_water: #243E64; // l: -0.2
+@color_water_underground: #507dbf66;
+@water_label: #5B80B9; // l: -0.1
+@water_stroke: @name_stroke;
+
+// SKIING
+@piste_difficulty_unknown: #ccc; // c: #ccc
+@piste_difficulty_novice: #060; // c: #060
+@piste_difficulty_easy: #00C; // c: #00C
+@piste_difficulty_intermediate: #c00; // c: #c00
+@piste_difficulty_expert: #70a; // c: #70a
+@piste_difficulty_freeride: #a60; // c: #a60
+@aerialway: #777; // c: #777
+
+// --- OLD to refactor
+
+
 @color_aeroway_aerodrome: #481E10; // l: 0.1
 @color_aeroway_apron: #4C363E; // l: 0.1
 @color_aeroway_runway: #0B2738; // l: 0.1
-@color_aeroway_runway_line: #5B5B5B; // l: 0.1
+
 @color_allotments: #806B3C; // l: 0.05
 @color_barrier: #B45920; // l: 0.1
 @color_boundary_country: #ad6cad;
 @color_boundary_other: #ad6cad;
 @color_boundary_state: #ad6cad;
-@color_bridge: #323232; // l: 0
 @color_building: #737373; // l: 0.1
 @color_building_planned: #392C1E; // l: 0
 @color_building_stroke: #836B4C; // l: 0
@@ -23,7 +100,7 @@
 @color_farmyard: #5F4325; // l: -0.1
 @color_glacier: #104846; // l: 0.1
 @color_grass: #344517; // l: -0.07
-@color_ground: #202020; // s: -0.35
+
 @color_hedge: #A7CC66; // l: -0
 @color_hospital: #222202; // l: 0
 @color_landuse_cemetery: #42473d; // c: #42473d
@@ -46,7 +123,6 @@
 @color_sports_centre: #DFFCE2;
 @color_stadium: #386156; // l: 0
 @color_swimming_pool: #1C6590; // l: 0
-@color_tunnel: #2F2F2F; // l: 0
 @color_volcano: #F10; // c: #F10
 @color_water: #243E64; // l: -0.2
 @color_water_underground: #507DBF66;
@@ -58,68 +134,24 @@
 @color_building_text: #B9AA99; // l: 0
 @color_danger_text: #B14F4F; // l: 0
 @color_entrance_text: #9A8268; // l: 0
-@color_label_stroke: #000000EE;  // l: 0
-@color_label_text: #C7C7C3; // l: -0.1
-@color_name_text: #BBB9B6;  // l: -0.1
 @color_national_park_text: #567634;
 @color_peak_text: #CB9467; // l: -0.1
-@color_private_access_text: #F17573; // l: 0
+
 @color_public_transport_text: #B1B1AC; // l: -0.1
 @color_shop_text: #FAD8A3; // l: 0
-@color_suburb_text: #818384;  // l: 0
-@color_trunk_text: #222;
-@color_trunk_text_stroke: #F98819;
 @color_volcano_text: #F10; // c: #F10
 @color_water_text: #5B80B9; // l: -0.1
 
-@color_difficulty_novice: #060; // c: #060
-@color_difficulty_easy: #00C; // c: #00C
-@color_difficulty_intermediate: #C00; // c: #C00
-@color_difficulty_expert: #70A; // c: #70A
-@color_difficulty_freeride: #A60; // c: #A60
+
 
 @color_icon_capital_tint: #DEDEDE; // l: 0.1
 @color_icon_charging_station: #75e300;
 @color_icon_fuel: #ee4000;
 @color_icon_parking: #0052af; // c: #0052af
 @color_icon_tint: #E89450; // l: -0.1
-@color_icon_water: #61B9FF; // l: -0.1
+@color_icon_water: #61B9FF; // c: #61B9FF
 @color_icon_wood: #85CC65; // l: -0.1
 
-// roads of all kinds
-@color_road_casing: #000; // c: #000
-@color_road: #E67506; // l: 0
-
-@color_motorway_casing: @color_road_casing;
-@color_motorway: @color_road;
-@color_trunk_casing: @color_road_casing;
-@color_trunk: @color_road;
-@color_primary_casing: @color_road_casing;
-@color_primary: @color_road;
-@color_secondary_casing: @color_road_casing;
-@color_secondary: @color_road;
-@color_raceway_casing: #b36d60;
-@color_raceway: #A81800; // l: 0.1 
-@color_tertiary_casing: @color_road_casing;
-@color_tertiary: @color_road;
-@color_tertiary_small: #E8821D; // l: -0.1
-@color_residential: #606002; // l: 0.1
-@color_residential_casing: #000; // c: #000
-@color_small_road: #5D5D5D; // l: 0.3
-@color_small_road_casing: #000; // c: #000
-@color_bridge: #3B3E40; // l: -0.1
-@color_road_construction: #7D4507; // l: 0
-@color_track_dashes: #333; // c: #333
-@color_path_dashes: #333; // c: #333
-
-@color_cycleway_dashes: #2638C1; // l: 0.1
 @color_footway_area: #875A2D; // l: 0.3
-@color_footway_dashes: #333; // c: #333
-@color_pedestrian: #444; // c: #444
-@color_steps_dashes: #555; // c: #555
-
-@color_railroad_tunnel: #6C7175AA; // l: 0.1
 @color_railway: #7F7F7F; // l: 0.1
-@color_railway_gap: #4C4C4C; // l: 0.1
-@color_railway_dashes: #C3C3C3; // l: 0.1
 @color_railway_station: #C3C3C3; // l: 0.1
