@@ -5,7 +5,7 @@ MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 CURRENT_DIR := $(dir $(MAKEFILE_PATH))
 RELEASE := $$(git describe --tags --candidates=0 2>/dev/null)
 BUILD_DIR := $(CURRENT_DIR)build
-ASSET := test-$(RELEASE)
+ASSET := Ingreelab-$(RELEASE)
 
 help:
 	@awk 'BEGIN {FS = ":.*##"; printf "\n\033[1mUsage:\n  make \033[36m<target>\033[0m\n"} \
