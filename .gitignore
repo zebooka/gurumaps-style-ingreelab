@@ -1,0 +1,5 @@
+/build/*.md
+/build/*.tar.gz
+/build/*.zip
+*/README.md
+*/CHANGELOG.md

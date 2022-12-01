@@ -28,81 +28,8 @@ node,area {
         }
     }
 
-    // Название воды
-    node{
-        |z1-8[place=ocean],
-        |z6-8[place=sea]
-        {
-            text: eval(locTag('name'));
-            text-color: @color_water_text;
-            text-priority: 5;
-            font-size: 16;
-            font-weight: bold;
-            font-stroke-width: 2pt;
-            font-stroke-color: @color_label_stroke;
-        }
-
-        |z5-8[place=ocean] {
-            font-size: 18;
-        }
-    }
-
     area{
-        |z9-{
-            [natural=water],
-            [landuse=reservoir],
-            [waterway=riverbank],
-            [natural=bay],
-            [landuse=basin]  {
-                text: eval(locTag('name'));
-                text-color: @color_water_text;
-                font-size: 10;
-                font-weight: bold;
-                font-stroke-width: 1.5pt;
-                font-stroke-color: @color_label_stroke;
-            }
-        }
 
-        |z11-[place=island],
-        |z13-[place=islet]
-        {
-            text: eval(locTag('name'));
-            text-color: @color_national_park_text;
-            font-size: 9;
-            font-weight: bold;
-            font-stroke-width: 1.5pt;
-            font-stroke-color: @color_label_stroke;
-            text-priority: 1;
-        }
-        |z14-[natural=bay],
-        |z14-[waterway=riverbank],
-        |z15-[natural=water],
-        |z16-[landuse=basin],
-        |z16-[landuse=reservoir] {
-            text: eval(locTag('name'));
-            text-color: @color_water_text;
-            font-size: 12;
-            font-weight: bold;
-            font-stroke-width: 1.5pt;
-            font-stroke-color: @color_label_stroke;
-            text-priority: 2;
-        }
-    }
-
-    area{
-        |z9-[boundary=national_park],
-        |z9-[leisure=nature_reserve] {
-            text: eval(locTag('name'));
-            text-color: @color_national_park_text;
-            text-priority: 4;
-            font-size: 9;
-            font-weight: bold;
-            font-stroke-width: 1.5pt;
-            font-stroke-color: @color_label_stroke;
-            [natural=water] {
-                text-color: @color_water_text;
-            }
-        }
         |z9-[landuse=military],
         |z9-[military=danger_area] {
             text: eval(locTag('name'));
@@ -189,17 +116,7 @@ node,area {
     @endif
 
 
-    |z16-{
-        [waterway=dock], // dock бывает отмечен дополнительно как building
-        [man_made=pier],
-        [man_made=groyne] {
-            text: eval(locTag('name'));
-            text-color: @color_building_text;
-            font-size:12;
-            font-stroke-width:2pt;
-            font-stroke-color: @color_ground;
-        }
-    }
+
 
     @if AllShops
         // all kinds of shops
