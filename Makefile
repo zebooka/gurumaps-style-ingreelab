@@ -1,4 +1,4 @@
-.PHONY: help dark-colors build publish clean
+.PHONY: help dark-colors build prerelease release clean
 .DEFAULT := help
 
 MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
@@ -32,7 +32,11 @@ build: clean ## Build new release assets
 	tar -czvf $(BUILD_DIR)/$(ASSET).tar.gz "Ingreelab HD.style/"
 	zip -r $(BUILD_DIR)/$(ASSET).zip "Ingreelab HD.style/"
 
-publish: build ## Publish new release to GitHub
+prerelease: build ## Publish new pre-release to GitHub
+	awk -v ver=DEV '/^## / { if (p) { exit }; if ($$2 == ver) { p=1; next } } p && NF' CHANGELOG.md > $(BUILD_DIR)/$(ASSET).CHANGELOG.md
+	cd $(BUILD_DIR) && gh release create "$(RELEASE)" -p -F $(BUILD_DIR)/$(ASSET).CHANGELOG.md "$(ASSET).tar.gz#Release (tar.gz)" "$(ASSET).zip#Release (zip)"
+
+release: build ## Publish new release to GitHub
 	cd $(BUILD_DIR) && gh release create "$(RELEASE)" -F $(BUILD_DIR)/$(ASSET).CHANGELOG.md "$(ASSET).tar.gz#Release (tar.gz)" "$(ASSET).zip#Release (zip)"
 
 clean: ## Clean
