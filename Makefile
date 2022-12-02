@@ -5,7 +5,7 @@ MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 CURRENT_DIR := $(dir $(MAKEFILE_PATH))
 RELEASE := $$(git describe --tags --candidates=0 2>/dev/null || (git describe --all | sed 's|^heads/||'; git log -1 --format="dev-%ad-%h" --date=short) | tr '\n ' '--' | sed 's|-$$||')
 VERSION := $$(git describe --tags --candidates=0 2>/dev/null || git describe --all | sed 's|^heads/||' | tr '\n' '-' | sed 's|-$$||')
-PRERELEASE_FLAG := $$(test -n "$$(git describe --tags --candidates=0 2>/dev/null)" || echo '-P')
+PRERELEASE_FLAG := $$(test -n "$$(git describe --tags --candidates=0 2>/dev/null)" || echo '-p')
 BUILD_DIR := "$(CURRENT_DIR)build"
 ASSET := "Ingreelab-$(RELEASE)"
 INGREELAB_DIR := "Ingreelab HD.style/"
