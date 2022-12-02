@@ -4,6 +4,10 @@
 foreach (glob(__DIR__ . '/*/colors.mapcss') as $colorsFile) {
     $colorsDarkFile = dirname($colorsFile) . '/colors_dark.mapcss';
     $lines = file($colorsFile);
+
+    echo mdTableLine('Light', 'Function', 'Dark');
+    echo mdTableLine('', '', '', '-', '-', '-');
+
     foreach ($lines as $i => $line) {
         if (preg_match('@#([0-9a-f]{1,8})\s*;\s*//\s*(s|l|c):\s*(-?\d+(?:\\.\d+)?|#[0-9a-f]{1,8})@i', $line, $matches)) {
             $color = $matches[1];
@@ -23,12 +27,23 @@ foreach (glob(__DIR__ . '/*/colors.mapcss') as $colorsFile) {
             } else {
                 $darkColor = encodeColor(hsl2rgb($hsla));
             }
-            echo "{$color} --- {$matches[2]}:{$matches[3]} ---> {$darkColor}\n";
+            echo mdTableLine($color, "{$matches[2]}:{$matches[3]}", $darkColor);
             $lines[$i] = str_replace("#{$color}", "#{$darkColor}", $line);
         }
     }
     file_put_contents($colorsDarkFile, implode('', $lines));
     echo "{$colorsFile}\n --> {$colorsDarkFile}\n";
+}
+
+function mdTableLine($col1, $col2, $col3, $pad1 = ' ', $pad2 = ' ', $pad3 = ' ')
+{
+    return '| '
+        . str_pad($col1, 8, $pad1, STR_PAD_RIGHT)
+        . ' | '
+        . str_pad($col2, 11, $pad2, STR_PAD_RIGHT)
+        . ' | '
+        . str_pad($col3, 8, $pad3, STR_PAD_RIGHT)
+        . " |\n";
 }
 
 function decodeColor($hex)
