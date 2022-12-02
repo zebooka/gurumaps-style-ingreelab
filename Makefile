@@ -4,8 +4,9 @@
 MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 CURRENT_DIR := $(dir $(MAKEFILE_PATH))
 RELEASE := $$(git describe --tags --candidates=0 2>/dev/null)
-BUILD_DIR := $(CURRENT_DIR)build
-ASSET := Ingreelab-$(RELEASE)
+BUILD_DIR := "$(CURRENT_DIR)build"
+ASSET := "Ingreelab-$(RELEASE)"
+INGREELAB_DIR := "Ingreelab HD.style/"
 
 help:
 	@awk 'BEGIN {FS = ":.*##"; printf "\n\033[1mUsage:\n  make \033[36m<target>\033[0m\n"} \
@@ -27,10 +28,10 @@ build: clean ## Build new release assets
 	git describe --tags --candidates=0
 	#test -z "$$(git status --porcelain)" && exit $?
 	awk -v ver=$(RELEASE) '/^## / { if (p) { exit }; if ($$2 == ver) { p=1; next } } p && NF' CHANGELOG.md > $(BUILD_DIR)/$(ASSET).CHANGELOG.md
-	cp CHANGELOG.md "Ingreelab HD.style/"
-	cp README.md "Ingreelab HD.style/"
-	tar -czvf $(BUILD_DIR)/$(ASSET).tar.gz "Ingreelab HD.style/"
-	zip -r $(BUILD_DIR)/$(ASSET).zip "Ingreelab HD.style/"
+	cp CHANGELOG.md $(INGREELAB_DIR)
+	cp README.md $(INGREELAB_DIR)
+	tar -czvf $(BUILD_DIR)/$(ASSET).tar.gz $(INGREELAB_DIR)
+	zip -r $(BUILD_DIR)/$(ASSET).zip $(INGREELAB_DIR)
 
 prerelease: build ## Publish new pre-release to GitHub
 	awk -v ver=DEV '/^## / { if (p) { exit }; if ($$2 == ver) { p=1; next } } p && NF' CHANGELOG.md > $(BUILD_DIR)/$(ASSET).CHANGELOG.md
