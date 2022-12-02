@@ -28,7 +28,7 @@ build: clean ## Build new release assets
 	git status --short; test -z "$$(git status --porcelain)" || (echo "\033[1;7;31m > Please commit changes. < \033[0m" && exit 1)
 	test -d $(BUILD_DIR) || mkdir -p $(BUILD_DIR)
 	awk -v ver=$(TAG) '/^## / { if (p) { exit }; if ($$2 == ver) { p=1; next } } p && NF' CHANGELOG.md > $(BUILD_DIR)/$(ASSET).CHANGELOG.md
-	test -s $(BUILD_DIR)/$(ASSET).CHANGELOG.md || awk -v ver=$$(echo $(RELEASE) | tr '-' ' ' | awk '{ print $$1 }') '/^## / { if (p) { exit }; if ($$2 == ver) { p=1; next } } p && NF' CHANGELOG.md > $(BUILD_DIR)/$(ASSET).CHANGELOG.md
+	test -s $(BUILD_DIR)/$(ASSET).CHANGELOG.md || awk -v ver=$$(echo $(RELEASE) | tr '-' ' ' | awk '{ print $$1 }' | tr v. '  ' | awk '{ printf "v%d.%d.%d", $$1, $$2, $$3 }') '/^## / { if (p) { exit }; if ($$2 == ver) { p=1; next } } p && NF' CHANGELOG.md > $(BUILD_DIR)/$(ASSET).CHANGELOG.md
 	cp {CHANGELOG.md,README.md,screenshot.jpg} $(INGREELAB_DIR)
 	tar -czvf $(BUILD_DIR)/$(ASSET).tar.gz $(INGREELAB_DIR)
 	zip -r $(BUILD_DIR)/$(ASSET).zip $(INGREELAB_DIR)

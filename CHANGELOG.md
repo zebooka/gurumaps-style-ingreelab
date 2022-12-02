@@ -1,6 +1,6 @@
 # Ingreelab changelog
 
-## v2.0
+## v2.0.0
 
 * Refactoring of style structure.
 * Countries, states and cities in separate files.
