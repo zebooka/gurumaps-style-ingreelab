@@ -26,7 +26,7 @@ dark-colors:
 ##@ Release
 
 build: clean ## Build new release assets
-	git status --short; test -z "$$(git status --porcelain)" && exit $?
+	git status --short; test -z "$$(git status --porcelain)" || exit 1
 	test -d $(BUILD_DIR) || mkdir -p $(BUILD_DIR)
 	awk -v ver=$(VERSION) '/^## / { if (p) { exit }; if ($$2 == ver) { p=1; next } } p && NF' CHANGELOG.md > $(BUILD_DIR)/$(ASSET).CHANGELOG.md
 	cp {CHANGELOG.md,README.md,screenshot.jpg} $(INGREELAB_DIR)
