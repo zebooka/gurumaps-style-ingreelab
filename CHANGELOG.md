@@ -9,6 +9,7 @@
 * Natural objects separated.
 * Areas refactored and separated.
 * Cities names are visible from zoom 9.
+* Tracks visibility increased (line width increased, dash style optimized to show grade).
 
 ## v1.0.3
 

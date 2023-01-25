@@ -14,7 +14,8 @@ Custom style for Guru Maps inspired by `Ingreelab.net` tiles render, to improve 
 
 ## How to use
 
-To add this style into the app, copy `Ingreelab HD.style/` folder into the app Documents folder.
+To add this style into the app, copy `Ingreelab HD.style/` folder into the app Documents folder using file manager, iTunes or Finder.
+For Mac OS users: copy to `~/Library/Containers/com.bodunov.galileo/Data/Documents/`.
 It will be added into the offline maps list as `Ingreelab HD`.
 
 

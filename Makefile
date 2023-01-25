@@ -5,9 +5,9 @@ MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 CURRENT_DIR := $(dir $(MAKEFILE_PATH))
 RELEASE := $$(git describe --tags --candidates=0 2>/dev/null || (git describe --all | sed 's|^heads/||'; git log -1 --format="dev-%ad-%h" --date=short) | tr '\n ' '--' | sed 's|-$$||')
 TAG := $$(git describe --tags --candidates=0 2>/dev/null)
-BUILD_DIR := "$(CURRENT_DIR)build"
-ASSET := "Ingreelab-$(RELEASE)"
-INGREELAB_DIR := "Ingreelab HD.style/"
+BUILD_DIR := $(CURRENT_DIR)build
+ASSET := Ingreelab-$(RELEASE)
+INGREELAB_DIR := Ingreelab\ HD.style/
 
 help:
 	@awk 'BEGIN {FS = ":.*##"; printf "\n\033[1mUsage:\n  make \033[36m<target>\033[0m\n"} \
@@ -21,6 +21,9 @@ help:
 dark-colors:
 	php ./generate-dark-colors.php
 	git status --short
+
+macos:
+	rsync -vaHzhP --no-g --no-o --delete-after $(INGREELAB_DIR) ~/Library/Containers/com.bodunov.galileo/Data/Documents/$(INGREELAB_DIR)
 
 ##@ Release
 
