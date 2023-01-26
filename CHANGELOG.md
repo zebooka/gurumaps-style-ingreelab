@@ -10,6 +10,7 @@
 * Areas refactored and separated.
 * Cities names are visible from zoom 9.
 * Tracks visibility increased (line width increased, dash style optimized to show grade).
+* Fix for water names on high zoom.
 
 ## v1.0.3
 
