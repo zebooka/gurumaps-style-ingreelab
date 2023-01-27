@@ -166,8 +166,11 @@ line {
             [tracktype=grade3] { dashes: 14,2; }
         }
         |z14- {
-            dashes: 18,3,8,3;
-            [tracktype=grade4] { dashes: 10,4; }
+            dashes: 6,5,16,5;
+            [tracktype=grade1] { dashes: 63,0; }
+            [tracktype=grade2] { dashes: 28,2; }
+            [tracktype=grade3] { dashes: 14,2; }
+            [tracktype=grade4] { dashes: 8,5; }
             [tracktype=grade5] { dashes: 5,8; }
         }
     }
