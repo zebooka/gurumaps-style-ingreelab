@@ -11,6 +11,7 @@
 * Cities names are visible from zoom 9.
 * Tracks visibility increased (line width increased, dash style optimized to show grade).
 * Fix for water names on high zoom.
+* Build files now contain style version in dir name.
 
 ## v1.0.3
 
