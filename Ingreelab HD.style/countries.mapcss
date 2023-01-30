@@ -89,4 +89,15 @@ area {
             dashes: 2,4,2,4,2,4,2,4;
         }
     }
+
+    |z9-[landuse=military],
+    |z9-[military=danger_area] {
+        text: eval(locTag('name'));
+        text-color: @color_danger_text;
+        text-priority: 2;
+        font-size: 9;
+        font-weight: bold;
+        font-stroke-width: 1.5pt;
+        font-stroke-color: @color_label_stroke;
+    }
 }

@@ -165,4 +165,31 @@ area {
             text-color: @color_water_text;
         }
     }
+
+    |z15-([leisure=park], [leisure=garden]) {
+        text: eval(locTag('name'));
+        text-color: @color_national_park_text;
+        text-priority: -1;
+        font-size: 8;
+        font-stroke-width: 2pt;
+        font-stroke-color: @color_label_stroke;
+    }
+}
+
+node,area {
+    |z14-[ref] {
+        [boundary=forest_compartment],
+        [boundary=forestry_compartment] {
+            text: eval(tag('ref'));
+            text-color: @color_national_park_text;
+            text-priority: -2;
+            font-size: 6;
+            font-stroke-width: 1pt;
+            font-stroke-color: @color_wood;
+            |z15- {
+                font-size: 8;
+                font-stroke-width:2pt;
+            }
+        }
+    }
 }

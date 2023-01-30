@@ -1,0 +1,27 @@
+// Ingreelab alike map style for Guru Maps, originally based on Default style.
+// Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
+// Copyright (c) 2022 Anton Bondar https://zebooka.com
+
+node,area {
+    |z16-{
+        @if Entertaiment
+            [leisure=water_park],
+            [tourism=theme_park],
+            [tourism=zoo]
+        @endif
+            area(
+                [highway=pedestrian],
+                [highway=footway]
+            ),
+        @if Sport
+            [leisure=stadium],
+        @endif
+        {
+            text: eval(locTag('name'));
+            text-color: @color_label_text;
+            font-size: 10;
+            font-stroke-width: 1pt;
+            font-stroke-color: @color_label_stroke;
+        }
+    }
+}

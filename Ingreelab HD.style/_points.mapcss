@@ -6,68 +6,9 @@
 
 node,area {
     // Названия больших объектов
-    |z16-{
-        @if Entertaiment
-            [leisure=water_park],
-            [tourism=theme_park],
-            [tourism=zoo]
-        @endif
-            area(
-                [highway=pedestrian],
-                [highway=footway]
-            ),
-        @if Sport
-            [leisure=stadium],
-        @endif
-        {
-            text: eval(locTag('name'));
-            text-color: @color_label_text;
-            font-size: 10;
-            font-stroke-width: 1pt;
-            font-stroke-color: @color_label_stroke;
-        }
-    }
 
-    area{
 
-        |z9-[landuse=military],
-        |z9-[military=danger_area] {
-            text: eval(locTag('name'));
-            text-color: @color_danger_text;
-            text-priority: 2;
-            font-size: 9;
-            font-weight: bold;
-            font-stroke-width: 1.5pt;
-            font-stroke-color: @color_label_stroke;
-        }
-        |z15-(
-            [leisure=park],
-            [leisure=garden]
-        ) {
-            text: eval(locTag('name'));
-            text-color: @color_national_park_text;
-            text-priority: -1; // если хватает места - покажем
-            font-size: 8;
-            font-stroke-width: 2pt;
-            font-stroke-color: @color_label_stroke;
-        }
-    }
 
-    |z14-[ref] {
-        [boundary=forest_compartment],
-        [boundary=forestry_compartment] {
-            text: eval(tag('ref'));
-            text-color: @color_national_park_text;
-            text-priority: -2; // если хватает места - покажем
-            font-size: 6;
-            font-stroke-width: 1pt;
-            font-stroke-color: @color_wood;
-            |z15-{
-                font-size: 8;
-                font-stroke-width:2pt;
-            }
-        }
-    }
 
     @if BuildingName
         area|z16-[building],
