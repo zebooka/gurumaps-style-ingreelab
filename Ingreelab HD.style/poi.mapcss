@@ -2,6 +2,25 @@
 // Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
 // Copyright (c) 2022 Anton Bondar https://zebooka.com
 
+node {
+    |z12- {
+        |z13-[historic=ruins] {
+            icon-image: "icon/ruins.svg";
+            icon-scale: 0.6;
+            icon-tint: @color_icon_tint;
+            text-priority: 1;
+            |z14- { icon-scale: 0.75; }
+        }
+        [tourism=viewpoint] {
+            icon-image: "icon/viewpoint.svg";
+            icon-scale: 0.6;
+            icon-tint: @color_icon_tint;
+            text-priority: 1;
+            |z14- { icon-scale: 0.75; }
+        }
+    }
+}
+
 node,area {
     |z16-{
         @if Entertaiment
@@ -22,6 +41,34 @@ node,area {
             font-size: 10;
             font-stroke-width: 1pt;
             font-stroke-color: @color_label_stroke;
+        }
+    }
+
+     //node|z16-[tourism=attraction],
+    |z14-{
+        [tourism=information], [shop=ticket] {
+            icon-image: "icon/info.svg";
+            icon-scale: 0.60;
+            icon-tint: @color_icon_tint;
+        }
+
+        [tourism=attraction],
+        [tourism=information][information=guidepost] {
+            icon-image: "icon/guidepost.svg";
+            icon-scale: 0.60;
+            icon-tint: @color_icon_tint;
+        }
+
+        [tourism=information][information=map] {
+            icon-image: "icon/info_map.svg";
+            icon-scale:0.60;
+            icon-tint: @color_icon_tint;
+        }
+
+        [tourism=information][information=board] {
+            icon-image: "icon/info_board.svg";
+            icon-scale: 0.60;
+            icon-tint: @color_icon_tint;
         }
     }
 }

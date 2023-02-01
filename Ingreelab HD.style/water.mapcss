@@ -134,6 +134,23 @@ node {
     |z5-8[place=ocean] {
         font-size: 18;
     }
+
+    |z12- {
+        [waterway=waterfall] {
+            icon-image: "icon/waterfall.svg";
+            icon-scale: 0.6;
+            icon-tint: @color_icon_water;
+            text-priority: 1;
+            |z14- { icon-scale: 0.8; }
+        }
+        [highway=ford] {
+            icon-image: "icon/ford.svg";
+            icon-scale: 0.6;
+            icon-tint: @color_icon_water;
+            text-priority: 1;
+            |z14- { icon-scale: 0.75; }
+        }
+    }
 }
 
 node, area {

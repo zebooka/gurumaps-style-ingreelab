@@ -71,6 +71,7 @@ canvas
 @import "skiing.mapcss";
 @import "natural.mapcss";
 @import "buildings.mapcss";
+@import "poi.mapcss";
 
 //@import "poi.mapcss";
 

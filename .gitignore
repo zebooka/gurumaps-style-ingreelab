@@ -1,6 +1,4 @@
-/build/*.md
-/build/*.tar.gz
-/build/*.zip
+/build/*
 */README.md
 */CHANGELOG.md
 */screenshot.jpg
