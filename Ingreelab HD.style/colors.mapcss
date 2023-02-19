@@ -20,11 +20,14 @@
 @country_stroke: @name_stroke;
 @country_part_label: @name_label_dimmed;
 @boundary_color: #ad6cad;
+@downloaded_100: #BFFF0040; // c: #FFAE0040
+@downloaded_50: #BFFF0020; // c: #FFAE0020
+@downloaded_25: #BFFF0010; // c: #FFAE0010
 
 // CITIES
 @city_label: @name_label;
 @city_stroke: @name_stroke;
-@capital_icon: #6e216e; // l: 0
+@capital_icon: #ff004d; // l: 0
 @suburb_label: #7a7c7e; // l: 0
 @suburb_stroke: @name_stroke;
 

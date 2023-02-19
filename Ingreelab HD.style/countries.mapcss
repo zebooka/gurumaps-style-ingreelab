@@ -2,6 +2,12 @@
 // Copyright (c) 2013-2019 Evgen Bodunov. All rights reserved.
 // Copyright (c) 2022 Anton Bondar https://zebooka.com
 
+@if DownloadedMaps
+    |z1-5(@DownloadedMaps) { fill-color: @downloaded_100; }
+    |z6(@DownloadedMaps) { fill-color: @downloaded_50; }
+    |z7(@DownloadedMaps) { fill-color: @downloaded_25; }
+@endif
+
 node,area {
     [place=country] {
         |z2-8 {

@@ -55,8 +55,8 @@ node,area {
 
     |z5-12[capital=yes] {
         [admin_level=2],[!admin_level] {
-            icon-image: "icon/circle.svg";
-            icon-scale: 1.5;
+            icon-image: "icon/embassy.svg";
+            icon-scale: 0.5;
             icon-tint: @capital_icon;
             text: eval(locTag('name'));
             text-color: @city_label;
