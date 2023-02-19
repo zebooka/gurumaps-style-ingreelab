@@ -12,6 +12,10 @@
 * Tracks visibility increased (line width increased, dash style optimized to show grade).
 * Fix for water names on high zoom.
 * Build files now contain style version in dir name.
+* POIs for tourism, ruins, viewpoint, waterfall, ford enhanced.
+* Buildings entrances now display numbers.
+* National parks and waterfalls/fords fixes.
+* Helicopter view for downloaded maps.
 
 ## v1.0.3
 
