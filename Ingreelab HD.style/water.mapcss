@@ -136,18 +136,25 @@ node {
     }
 
     |z12- {
+        [waterway=waterfall],
+        [highway=ford] {
+            icon-tint: @color_icon_water;
+            text-priority: 2;
+            text: eval(locTag('name'));
+            text-color: @water_label;
+            font-size: 9;
+            font-weight: bold;
+            font-stroke-width: 1.5pt;
+            font-stroke-color: @water_stroke;
+        }
         [waterway=waterfall] {
             icon-image: "icon/waterfall.svg";
             icon-scale: 0.6;
-            icon-tint: @color_icon_water;
-            text-priority: 1;
             |z14- { icon-scale: 0.8; }
         }
         [highway=ford] {
             icon-image: "icon/ford.svg";
             icon-scale: 0.6;
-            icon-tint: @color_icon_water;
-            text-priority: 1;
             |z14- { icon-scale: 0.75; }
         }
     }

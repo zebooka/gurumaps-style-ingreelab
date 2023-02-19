@@ -26,7 +26,7 @@ node,area {
             text: eval(locTag('name'));
             text-color: @country_part_label;
             font-size: 14;
-            font-stroke-width: 2pt;
+            font-stroke-width: 1.5pt;
             font-stroke-color: @country_stroke;
             text-priority: 8;
             text-big-padding: true;

@@ -160,8 +160,6 @@ node,area {
     @if Beauty
         |z17-( [shop=hairdresser], [shop=beauty], [shop=tattoo], [shop=massage], [leisure=sauna], [amenity=sauna] ),
     @endif
-        |z13-[waterway=waterfall],
-        |z13-[highway=ford],
     @if Sport
         |z16-(
             [amenity=swimming_pool],
