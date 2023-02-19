@@ -42,16 +42,37 @@ node,area {
         }
 
         node|z17-[entrance][!indoor] {
-            icon-image: "icon/circle.svg";
+            icon-image: "circle.svg";
             icon-tint: @color_entrance_text;
-            icon-scale: 0.8;
+
+            text-priority: -5;
+            details-enabled: 0;
+
+            icon-scale: 0.7;
             [entrance=main] {
-                icon-scale: 1;
+                icon-scale: 0.85;
             }
+
             |z18-{
-                text: eval( tag('ref') );
-                text-color: @color_entrance_text;
-                font-size: 8;
+                icon-image: "entrance.svg";
+                icon-scale: 0.8;
+                [entrance=main] {
+                    icon-scale: 1;
+                }
+
+                [addr:housenumber] {
+                text: eval( tag('addr:housenumber') );
+                text-color: @color_building_text;
+                font-size: 9;
+                details-enabled: 1;
+            }
+
+                [ref] {
+                    text: eval( tag('ref') );
+                    text-color: @color_entrance_text;
+                    font-size: 8;
+                    details-enabled: 1;
+                }
             }
         }
     @endif
