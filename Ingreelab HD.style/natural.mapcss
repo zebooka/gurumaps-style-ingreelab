@@ -141,7 +141,9 @@ area {
 
     |z9- {
         [boundary=national_park],
-        [boundary=protected_area],
+        [boundary=protected_area][protected_class=1a],
+        [boundary=protected_area][protected_class=1b],
+        [boundary=protected_area][protected_class<=6],
         [leisure=nature_reserve] {
             z-index: 2;
             color: @color_national_park;
