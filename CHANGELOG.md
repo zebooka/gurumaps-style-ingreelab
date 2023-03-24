@@ -16,6 +16,7 @@
 * Buildings entrances now display numbers.
 * National parks and waterfalls/fords fixes.
 * Helicopter view for downloaded maps.
+* Increased visibility for woods/forests and farms upto 9 zoom.
 
 ## v1.0.3
 

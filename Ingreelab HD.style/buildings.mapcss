@@ -9,7 +9,7 @@ area {
         fill-image: @image_construction;
     }
 
-    |z10-{
+    |z9-{
         [landuse=farm],
         [landuse=village_green],
         [landuse=recreation_ground],

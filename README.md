@@ -12,10 +12,12 @@ Custom style for Guru Maps inspired by `Ingreelab.net` tiles render, to improve 
 * Adds contrast display of forest tracks, footways etc. that is useful for hiking and offroad.
 
 
-## How to use
+## How to install
 
-To add this style into the app, copy `Ingreelab HD.style/` folder into the app Documents folder using file manager, iTunes or Finder.
-For Mac OS users: copy to `~/Library/Containers/com.bodunov.galileo/Data/Documents/`.
+To add this style into the app, copy `Ingreelab HD.style/` folder into the app files folder using file manager, iTunes or Finder.
+- Android: `/Android/data/com.bodunov.galileo/`
+- iOS: `Files App` → `Guru Maps` or from computer `Locations`/`iTunes` → `Your device` → `Files` → `Guru Maps`
+- macOS: `~/Library/Containers/com.bodunov.galileo/Data/Documents/`.
 It will be added into the offline maps list as `Ingreelab HD`.
 
 

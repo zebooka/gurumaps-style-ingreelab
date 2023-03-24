@@ -63,7 +63,7 @@ area {
     }
 
 
-    |z10-{
+    |z9-{
         [natural=wood],
         [landuse=forest] {
             z-index: -13;
