@@ -109,10 +109,10 @@
 @color_landuse_cemetery: #a6b09c; // c: #42473d
 @color_landuse_commercial: #F3E3D9; // s: -0.15
 @color_landuse_parking: #FFFCA0; // c: #99825f
-@color_landuse_residential: #D6D5B4; // s: -0.15 
+@color_landuse_residential: #D6D5B4; // s: -0.15
 @color_market: #D9E5B3; // l: 0
 @color_mud: #E9DFBF; // l: 0.1
-@color_national_park: #ACCB8A; // l: 0
+@color_national_park: #ACCB8A70; // l: 0
 @color_nature_reserve: #BCDB9A30; // l: 0
 @color_orchard: #C6D876; // l: -0.095
 @color_peak: #724927; // l: -0.1
