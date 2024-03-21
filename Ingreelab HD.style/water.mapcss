@@ -63,6 +63,7 @@ area {
         [landuse=reservoir],
         [waterway=riverbank] {
             fill-color: @color_water;
+            [salt=yes] { fill-color: @color_water_salted; }
         }
     }
 

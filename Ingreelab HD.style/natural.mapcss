@@ -86,10 +86,10 @@ area {
     |z15-{
         [natural=wood],
         [landuse=forest] {
-            [leaf_type=broadleaved] { fill-image: @image_wood_broad; } // TODO: not implemented in map data
-            [leaf_type=leafless] { fill-image: @image_wood_leafless; } // TODO: not implemented in map data
-            [leaf_type=mixed] { fill-image: @image_wood_mixed; } // TODO: not implemented in map data
-            [leaf_type=needleleaved] { fill-image: @image_wood_needle; } // TODO: not implemented in map data
+            [leaf_type=broadleaved] { fill-image: @image_wood_broad; }
+            [leaf_type=leafless] { fill-image: @image_wood_leafless; }
+            [leaf_type=mixed] { fill-image: @image_wood_mixed; }
+            [leaf_type=needleleaved] { fill-image: @image_wood_needle; }
         }
         [landuse=quarry] {
             fill-image: @image_quarry;
@@ -136,6 +136,7 @@ area {
         }
         |z11- {
             fill-image: @image_wetland;
+            [wetland=saltmarsh] { fill-image: @image_wetland_saltmarsh; }
         }
     }
 

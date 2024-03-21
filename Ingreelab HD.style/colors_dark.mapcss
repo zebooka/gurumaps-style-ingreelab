@@ -68,6 +68,7 @@
 
 // WATER
 @color_water: #243E64; // l: -0.2
+@color_water_salted: #452464; // l: -0.2
 @color_water_underground: #507dbf66;
 @water_label: #5B80B9; // l: -0.1
 @water_stroke: @name_stroke;
@@ -109,10 +110,10 @@
 @color_landuse_cemetery: #42473d; // c: #42473d
 @color_landuse_commercial: #22160F; // s: -0.15
 @color_landuse_parking: #99825f; // c: #99825f
-@color_landuse_residential: #424131; // s: -0.15 
+@color_landuse_residential: #424131; // s: -0.15
 @color_market: #404C19; // l: 0
 @color_mud: #655623; // l: 0.1
-@color_national_park: #567534; // l: 0
+@color_national_park: #56753470; // l: 0
 @color_nature_reserve: #46652430; // l: 0
 @color_orchard: #56631C; // l: -0.095
 @color_peak: #CB9467; // l: -0.1

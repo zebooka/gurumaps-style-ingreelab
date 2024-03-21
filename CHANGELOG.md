@@ -17,6 +17,8 @@
 * National parks and waterfalls/fords fixes.
 * Helicopter view for downloaded maps.
 * Increased visibility for woods/forests and farms upto 9 zoom.
+* Salt lakes and other water objects are now shown with violet color.
+* Woods display one of four types (if data is specified) - broadleaved, needleleaved, leafless and mixed.
 
 ## v1.0.3
 

@@ -68,6 +68,7 @@
 
 // WATER
 @color_water: #507dbf; // l: -0.2
+@color_water_salted: #9b84d5; // l: -0.2
 @color_water_underground: #507dbf66;
 @water_label: #365380; // l: -0.1
 @water_stroke: @name_stroke;
