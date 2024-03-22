@@ -14,11 +14,16 @@ Custom style for Guru Maps inspired by `Ingreelab.net` tiles render, to improve 
 
 ## How to install
 
-To add this style into the app, copy `Ingreelab HD.style/` folder into the app files folder using file manager, iTunes or Finder.
+To add this style into the app, download `Release (zip)` from the assets and save it to GuruMaps application folder.
 - Android: `/Android/data/com.bodunov.galileo/`
 - iOS: `Files App` → `Guru Maps` or from computer `Locations`/`iTunes` → `Your device` → `Files` → `Guru Maps`
 - macOS: `~/Library/Containers/com.bodunov.galileo/Data/Documents/`.
-It will be added into the offline maps list as `Ingreelab HD`.
+Then using file manager unzip it and new style will be added into the offline maps list as `Ingreelab HD vX.Y.Z`.
+
+### Small tip
+
+In order for app data folder to appear, you need to create some point or record some track first. Some Android OS versions do not allow write
+access to application folders.
 
 
 ## Why it is called *Ingreelab HD*?

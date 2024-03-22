@@ -34,6 +34,7 @@
 // ROADS
 @main_road: #E67506; // l: 0
 @main_road_darker: #E8821D; // l: -0.1
+@main_road_unpaved: #854; // c: #854
 @main_road_casing: #000; // c: #000
 @main_road_label: #222;
 @main_road_stroke: #F98819;
@@ -68,7 +69,7 @@
 
 // WATER
 @color_water: #243E64; // l: -0.2
-@color_water_salted: #452464; // l: -0.2
+@color_water_salted: #18102E; // l: -0.2
 @color_water_underground: #507dbf66;
 @water_label: #5B80B9; // l: -0.1
 @water_stroke: @name_stroke;

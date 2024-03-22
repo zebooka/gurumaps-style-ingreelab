@@ -34,6 +34,7 @@
 // ROADS
 @main_road: #F98819; // l: 0
 @main_road_darker: #b36212; // l: -0.1
+@main_road_unpaved: #8c5014; // c: #854
 @main_road_casing: #663a0e; // c: #000
 @main_road_label: #222;
 @main_road_stroke: #F98819;

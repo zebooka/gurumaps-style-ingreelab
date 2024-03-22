@@ -19,6 +19,7 @@
 * Increased visibility for woods/forests and farms upto 9 zoom.
 * Salt lakes and other water objects are now shown with violet color.
 * Woods display one of four types (if data is specified) - broadleaved, needleleaved, leafless and mixed.
+* Unpaved highways now displayed in darker colors from zoom 13 (depending on maps data).
 
 ## v1.0.3
 
