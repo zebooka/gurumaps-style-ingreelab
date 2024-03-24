@@ -41,9 +41,9 @@
 @raceway: #ff9b8a; // l: 0.1
 @raceway_casing: #b36d60;
 @residential_road: #fefed0; // l: 0.1
-@residential_road_casing: #8c8c8c; // c: #000
+@residential_road_casing: #666666; // c: #000
 @small_road: #eee; // l: 0.3
-@small_road_casing: #808080; // c: #000
+@small_road_casing: #666666; // c: #000
 @track_dashes: #555; // c: #333
 @road_construction: #F7BE81; // l: 0
 @private_dashes: #ccc; // l: 0

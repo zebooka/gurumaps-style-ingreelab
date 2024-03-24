@@ -28,7 +28,7 @@ line {
     |z13-[highway=motorway_link] {
         color: @main_road;
         [surface=unpaved],
-        [surface=gravel],[surface=compacted],[surface=fine_gravel],[surface=gravel],[surface=rock],[surface=pebblestone],
+        [surface=unpaved],[surface=compacted],[surface=fine_gravel],[surface=gravel],[surface=rock],[surface=pebblestone],
         [surface=ground],[surface=dirt],[surface=earth],[surface=mud],[surface=sand] { color: @main_road_unpaved; }
         casing-color: @main_road_casing;
         casing-width: 1pt;
@@ -50,7 +50,7 @@ line {
     |z6-[highway=trunk],
     |z13-[highway=trunk_link] {
         color: @main_road;
-        [surface=gravel],[surface=compacted],[surface=fine_gravel],[surface=gravel],[surface=rock],[surface=pebblestone],
+        [surface=unpaved],[surface=compacted],[surface=fine_gravel],[surface=gravel],[surface=rock],[surface=pebblestone],
         [surface=ground],[surface=dirt],[surface=earth],[surface=mud],[surface=sand] { color: @main_road_unpaved; }
         casing-color: @main_road_casing;
         casing-width: 1pt;
@@ -72,7 +72,7 @@ line {
     |z8-[highway=primary],
     |z14-[highway=primary_link] {
         color: @main_road;
-        [surface=gravel],[surface=compacted],[surface=fine_gravel],[surface=gravel],[surface=rock],[surface=pebblestone],
+        [surface=unpaved],[surface=compacted],[surface=fine_gravel],[surface=gravel],[surface=rock],[surface=pebblestone],
         [surface=ground],[surface=dirt],[surface=earth],[surface=mud],[surface=sand] { color: @main_road_unpaved; }
         casing-color: @main_road_casing;
         casing-width: 1pt;
@@ -95,7 +95,7 @@ line {
     |z11-[highway=secondary],
     |z14-[highway=secondary_link] {
         color: @main_road;
-        [surface=gravel],[surface=compacted],[surface=fine_gravel],[surface=gravel],[surface=rock],[surface=pebblestone],
+        [surface=unpaved],[surface=compacted],[surface=fine_gravel],[surface=gravel],[surface=rock],[surface=pebblestone],
         [surface=ground],[surface=dirt],[surface=earth],[surface=mud],[surface=sand] { color: @main_road_unpaved; }
         casing-color: @main_road_casing;
         casing-width: 0.5pt;
@@ -116,7 +116,7 @@ line {
     |z11-[highway=tertiary],
     |z15-[highway=tertiary_link] {
         color: @main_road;
-        [surface=gravel],[surface=compacted],[surface=fine_gravel],[surface=gravel],[surface=rock],[surface=pebblestone],
+        [surface=unpaved],[surface=compacted],[surface=fine_gravel],[surface=gravel],[surface=rock],[surface=pebblestone],
         [surface=ground],[surface=dirt],[surface=earth],[surface=mud],[surface=sand] { color: @main_road_unpaved; }
         casing-color: @main_road_casing;
         casing-width: 0.5pt;
@@ -142,7 +142,7 @@ line {
         width: eval( zlinear(13, 2pt,2pt,max(3pt, 4m) ));
         color: @residential_road;
         casing-color: @residential_road_casing;
-        casing-width: 0.5pt;
+        casing-width: 0.7pt;
     }
 
     |z12-[highway=unclassified],
@@ -153,7 +153,7 @@ line {
         width: eval( zlinear(13, 2pt,2pt,max(3pt, 4m) ));
         color: @small_road;
         casing-color: @small_road_casing;
-        casing-width: 0.5pt;
+        casing-width: 0.7pt;
     }
 
     // direction arrows
