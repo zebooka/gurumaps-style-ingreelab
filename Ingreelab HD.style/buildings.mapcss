@@ -171,6 +171,8 @@ area {
         |z13-{
             z-index: 3;
             fill-color: @color_building;
+            casing-color: white;
+            casing-width: eval( zlinear(15, 0.1pt,0.2pt,0.5pt) );
         }
 
         // building stroke

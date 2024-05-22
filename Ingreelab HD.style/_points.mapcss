@@ -48,9 +48,9 @@ node,area {
             text-priority: -5;
             details-enabled: 0;
 
-            icon-scale: 0.7;
+            icon-scale: 0.2;
             [entrance=main] {
-                icon-scale: 0.85;
+                icon-scale: 0.4;
             }
 
             |z18-{
@@ -61,11 +61,11 @@ node,area {
                 }
 
                 [addr:housenumber] {
-                text: eval( tag('addr:housenumber') );
-                text-color: @color_building_text;
-                font-size: 9;
-                details-enabled: 1;
-            }
+                    text: eval( tag('addr:housenumber') );
+                    text-color: @color_building_text;
+                    font-size: 9;
+                    details-enabled: 1;
+                }
 
                 [ref] {
                     text: eval( tag('ref') );
@@ -369,20 +369,20 @@ node,area {
             icon-scale:0.50;
             icon-tint: @color_icon_tint;
         }
-        
+
         [leisure=firepit] {
             icon-image: "icon/firepit.svg";
             icon-scale:0.50;
             icon-tint: @color_icon_tint;
         }
-        
+
         [leisure=bbq],
         [amenity=bbq] {
             icon-image: "icon/bbq.svg";
             icon-scale:0.50;
             icon-tint: @color_icon_tint;
         }
-        
+
         [leisure=fishing] {
             icon-image: "icon/fishing.svg";
             icon-scale:0.50;
@@ -395,20 +395,20 @@ node,area {
             icon-tint: @color_wood;
             text-priority: -10;
         }
-        
+
         [natural=rock] {
             icon-image: "icon/rock.svg";
             icon-scale: 0.5;
             icon-tint: @color_icon_tint;
         }
-        
+
         [natural=stone] {
             icon-image: "icon/stone.svg";
             icon-scale: 0.5;
             icon-tint: @color_icon_tint;
         }
     }
-    
+
     node|z18-[amenity=bench] {
         icon-image: "icon/bench.svg";
         icon-scale:0.50;
@@ -569,7 +569,7 @@ node,area {
         font-stroke-width: 1;
         text-priority: 1;
         font-stroke-color: @color_label_stroke;
-        
+
         [highway=pedestrian]{
             font-stroke-color: @color_footway_area;
         }
@@ -577,7 +577,7 @@ node,area {
             font-stroke-color: @color_hospital;
         }
     }
-    
+
     |z15-[building] {
         [amenity=university],
         [amenity=hospital],
