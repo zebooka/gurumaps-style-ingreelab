@@ -76,6 +76,18 @@ canvas
 @import "poi.mapcss";
 
 //@import "poi.mapcss";
-
 @import "_points.mapcss";
-@import "_relations.mapcss";
+
+
+@if SelectedRelations
+@SelectedRelations {
+    line|z9-12 {
+        outline-width: eval( zlinear(9, 4pt,5pt,5pt,6pt ));
+        outline-color: #ff000050;
+    }
+    line|z13- {
+        width: eval( zlinear(9, 2pt,3pt,3pt,4pt ));
+        color: #ff0000aa; // red
+    }
+}
+@endif
