@@ -18,6 +18,7 @@
     @image_railway12: "dark/railway12.png";
     @image_sand: "dark/sand.png";
     @image_scrub: "dark/scrub.png";
+    @image_tram: "dark/tram.png";
     @image_vineyard: "dark/vineyard.png";
     @image_wetland: "dark/wetland.png";
     @image_wetland_saltmarsh: "dark/wetland_saltmarsh.png";
@@ -41,6 +42,7 @@
     @image_railway12: "light/railway12.png";
     @image_sand: "light/sand.png";
     @image_scrub: "light/scrub.png";
+    @image_tram: "light/tram.png";
     @image_vineyard: "light/vineyard.png";
     @image_wetland: "light/wetland.png";
     @image_wetland_saltmarsh: "light/wetland_saltmarsh.png";

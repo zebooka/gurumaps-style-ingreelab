@@ -9,10 +9,6 @@ line {
 
     [railway] {
         |z10-[railway=rail] {
-            //color: @color_railway_dashes;
-            //dashes-color: @color_railway_gap;
-            //dashes-color: @color_railway_dashes;
-            //dashes: 4,2;
             width: 3pt;
             //dashes-width: 1pt;
             galileo-stencil-type: drop-same;
@@ -26,12 +22,12 @@ line {
             }
         }
 
-        |z13-[railway=tram] {
+        |z14-[railway=tram],
+        |z14-[railway=light_rail],
+        |z14-[railway=narrow_gauge] {
             width: eval(zlinear(15, 3pt,4pt));
-            dashes: 6,2;
-            dashes-width: eval(zlinear(15, 1pt,2pt));
-            dashes-color: @railway_dashes;
             z-index: 6;
+            fill-image: @image_tram;
         }
 
         |z13-[railway=subway] {
@@ -51,9 +47,7 @@ line {
             }
         }
 
-        |z14-[railway=light_rail],
-        |z15-[railway=funicular],
-        |z14-[railway=narrow_gauge] {
+        |z15-[railway=funicular] {
             dashes: 2,2;
             dashes-width: 1pt;
             dashes-color: @bridge;
