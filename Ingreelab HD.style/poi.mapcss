@@ -6,7 +6,7 @@ node {
     |z12- {
         |z13-[historic=ruins] {
             icon-image: "icon/ruins.svg";
-            icon-scale: 0.6;
+            icon-scale: 0.5;
             icon-tint: @color_icon_tint;
             text-priority: 1;
             |z14- { icon-scale: 0.75; }
