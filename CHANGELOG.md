@@ -20,6 +20,7 @@
 * Salt lakes and other water objects are now shown with violet color.
 * Woods display one of four types (if data is specified) - broadleaved, needleleaved, leafless and mixed.
 * Unpaved highways now displayed in darker colors from zoom 13 (depending on maps data).
+* Fixed rendering of light railways, narrow railways and tram.
 
 ## v1.0.3
 
