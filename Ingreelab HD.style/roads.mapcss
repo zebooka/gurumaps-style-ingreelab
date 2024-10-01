@@ -289,4 +289,31 @@ line {
             color: @aeroway_runway_line;
         }
     }
+
+    |z14-[highway=residential],
+    |z14-[highway=living_street] {
+        [surface=unpaved],[surface=compacted],[surface=fine_gravel],[surface=gravel],[surface=rock],[surface=pebblestone],
+        [surface=ground],[surface=dirt],[surface=earth],[surface=mud],[surface=sand] {
+            //                             -13  14  15+
+            dashes-width: eval( zlinear(13, 2pt,2pt,max(3pt, 4m) ));
+            dashes-color: @residential_road_casing;
+            dashes: 1,7;
+            |z15- { dashes: 1,15; }
+            |z17- { dashes: 2,46; }
+        }
+    }
+
+    |z14-[highway=unclassified],
+    |z14-[highway=road],
+    |z14-[highway=service] {
+        [surface=unpaved],[surface=compacted],[surface=fine_gravel],[surface=gravel],[surface=rock],[surface=pebblestone],
+        [surface=ground],[surface=dirt],[surface=earth],[surface=mud],[surface=sand] {
+            //                             -13  14  15+
+            dashes-width: eval( zlinear(13, 2pt,2pt,max(3pt, 4m) ));
+            dashes-color: @small_road_casing;
+            dashes: 1,7;
+            |z15- { dashes: 1,15; }
+            |z17- { dashes: 2,46; }
+        }
+    }
 }

@@ -1,5 +1,9 @@
 # Ingreelab changelog
 
+## MINOR
+
+* Show unpaved surface for residential, living_street, unclassified, road and service highways using gentle dashes.
+
 ## v2.0.0
 
 * Refactoring of style structure.
