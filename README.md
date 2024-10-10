@@ -2,6 +2,8 @@
 
 Custom style for Guru Maps inspired by `Ingreelab.net` tiles render, to improve readability of maps.
 
+[Русский](README_ru.md)
+
 ![Example of rendering](screenshot.jpg)
 
 
@@ -15,15 +17,17 @@ Custom style for Guru Maps inspired by `Ingreelab.net` tiles render, to improve 
 ## How to install
 
 To add this style into the app, download `Release (zip)` from the assets and save it to GuruMaps application folder.
-- Android: `/Android/data/com.bodunov.galileo/`
-- iOS: `Files App` → `Guru Maps` or from computer `Locations`/`iTunes` → `Your device` → `Files` → `Guru Maps`
+- Android: `/Android/data/com.bodunov.galileo/` or `Android/data/com.bodunov.GalileoPro/files`
+- iOS: `Files App` → `Guru Maps` or from computer `Locations`/`iTunes` → `Your device` → `Files` → `Guru Maps` or `Guru Maps Pro`
 - macOS: `~/Library/Containers/com.bodunov.galileo/Data/Documents/`.
-Then using file manager unzip it and new style will be added into the offline maps list as `Ingreelab HD vX.Y.Z`.
+
+Then using file manager unzip it, restart `Guru Maps` and new style will be added into the offline maps list as `Ingreelab HD vX.Y.Z`.
+
 
 ### Small tip
 
 In order for app data folder to appear, you need to create some point or record some track first. Some Android OS versions do not allow write
-access to application folders.
+access to application folders. You may need to use desktop computer for this.
 
 
 ## Why it is called *Ingreelab HD*?

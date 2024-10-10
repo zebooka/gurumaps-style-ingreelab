@@ -36,7 +36,7 @@ build: clean ## Build new release assets
 	awk -v ver=$(TAG) '/^## / { if (p) { exit }; if ($$2 == ver) { p=1; next } } p && NF' CHANGELOG.md > $(BUILD_DIR)/$(ASSET).CHANGELOG.md
 	test -s $(BUILD_DIR)/$(ASSET).CHANGELOG.md || awk -v ver=$$(echo $(RELEASE) | tr '-' ' ' | awk '{ print $$1 }' | tr v. '  ' | awk '{ printf "v%d.%d.%d", $$1, $$2, $$3 }') '/^## / { if (p) { exit }; if ($$2 == ver) { p=1; next } } p && NF' CHANGELOG.md > $(BUILD_DIR)/$(ASSET).CHANGELOG.md
 	rsync -vaHzhP --no-g --no-o --delete-after $(INGREELAB_SRC_DIR)/ $(BUILD_DIR)/$(INGREELAB_DST_DIR)/
-	cp {CHANGELOG.md,README.md,screenshot.jpg} $(BUILD_DIR)/$(INGREELAB_DST_DIR)/
+	cp {CHANGELOG.md,README*.md,screenshot.jpg} $(BUILD_DIR)/$(INGREELAB_DST_DIR)/
 	cd $(BUILD_DIR)/ && tar -czvf $(ASSET).tar.gz $(INGREELAB_DST_DIR)/
 	cd $(BUILD_DIR)/ && zip -r $(ASSET).zip $(INGREELAB_DST_DIR)/
 	rm -rfv $(BUILD_DIR)/$(INGREELAB_DST_DIR)/

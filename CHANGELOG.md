@@ -3,6 +3,7 @@
 ## MINOR
 
 * Show unpaved surface for residential, living_street, unclassified, road and service highways using gentle dashes.
+* Russian README added.
 
 ## v2.0.0
 
