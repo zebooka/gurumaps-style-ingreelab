@@ -67,7 +67,7 @@
 @railway_station: #555; // l: 0.1
 @railway_platform: #aaa; // c: #aaa
 
-@power_lines: #8c8c8c;
+@power_lines: #888888;
 
 // WATER
 @color_water: #507dbf; // l: -0.2

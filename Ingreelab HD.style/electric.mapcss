@@ -2,24 +2,38 @@
 // Copyright (c) 2013-2025 Evgen Bodunov. All rights reserved.
 // Copyright (c) 2025 Anton Bondar https://zebooka.com
 
-node|z14-[power=tower] {
-    icon-image: "icon/poi_power_node.svg";
-    icon-tint: @power_lines;
-    details-enabled: 0;
-    icon-scale: 1.5;
-
-    |z15- {
-        icon-scale: 2;
+line {
+    |z14-[power=line] {
+        width: eval(zlinear(14, 1.5pt, 1.75pt, 2pt, 2.5pt));
+        color: @power_lines;
     }
 
-    |z16- {
-        icon-scale: 1.2;
-        icon-image: "icon/poi_power_tower.svg";
+    |z15-[power=minor_line] {
+        width: eval(zlinear(15, 1pt, 1.5pt, 1.5pt, 2pt));
+        color: @power_lines;
     }
 }
 
-node|z15-[power=node] {
-    icon-image: "icon/poi_power_node.svg";
-    icon-tint: @power_lines;
-    details-enabled: 0;
+node {
+    |z14-[power=tower] {
+        icon-image: "icon/poi_power_node.svg";
+        icon-tint: @power_lines;
+        details-enabled: 0;
+        icon-scale: 1.5;
+
+        |z15- {
+            icon-scale: 2;
+        }
+
+        |z16- {
+            icon-scale: 1.2;
+            icon-image: "icon/poi_power_tower.svg";
+        }
+    }
+
+    |z15-[power=node] {
+        icon-image: "icon/poi_power_node.svg";
+        icon-tint: @power_lines;
+        details-enabled: 0;
+    }
 }
