@@ -1,0 +1,91 @@
+node, area {
+
+    // public transport stops
+    @if PublicTransport
+        node|z16-[highway=bus_stop],
+        node|z17-[railway=tram_stop],
+        |z17-[public_transport=platform],
+    @endif
+    @if Railway
+        |z14-[railway=station][transport=subway],
+        |z14-[railway=station],
+        node|z14-[railway=halt],
+    @endif
+    {
+        text: eval(locTag('name'));
+        text-priority: 5;
+        text-color: @color_public_transport_text;
+        font-size: 10;
+        font-stroke-width: 2pt;
+        font-stroke-color: @color_label_stroke;
+    }
+
+     @if PublicTransport
+        |z16-[amenity=bus_station],
+        node|z16-[highway=bus_stop],
+        |z17-[public_transport=platform]
+        {
+            icon-image: "icon/bus.svg";
+            icon-scale:0.37;
+            icon-tint:brown;
+        }
+
+        node|z17-[railway=tram_stop]
+        {
+            icon-image: "icon/tram.svg";
+            icon-scale:0.37;
+            icon-tint:brown;
+        }
+    @endif
+
+    @if Railway
+        |z13-[railway=station] {
+            icon-image: "icon/railway_station.svg";
+            icon-scale: 2.4;
+            icon-tint: @color_railway_station;
+        }
+
+        node|z13-[railway=halt] {
+            icon-image: "icon/railway_station.svg";
+            icon-scale: 1.8;
+            icon-tint: @color_railway_station;
+        }
+
+        |z13-[railway=station][transport=subway] {
+            icon-image: "icon/subway.svg";
+            icon-scale: 2;
+            icon-tint: eval(any(tag('colour'), @color_icon_tint));
+            text-priority: 6; // выше чем у названий дорог
+        }
+
+        node|z15-[railway=subway_entrance] {
+            icon-image: "icon/circle.svg";
+            icon-scale: 1;
+            icon-tint: eval(any(tag('colour'), @color_icon_tint));
+            text-priority: 7; // выше чем у названий дорог
+        }
+    @endif
+
+    // train stations
+    |z15-[building=train_station]
+    {
+        icon-image: "icon/railway.svg";
+        icon-scale:0.5;
+        icon-tint: @color_railway_station;
+    }
+
+    // water transport
+    node|z16-[amenity=ferry_terminal]
+    {
+        icon-image: "icon/ferry.svg";
+        icon-scale:0.50;
+        icon-tint: @color_icon_tint;
+    }
+
+    node|z12-[aeroway=aerodrome]
+    {
+        icon-image: "icon/airport.svg";
+        icon-scale:0.50;
+        icon-tint: @color_icon_tint;
+    }
+}
