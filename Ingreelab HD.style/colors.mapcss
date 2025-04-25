@@ -1,6 +1,6 @@
 // Ingreelab alike map style for Guru Maps, originally based on Default style.
-// Copyright (c) 2013-2024 Evgen Bodunov. All rights reserved.
-// Copyright (c) 2024 Anton Bondar https://zebooka.com
+// Copyright (c) 2013-2025 Evgen Bodunov. All rights reserved.
+// Copyright (c) 2025 Anton Bondar https://zebooka.com
 
 // Suffixes: _label, _stroke, _icon, _darker, _casing, _dashes
 
@@ -66,6 +66,8 @@
 @railway_dashes: #555; // l: 0.1
 @railway_station: #555; // l: 0.1
 @railway_platform: #aaa; // c: #aaa
+
+@power_lines: #8c8c8c;
 
 // WATER
 @color_water: #507dbf; // l: -0.2

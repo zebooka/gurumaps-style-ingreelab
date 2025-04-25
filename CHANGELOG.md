@@ -4,6 +4,7 @@
 
 * Show unpaved surface for residential, living_street, unclassified, road and service highways using gentle dashes.
 * Russian README added.
+* Power lines and towers.
 
 ## v2.0.0
 

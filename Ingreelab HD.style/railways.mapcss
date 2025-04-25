@@ -1,6 +1,6 @@
 // Ingreelab alike map style for Guru Maps, originally based on Default style.
-// Copyright (c) 2013-2024 Evgen Bodunov. All rights reserved.
-// Copyright (c) 2024 Anton Bondar https://zebooka.com
+// Copyright (c) 2013-2025 Evgen Bodunov. All rights reserved.
+// Copyright (c) 2025 Anton Bondar https://zebooka.com
 
 line {
     |z13-[railway] {
@@ -68,6 +68,16 @@ line {
             linecap: none;
             z-index: 6;
         }
+    }
+
+    |z14-[power=line] {
+         width: eval( zlinear( 14, 1pt, 1.5pt, 1.5pt, 2pt) );
+         color: @power_lines;
+    }
+
+    |z15-[power=minor_line] {
+        width: eval( zlinear(15, 1pt, 1.5pt, 1.5pt, 2pt) );
+        color: @power_lines;
     }
 }
 

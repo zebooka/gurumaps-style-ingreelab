@@ -1,6 +1,6 @@
 // Ingreelab alike map style for Guru Maps
-// Copyright (c) 2013-2024 Evgen Bodunov. All rights reserved.
-// Copyright (c) 2024 Anton Bondar https://zebooka.com
+// Copyright (c) 2013-2025 Evgen Bodunov. All rights reserved.
+// Copyright (c) 2025 Anton Bondar https://zebooka.com
 
 @if Theme == Dark
     @import "colors_dark.mapcss";
@@ -71,13 +71,13 @@ canvas
 @import "roads.mapcss";
 @import "footways.mapcss";
 @import "railways.mapcss";
+@import "electric.mapcss";
 @import "water.mapcss";
 @import "skiing.mapcss";
 @import "natural.mapcss";
 @import "buildings.mapcss";
 @import "poi.mapcss";
 
-//@import "poi.mapcss";
 @import "_points.mapcss";
 
 
