@@ -1,0 +1,57 @@
+// Ingreelab alike map style for Guru Maps
+// Copyright (c) 2013-2025 Evgen Bodunov. All rights reserved.
+// Copyright (c) 2025 Anton Bondar https://zebooka.com
+
+node, area {
+    @if Sport
+        |z16-(
+            [amenity=swimming_pool],
+            [leisure=sports_centre],
+            [leisure=pitch],
+            [leisure=track],
+            [leisure=golf_course]
+        ),
+        |z18-[leisure=swimming_pool]
+        {
+            text: eval(locTag('name'));
+            text-color: @color_shop_text;
+            font-size: 9;
+            font-stroke-width:0.8pt;
+            font-stroke-color: @color_label_stroke;
+            text-priority: 0;
+        }
+
+        |z16-[amenity=swimming_pool],
+        |z18-[leisure=swimming_pool]
+        {
+            icon-image: "icon/pool.svg";
+            icon-scale:0.50;
+            icon-tint: @color_icon_tint;
+        }
+
+        |z16-[leisure=sports_centre]
+        {
+            icon-image: "icon/gym.svg";
+            icon-scale:0.50;
+            icon-tint: @color_icon_tint;
+        }
+
+        |z15-[leisure=golf_course]
+        {
+            icon-image: "icon/golf_course.svg";
+            icon-scale:0.50;
+            icon-tint: @color_icon_tint;
+        }
+    @endif
+
+    |z13-{
+        [landuse=winter_sports] {
+            text:eval(locTag('name'));
+            text-color: @piste_difficulty_expert;
+            font-size: 11;
+            font-stroke-width: 2pt;
+            font-stroke-color: @color_label_stroke;
+            text-priority: -1;
+        }
+    }
+}

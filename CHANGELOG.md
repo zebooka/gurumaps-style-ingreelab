@@ -4,7 +4,7 @@
 
 * Show unpaved surface for residential, living_street, unclassified, road and service highways using gentle dashes.
 * Power lines and towers.
-* Refactored transport POI.
+* Refactored POI: sports, transport.
 * Russian README added.
 
 ## v2.0.0

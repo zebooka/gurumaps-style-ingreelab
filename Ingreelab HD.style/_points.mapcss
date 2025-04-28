@@ -10,76 +10,6 @@ node,area {
 
 
 
-    @if BuildingName
-        area|z16-[building],
-        |z17-[landuse=construction]
-        {
-            text: eval( cond( tag('addr:housenumber'),
-                            tag('addr:housenumber') . cond( any( locTag('name'), tag('addr:housename') ),' (' . any( locTag('name'), tag('addr:housename') ) . ')',''),
-                            any( locTag('name'), tag('addr:housename') ) ) );
-
-            text-color: @color_building_text;
-            font-size: 9;
-            font-stroke-width: 0.8pt;
-            font-stroke-color: @color_label_stroke;
-            text-priority: 1;
-        }
-        // для точек номер дома не так важен. Если есть имя - пишем имя.
-        node|z18-(
-            [addr:housenumber],
-            [addr:housename]
-        ) {
-            text: eval( cond( locTag('name'), // write name if we have one
-                              locTag('name'),
-                              cond( tag('addr:housenumber'), // if we have housenumber, use it
-                                    tag('addr:housenumber') . cond( tag('addr:housename'),' (' . tag('addr:housename') . ')',''),
-                                    tag('addr:housename') ) ) );
-            text-color: @color_building_text;
-            font-size: 9;
-            font-stroke-width: 0.8pt;
-            font-stroke-color: @color_label_stroke;
-            text-priority: 0;
-        }
-
-        node|z17-[entrance][!indoor] {
-            icon-image: "circle.svg";
-            icon-tint: @color_entrance_text;
-
-            text-priority: -5;
-            details-enabled: 0;
-
-            icon-scale: 0.2;
-            [entrance=main] {
-                icon-scale: 0.4;
-            }
-
-            |z18-{
-                icon-image: "entrance.svg";
-                icon-scale: 0.8;
-                [entrance=main] {
-                    icon-scale: 1;
-                }
-
-                [addr:housenumber] {
-                    text: eval( tag('addr:housenumber') );
-                    text-color: @color_building_text;
-                    font-size: 9;
-                    details-enabled: 1;
-                }
-
-                [ref] {
-                    text: eval( tag('ref') );
-                    text-color: @color_entrance_text;
-                    font-size: 8;
-                    details-enabled: 1;
-                }
-            }
-        }
-    @endif
-
-
-
-
     @if AllShops
         // all kinds of shops
         |z17-[shop]{
@@ -180,16 +110,6 @@ node,area {
     @endif
     @if Beauty
         |z17-( [shop=hairdresser], [shop=beauty], [shop=tattoo], [shop=massage], [leisure=sauna], [amenity=sauna] ),
-    @endif
-    @if Sport
-        |z16-(
-            [amenity=swimming_pool],
-            [leisure=sports_centre],
-            [leisure=pitch],
-            [leisure=track],
-            [leisure=golf_course]
-        ),
-        |z18-[leisure=swimming_pool]
     @endif
     {
         text: eval(locTag('name'));
@@ -441,31 +361,11 @@ node,area {
     @if Entertaiment
         |z15-[leisure=water_park],
     @endif
-    @if Sport
-        |z16-[amenity=swimming_pool],
-        |z18-[leisure=swimming_pool],
-    @endif
-        {
-            icon-image: "icon/pool.svg";
-            icon-scale:0.50;
-            icon-tint: @color_icon_tint;
-        }
-
-    @if Sport
-        |z16-[leisure=sports_centre]
-        {
-            icon-image: "icon/gym.svg";
-            icon-scale:0.50;
-            icon-tint: @color_icon_tint;
-        }
-
-        |z15-[leisure=golf_course]
-        {
-            icon-image: "icon/golf_course.svg";
-            icon-scale:0.50;
-            icon-tint: @color_icon_tint;
-        }
-    @endif
+    {
+        icon-image: "icon/pool.svg";
+        icon-scale:0.50;
+        icon-tint: @color_icon_tint;
+    }
 
     @if Entertaiment
         |z17-[amenity=arts_centre],
@@ -783,17 +683,6 @@ node,area {
             [amenity=bicycle_repair_station] {
                 icon-image: "icon/bike_service.svg";
             }
-        }
-    }
-
-    |z13-{
-        [landuse=winter_sports] {
-            text:eval(locTag('name'));
-            text-color: @piste_difficulty_expert;
-            font-size:11;
-            font-stroke-width:2pt;
-            font-stroke-color: @color_label_stroke;
-            text-priority: -1;
         }
     }
 }
