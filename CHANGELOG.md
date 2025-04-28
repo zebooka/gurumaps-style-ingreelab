@@ -1,6 +1,6 @@
 # Ingreelab changelog
 
-## MINOR
+## v2.1.0
 
 * Show unpaved surface for residential, living_street, unclassified, road and service highways using gentle dashes.
 * Power lines and towers.
