@@ -48,6 +48,13 @@ line {
         font-stroke-width: 1.5pt;
         font-stroke-color: @water_stroke;
     }
+
+    // ferry
+    |z9-[route=ferry] {
+        dashes-width: eval(zlinear(12, 1pt,1.5pt,2pt));
+        dashes-color: @color_water_darker;
+        dashes: 8,8;
+    }
 }
 
 area {

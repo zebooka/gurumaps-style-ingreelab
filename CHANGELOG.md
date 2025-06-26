@@ -1,5 +1,9 @@
 # Ingreelab changelog
 
+##
+
+* Ferry lines now visible.
+
 ## v2.1.0
 
 * Show unpaved surface for residential, living_street, unclassified, road and service highways using gentle dashes.
