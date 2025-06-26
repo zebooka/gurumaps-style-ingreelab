@@ -54,6 +54,18 @@ line {
         dashes-width: eval(zlinear(12, 1pt,1.5pt,2pt));
         dashes-color: @color_water_darker;
         dashes: 8,8;
+        font-stroke-width: 0;
+        text-color: @color_water_darker;
+    }
+
+    // ice roads
+    |z12-[highway=track]{
+        [ice_road=yes],[surface=ice] {
+            dashes-color: @color_water_ice;
+            font-stroke-width: 0;
+            font-stroke-color: @none;
+            text-color: @color_water_ice;
+        }
     }
 }
 

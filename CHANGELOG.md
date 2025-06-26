@@ -3,6 +3,7 @@
 ##
 
 * Ferry lines now visible.
+* Added ice roads and their names.
 
 ## v2.1.0
 

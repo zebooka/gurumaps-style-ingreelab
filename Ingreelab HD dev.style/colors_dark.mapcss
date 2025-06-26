@@ -4,6 +4,7 @@
 
 // Suffixes: _label, _stroke, _icon, _darker, _casing, _dashes
 
+@none: #00000000;
 
 @color_label_stroke: #000000EE;  // l: 0
 @color_label_text: #B5B5B5; // l: -0.1
@@ -70,6 +71,7 @@
 @power_lines: #888888;
 
 // WATER
+@color_water_ice: #000000; // l: -0.2
 @color_water: #243E64; // l: -0.2
 @color_water_darker: #3A598B; // l: -0.2
 @color_water_salted: #18102E; // l: -0.2
