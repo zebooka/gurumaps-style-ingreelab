@@ -46,7 +46,7 @@ node, area {
         |z13-[railway=station] {
             icon-image: "icon/railway_station.svg";
             icon-scale: 2.4;
-            icon-tint: @color_railway_station;
+            icon-tint: eval(any(tag('colour'), @color_railway_station));
         }
 
         node|z13-[railway=halt] {
@@ -55,18 +55,11 @@ node, area {
             icon-tint: @color_railway_station;
         }
 
-        |z13-[railway=station][transport=subway] {
-            icon-image: "icon/subway.svg";
-            icon-scale: 2;
-            icon-tint: eval(any(tag('colour'), @color_icon_tint));
-            text-priority: 6; // выше чем у названий дорог
-        }
-
         node|z15-[railway=subway_entrance] {
             icon-image: "icon/circle.svg";
             icon-scale: 1;
             icon-tint: eval(any(tag('colour'), @color_icon_tint));
-            text-priority: 7; // выше чем у названий дорог
+            text-priority: 7; // higher than roads prio
         }
     @endif
 

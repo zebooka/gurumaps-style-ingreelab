@@ -1,9 +1,10 @@
 # Ingreelab changelog
 
-##
+## v2.2.0
 
 * Ferry lines now visible.
 * Added ice roads and their names.
+* Fixed metro/subway/underground/tunnelbana stations colouring.
 
 ## v2.1.0
 
