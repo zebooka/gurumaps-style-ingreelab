@@ -7,8 +7,7 @@ RELEASE := $$(git describe --tags --candidates=0 2>/dev/null || (git describe --
 TAG := $$(git describe --tags --candidates=0 2>/dev/null)
 BUILD_DIR := $(CURRENT_DIR)build
 ASSET := Ingreelab-$(RELEASE)
-INGREELAB_SRC_DIR := Ingreelab\ HD.style
-INGREELAB_DEV_DIR := Ingreelab\ HD\ dev.style
+INGREELAB_SRC_DIR := Ingreelab\ HD\ dev.style
 INGREELAB_DST_DIR := Ingreelab\ HD\ $(RELEASE).style
 
 
@@ -26,7 +25,7 @@ dark-colors:
 	git status --short
 
 macos:
-	rsync -vaHzhP --no-g --no-o --delete-after $(INGREELAB_SRC_DIR)/ ~/Library/Containers/com.bodunov.galileo/Data/Documents/$(INGREELAB_DEV_DIR)/
+	rsync -vaHzhP --no-g --no-o --delete-after $(INGREELAB_SRC_DIR)/ ~/Library/Containers/com.bodunov.galileo/Data/Documents/$(INGREELAB_SRC_DIR)/
 
 ##@ Release
 
