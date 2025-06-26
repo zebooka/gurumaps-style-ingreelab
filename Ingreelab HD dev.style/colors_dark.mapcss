@@ -71,7 +71,7 @@
 @power_lines: #888888;
 
 // WATER
-@color_water_ice: #000000; // l: -0.2
+@color_water_light: #000000; // l: -0.2
 @color_water: #243E64; // l: -0.2
 @color_water_darker: #3A598B; // l: -0.2
 @color_water_salted: #18102E; // l: -0.2

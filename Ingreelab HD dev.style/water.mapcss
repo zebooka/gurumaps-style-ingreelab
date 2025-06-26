@@ -61,10 +61,10 @@ line {
     // ice roads
     |z12-[highway=track]{
         [ice_road=yes],[surface=ice] {
-            dashes-color: @color_water_ice;
-            font-stroke-width: 0;
-            font-stroke-color: @none;
-            text-color: @color_water_ice;
+            dashes-color: @color_water_light;
+            font-stroke-width: 8pt;
+            font-stroke-color: @color_water;
+            text-color: @color_water_light;
         }
     }
 }
