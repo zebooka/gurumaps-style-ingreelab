@@ -255,22 +255,22 @@ node, area {
         }
 
         node|z17-[entrance][!indoor] {
-            icon-image: "circle.svg";
+            icon-image: "icon/circle.svg";
             icon-tint: @color_entrance_text;
 
             text-priority: -5;
             details-enabled: 0;
 
-            icon-scale: 0.2;
+            icon-scale: 0.3;
             [entrance=main] {
                 icon-scale: 0.4;
             }
 
             |z18-{
-                icon-image: "entrance.svg";
+                icon-image: "icon/entrance.svg";
                 icon-scale: 0.8;
                 [entrance=main] {
-                    icon-scale: 1;
+                    icon-scale: 1.1;
                 }
 
                 [addr:housenumber] {

@@ -1,5 +1,9 @@
 # Ingreelab changelog
 
+## minor
+
+* Fixed entrances icons.
+
 ## v2.2.0
 
 * Ferry lines now visible.
