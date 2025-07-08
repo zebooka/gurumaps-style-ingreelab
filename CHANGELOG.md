@@ -3,6 +3,7 @@
 ## minor
 
 * Fixed entrances icons.
+* Fixed fords and water directions display.
 
 ## v2.2.0
 

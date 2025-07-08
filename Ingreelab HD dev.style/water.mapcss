@@ -17,6 +17,9 @@ line {
             width: eval(zlinear(10, 1px,1pt,2pt,3pt,4pt,5pt,6pt));
             color: @color_water;
             z-index: -20;
+            |z14- {
+                fill-image: "icon/arrow.svg";
+            }
         }
     }
 
@@ -156,26 +159,25 @@ node {
     }
 
     |z12- {
-        [waterway=waterfall],
-        [highway=ford] {
+        [waterway=waterfall] {
+            icon-image: "icon/waterfall.svg";
             icon-tint: @color_icon_water;
+            icon-scale: 0.6;
+        }
+        [ford] {
+            icon-image: "icon/ford.svg";
+            icon-tint: @color_icon_water;
+            icon-scale: 0.5;
+        }
+        |z16- {
+            icon-scale: 0.7;
             text-priority: 2;
-            text: eval(locTag('name'));
-            text-color: @water_label;
+            text: eval(cond(locTag('name'), cond(tag('depth'), locTag('name').' '.formatElevation(tag('depth')), locTag('name')), formatElevation(tag('depth'))));
+            text-color: @color_water_text;
             font-size: 9;
             font-weight: bold;
             font-stroke-width: 1.5pt;
             font-stroke-color: @water_stroke;
-        }
-        [waterway=waterfall] {
-            icon-image: "icon/waterfall.svg";
-            icon-scale: 0.6;
-            |z14- { icon-scale: 0.8; }
-        }
-        [highway=ford] {
-            icon-image: "icon/ford.svg";
-            icon-scale: 0.6;
-            |z14- { icon-scale: 0.75; }
         }
     }
 }
