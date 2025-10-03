@@ -76,8 +76,24 @@ canvas
 @import "skiing.mapcss";
 @import "natural.mapcss";
 @import "buildings.mapcss";
+
 @import "poi.mapcss";
-@import "poi_sports.mapcss";
+//@import "poi_banks.mapcss";
+//@import "poi_barbershops.mapcss";
+//@import "poi_cinemas.mapcss";
+//@import "poi_education.mapcss";
+//@import "poi_hospitals.mapcss";
+//@import "poi_hotels.mapcss";
+//@import "poi_museums.mapcss";
+//@import "poi_numbers.mapcss";
+@import "poi_other.mapcss";
+//@import "poi_police.mapcss";
+//@import "poi_post.mapcss";
+//@import "poi_pubs.mapcss";
+//@import "poi_restaurants.mapcss";
+@import "poi_shops.mapcss";
+//@import "poi_ski.mapcss";
+//@import "poi_sports.mapcss";
 @import "poi_transport.mapcss";
 
 @import "_points.mapcss";

@@ -1,0 +1,14 @@
+|z16-{
+    area([highway=pedestrian],[highway=footway]),
+    [place=locality],
+    [place=square],
+    {
+        text: eval(locTag('name'));
+        text-color: @suburb_label;
+        text-priority: 1;
+    }
+}
+|z16-[leisure=stadium] {
+    text: eval(locTag('name'));
+    text-color: @color_label_text;
+}
