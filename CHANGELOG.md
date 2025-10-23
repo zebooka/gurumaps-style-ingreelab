@@ -4,6 +4,7 @@
 
 * Fixed entrances icons.
 * Fixed fords and water directions display.
+* Fixed water/streams sizes.
 
 ## v2.2.0
 

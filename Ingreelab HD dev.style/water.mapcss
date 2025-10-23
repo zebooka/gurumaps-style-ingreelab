@@ -13,8 +13,8 @@ line {
     // rivers
     |z10-[waterway=river] {
         [!layer], [layer>=0] {
-            //                       10  11  12  13  14  15  16
-            width: eval(zlinear(10, 1px,1pt,2pt,3pt,4pt,5pt,6pt));
+            //                       10  11  12  13  14  15  16  17  18
+            width: eval(zlinear(10, 1px,1pt,2pt,3pt,4pt,5pt,6pt,8pt,10pt));
             color: @color_water;
             z-index: -20;
             |z14- {
@@ -29,13 +29,13 @@ line {
         [waterway=canal],
         [waterway=drain],
         [waterway=ditch] {
-            width: eval(zlinear(14, 1pt,3pt,3m));
+            width: eval(zlinear(14, 1pt,3pt,3pt,4pt));
             color: @color_water;
             z-index: -20;
         }
 
         [layer<0] {
-            width: eval(zlinear(14, 1pt,2pt,3m));
+            width: eval(zlinear(14, 1pt,2pt,2pt,3pt));
             color: @color_water_underground;
             layer: 0;
         }
