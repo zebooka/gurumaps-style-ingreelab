@@ -16,7 +16,11 @@ Custom style for Guru Maps inspired by `Ingreelab.net` tiles render, to improve 
 
 ## How to install
 
-To add this style into the app, download `Release (zip)` from the assets and save it to GuruMaps application folder.
+[Click this link on your phone/tablet](guru://open/?url=https://github.com/zebooka/gurumaps-style-ingreelab/releases/download/v2.2.0/Ingreelab-v2.2.0.zip)
+
+OR
+
+To add this style manually into the app, download `Release (zip)` from the assets and save it to GuruMaps application folder.
 - Android: `/Android/data/com.bodunov.galileo/` or `Android/data/com.bodunov.GalileoPro/files`
 - iOS: `Files App` → `Guru Maps` or from computer `Locations`/`iTunes` → `Your device` → `Files` → `Guru Maps` or `Guru Maps Pro`
 - macOS: `~/Library/Containers/com.bodunov.galileo/Data/Documents/`.

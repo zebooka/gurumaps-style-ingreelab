@@ -16,7 +16,11 @@
 
 ## Как установить
 
-Чтобы добавить этот стиль в приложение, скачайте `Release (zip)` из списка файлов и сохрание его в папку приложения `Guru Maps`.
+[Нажмите на эту ссылку на вашем телефоне/планшете](guru://open/?url=https://github.com/zebooka/gurumaps-style-ingreelab/releases/download/v2.2.0/Ingreelab-v2.2.0.zip)
+
+ИЛИ
+
+Чтобы добавить вручную этот стиль в приложение, скачайте `Release (zip)` из списка файлов и сохрание его в папку приложения `Guru Maps`.
 - Android: `/Android/data/com.bodunov.galileo/` или `Android/data/com.bodunov.GalileoPro/files`
 - iOS: `Приложение Файлы` → `Guru Maps` или с компьютера `Места`/`iTunes` → `Имя вашего устройства` → `Файлы` → `Guru Maps` или `Guru Maps Pro`
 - macOS: `~/Library/Containers/com.bodunov.galileo/Data/Documents/`.
