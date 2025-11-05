@@ -16,7 +16,7 @@ Custom style for Guru Maps inspired by `Ingreelab.net` tiles render, to improve 
 
 ## How to install
 
-Click this link on your phone/tablet — [](guru://open/?url=https://github.com/zebooka/gurumaps-style-ingreelab/releases/download/v2.2.0/Ingreelab-v2.2.0.zip)
+[Click this link on your phone/tablet](https://zebooka.com/map/gurumaps/ingreelab/download/v2.2.0/)
 
 OR
 
