@@ -16,7 +16,7 @@
 
 ## Как установить
 
-<a href="guru://open/?url=https://github.com/zebooka/gurumaps-style-ingreelab/releases/download/v2.2.0/Ingreelab-v2.2.0.zip">Нажмите на эту ссылку на вашем телефоне/планшете</a>
+Нажмите на эту ссылку на вашем телефоне/планшете — [](guru://open/?url=https://github.com/zebooka/gurumaps-style-ingreelab/releases/download/v2.2.0/Ingreelab-v2.2.0.zip)
 
 ИЛИ
 
