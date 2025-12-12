@@ -1,5 +1,7 @@
 # Ingreelab alike map style for [Guru Maps](https://gurumaps.app)
 
+[![Github All Releases](https://img.shields.io/github/downloads/zebooka/gurumaps-style-ingreelab/total.svg)]()
+
 Custom style for Guru Maps inspired by `Ingreelab.net` tiles render, to improve readability of maps.
 
 [Русский](README_ru.md)

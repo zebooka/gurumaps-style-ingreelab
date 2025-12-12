@@ -1,5 +1,7 @@
 # Стиль карт Ingreelab для [Guru Maps](https://gurumaps.app)
 
+[![Github All Releases](https://img.shields.io/github/downloads/zebooka/gurumaps-style-ingreelab/total.svg)]()
+
 Стиль для `Guru Maps` вдохновлённый рендером `Ingreelab.net` для OSM карт, созданный для улучшения читаемости карт.
 
 [in English](README.md)
