@@ -15,6 +15,7 @@ line {
     }
 
     |z13-[natural=cliff],
+    |z13-[man_made=embankment],
     |z13-[natural=earth_bank] {
         width: 8pt;
         fill-image: @image_cliff;

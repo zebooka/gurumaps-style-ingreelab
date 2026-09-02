@@ -6,6 +6,7 @@
 * Fixed fords and water directions display.
 * Fixed water/streams sizes.
 * Added easy installation link to readme.
+* Added man_made=embankment display.
 
 ## v2.2.0
 
